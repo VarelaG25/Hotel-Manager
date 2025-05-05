@@ -13,6 +13,7 @@ namespace AAVD
 {
     public partial class Login : Form
     {
+        public int bdd { get; set; }
         public Login()
         {
             InitializeComponent();

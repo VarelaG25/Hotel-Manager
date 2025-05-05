@@ -13,15 +13,16 @@ namespace AAVD
     public partial class Usuario : Form
     {
         // Variables para el usuario
+        public int Id_Usuario { get; set; }
+        public int Id_Admin { get; set; }
         public int NumeroNomina { get; set; }
-        public string Nombre { get; set; }
+        public string NombreUsuario { get; set; }
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
-        public string TelefonoCasa { get; set; }
-        public string TelefonoCelular { get; set; }
-        public string Correo { get; set; }
-        public string Contrasenia { get; set; }
-        public string ConfirmarContrasenia { get; set; }
+        public string CorreoUsuario { get; set; }
+        public string ContrasenaUsuario { get; set; }
+        public DateTime FechaRegistroUsuario { get; set; }
+        public DateTime FechaModificacionUsuario { get; set; }
 
         public Usuario()
         {
@@ -45,11 +46,17 @@ namespace AAVD
         {
             AbrirControlEnPanel(new Menu());
             var NuevoForm = new Login();
+            
+            //Cargar tabla Usuarios SQL
+            var enlace = new EnlaceDB();
+            var tabla = new DataTable();
+            tabla = enlace.get_Deptos();
+            dataGridView2.DataSource = tabla;
 
             this.FindForm().Size = NuevoForm.Size;
             this.FindForm().StartPosition = FormStartPosition.Manual;
             this.FindForm().Location = NuevoForm.Location;
-        }
 
+        }
     }
 }

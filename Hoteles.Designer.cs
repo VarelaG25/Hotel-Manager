@@ -181,6 +181,14 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.MenuContenedor = new System.Windows.Forms.Panel();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -317,6 +325,14 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.button8);
+            this.groupBox9.Controls.Add(this.button6);
+            this.groupBox9.Controls.Add(this.textBox2);
+            this.groupBox9.Controls.Add(this.textBox1);
+            this.groupBox9.Controls.Add(this.button4);
+            this.groupBox9.Controls.Add(this.button1);
+            this.groupBox9.Controls.Add(this.checkedListBox2);
+            this.groupBox9.Controls.Add(this.checkedListBox1);
             this.groupBox9.Controls.Add(this.label31);
             this.groupBox9.Controls.Add(this.label29);
             this.groupBox9.Controls.Add(this.label32);
@@ -351,9 +367,9 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label31.Location = new System.Drawing.Point(734, 437);
+            this.label31.Location = new System.Drawing.Point(733, 466);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(250, 144);
+            this.label31.Size = new System.Drawing.Size(250, 108);
             this.label31.TabIndex = 64;
             this.label31.Text = resources.GetString("label31.Text");
             // 
@@ -362,9 +378,9 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label29.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label29.Location = new System.Drawing.Point(734, 222);
+            this.label29.Location = new System.Drawing.Point(734, 190);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(253, 156);
+            this.label29.Size = new System.Drawing.Size(253, 132);
             this.label29.TabIndex = 63;
             this.label29.Text = resources.GetString("label29.Text");
             // 
@@ -423,10 +439,10 @@
             // 
             this.caracteristicas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.caracteristicas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.caracteristicas.Location = new System.Drawing.Point(377, 437);
+            this.caracteristicas.Location = new System.Drawing.Point(377, 460);
             this.caracteristicas.Multiline = true;
             this.caracteristicas.Name = "caracteristicas";
-            this.caracteristicas.Size = new System.Drawing.Size(347, 158);
+            this.caracteristicas.Size = new System.Drawing.Size(347, 114);
             this.caracteristicas.TabIndex = 11;
             // 
             // label34
@@ -455,7 +471,7 @@
             this.BTN_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Registrar.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Registrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTN_Registrar.Location = new System.Drawing.Point(48, 504);
+            this.BTN_Registrar.Location = new System.Drawing.Point(390, 645);
             this.BTN_Registrar.Name = "BTN_Registrar";
             this.BTN_Registrar.Size = new System.Drawing.Size(251, 41);
             this.BTN_Registrar.TabIndex = 12;
@@ -477,10 +493,10 @@
             // 
             this.amenidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.amenidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.amenidades.Location = new System.Drawing.Point(378, 222);
+            this.amenidades.Location = new System.Drawing.Point(377, 184);
             this.amenidades.Multiline = true;
             this.amenidades.Name = "amenidades";
-            this.amenidades.Size = new System.Drawing.Size(347, 158);
+            this.amenidades.Size = new System.Drawing.Size(347, 114);
             this.amenidades.TabIndex = 10;
             // 
             // precioHabitacion
@@ -497,7 +513,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label27.Location = new System.Drawing.Point(372, 188);
+            this.label27.Location = new System.Drawing.Point(372, 30);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(117, 25);
             this.label27.TabIndex = 59;
@@ -521,7 +537,7 @@
             this.groupBox7.Controls.Add(this.JardinCheckBox);
             this.groupBox7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.groupBox7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox7.Location = new System.Drawing.Point(378, 30);
+            this.groupBox7.Location = new System.Drawing.Point(12, 461);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(347, 145);
             this.groupBox7.TabIndex = 6;
@@ -585,7 +601,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label17.Location = new System.Drawing.Point(372, 400);
+            this.label17.Location = new System.Drawing.Point(372, 309);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(150, 28);
             this.label17.TabIndex = 40;
@@ -1871,6 +1887,98 @@
             this.MenuContenedor.Size = new System.Drawing.Size(1508, 74);
             this.MenuContenedor.TabIndex = 25;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.checkedListBox1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            ""});
+            this.checkedListBox1.Location = new System.Drawing.Point(378, 64);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(346, 114);
+            this.checkedListBox1.TabIndex = 65;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.checkedListBox2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(377, 340);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(346, 114);
+            this.checkedListBox2.TabIndex = 66;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(732, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(251, 41);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(732, 373);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(251, 41);
+            this.button4.TabIndex = 68;
+            this.button4.Text = "Agregar";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(732, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(251, 27);
+            this.textBox1.TabIndex = 69;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(732, 340);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(251, 27);
+            this.textBox2.TabIndex = 70;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Crimson;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button6.Location = new System.Drawing.Point(732, 416);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(251, 41);
+            this.button6.TabIndex = 71;
+            this.button6.Text = "Eliminar";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Crimson;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button8.Location = new System.Drawing.Point(732, 140);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(251, 41);
+            this.button8.TabIndex = 72;
+            this.button8.Text = "Eliminar";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // Hoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2083,5 +2191,13 @@
         private System.Windows.Forms.TextBox ciudades;
         private System.Windows.Forms.TextBox estado;
         private System.Windows.Forms.TextBox pais;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
