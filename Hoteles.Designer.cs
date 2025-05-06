@@ -189,6 +189,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -1110,6 +1114,10 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button9);
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.button10);
+            this.groupBox4.Controls.Add(this.checkedListBox3);
             this.groupBox4.Controls.Add(this.numeroHabitaciones);
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.label38);
@@ -1255,7 +1263,7 @@
             this.BTN_RegistrarHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_RegistrarHotel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_RegistrarHotel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTN_RegistrarHotel.Location = new System.Drawing.Point(132, 709);
+            this.BTN_RegistrarHotel.Location = new System.Drawing.Point(269, 708);
             this.BTN_RegistrarHotel.Name = "BTN_RegistrarHotel";
             this.BTN_RegistrarHotel.Size = new System.Drawing.Size(225, 40);
             this.BTN_RegistrarHotel.TabIndex = 19;
@@ -1305,10 +1313,10 @@
             // 
             this.serviciosAdicionales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.serviciosAdicionales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.serviciosAdicionales.Location = new System.Drawing.Point(17, 540);
+            this.serviciosAdicionales.Location = new System.Drawing.Point(267, 527);
             this.serviciosAdicionales.Multiline = true;
             this.serviciosAdicionales.Name = "serviciosAdicionales";
-            this.serviciosAdicionales.Size = new System.Drawing.Size(478, 163);
+            this.serviciosAdicionales.Size = new System.Drawing.Size(226, 158);
             this.serviciosAdicionales.TabIndex = 18;
             // 
             // groupBox3
@@ -1979,6 +1987,51 @@
             this.button8.Text = "Eliminar";
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.checkedListBox3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(17, 527);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(211, 92);
+            this.checkedListBox3.TabIndex = 67;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Crimson;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button9.Location = new System.Drawing.Point(17, 708);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(215, 41);
+            this.button9.TabIndex = 75;
+            this.button9.Text = "Eliminar";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(17, 632);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(215, 27);
+            this.textBox3.TabIndex = 74;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button10.Location = new System.Drawing.Point(17, 665);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(215, 41);
+            this.button10.TabIndex = 73;
+            this.button10.Text = "Agregar";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // Hoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2199,5 +2252,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button10;
     }
 }

@@ -138,14 +138,14 @@ namespace AAVD
 
 		// Ejemplo de método para recibir una consulta en forma de tabla
 		// Cuando el SP ejecutará un SELECT
-        public DataTable get_Deptos(/*string opc*/)
+        public DataTable ConsultarUsuarios(/*string opc*/)
         {
             var msg = "";
             DataTable tabla = new DataTable();
             try
             {
                 conectar();
-                string qry = "ConsultarUsuarios";
+                string qry = "SP_ConsultarUsuarios";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
@@ -171,9 +171,41 @@ namespace AAVD
 
             return tabla;
         }
-		
-		// Ejemplo de método para ejecutar un SP que no se espera que regrese información, 
-		// solo que ejecute ya sea un INSERT, UPDATE o DELETE
+
+        public DataTable consultarUsuarioEspecifico(int NumeroNomina)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarUsuarioEspecifico";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@NumeroNomina", NumeroNomina);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+                // la ejecución del SP espera que regrese datos en formato tabla
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+
+        // Ejemplo de método para ejecutar un SP que no se espera que regrese información, 
+        // solo que ejecute ya sea un INSERT, UPDATE o DELETE
         public bool Add_Deptos(string opc, string depto)
         {
             var msg = "";
@@ -207,6 +239,132 @@ namespace AAVD
             finally
             {
                 desconectar();                
+            }
+
+            return add;
+        }
+
+        public bool Insertar_Usuario(Usuario.UsuarioDatos param)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarUsuario";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@numeroNomina", param.NumeroNomina);
+                _comandosql.Parameters.AddWithValue("@nombreUsuario", param.NombreUsuario);
+                _comandosql.Parameters.AddWithValue("@primerApellido", param.PrimerApellido);
+                _comandosql.Parameters.AddWithValue("@segundoApellido", param.SegundoApellido);
+                _comandosql.Parameters.AddWithValue("@fechaRegistroUsuario", param.FechaRegistroUsuario);
+                _comandosql.Parameters.AddWithValue("@fechaModificacionUsuario", param.FechaModificacionUsuario);
+
+                // Parámetros para la tabla InicioSesion
+                _comandosql.Parameters.AddWithValue("@correoUsuario", param.CorreoUsuario);
+                _comandosql.Parameters.AddWithValue("@contrasenaUsuario", param.ContrasenaUsuario);
+
+                // Parámetros para la tabla Telefono
+                _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);
+                _comandosql.Parameters.AddWithValue("@telefonoCasa", param.TelefonoCasa);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Borrar_Usuario(int numeroNomina)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_BorrarUsuario";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@numeroNomina", numeroNomina);
+               
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+        public bool Actualizar_Usuario(Usuario.UsuarioDatos param)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_ActualizarUsuario";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@numeroNomina", param.NumeroNomina);
+                _comandosql.Parameters.AddWithValue("@nombreUsuario", param.NombreUsuario);
+                _comandosql.Parameters.AddWithValue("@primerApellido", param.PrimerApellido);
+                _comandosql.Parameters.AddWithValue("@segundoApellido", param.SegundoApellido);
+                _comandosql.Parameters.AddWithValue("@fechaModificacionUsuario", param.FechaModificacionUsuario);
+
+                // Parámetros para la tabla InicioSesion
+                _comandosql.Parameters.AddWithValue("@correoUsuario", param.CorreoUsuario);
+                _comandosql.Parameters.AddWithValue("@contrasenaUsuario", param.ContrasenaUsuario);
+
+                // Parámetros para la tabla Telefono
+                _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);
+                _comandosql.Parameters.AddWithValue("@telefonoCasa", param.TelefonoCasa);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
             }
 
             return add;

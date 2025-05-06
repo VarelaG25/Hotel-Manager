@@ -31,65 +31,61 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.TablaRegistroUsuarioDGV = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.NumeroNominaTXT = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TelefonoCelularTXT = new System.Windows.Forms.TextBox();
+            this.TelefonoCasaTXT = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.SegundoApellidoTXT = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PrimerApellidoTXT = new System.Windows.Forms.TextBox();
+            this.NombreTXT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaActualDTP = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.ConfirmarContraseniaTXT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.ContraseniaTXT = new System.Windows.Forms.TextBox();
+            this.CorreoTXT = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AceptarBTN = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.FechaModificadoTXT = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NombreCompletoCB = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.TelefonoCelularSeleccionadoTXT = new System.Windows.Forms.TextBox();
+            this.TelefonoCasaSeleccionadoTXT = new System.Windows.Forms.TextBox();
+            this.SegundoApellidoSeleccionadoTXT = new System.Windows.Forms.TextBox();
+            this.PrimerApellidoSeleccionadoTXT = new System.Windows.Forms.TextBox();
+            this.NombreSeleccionadoTXT = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.NumeroNominaSeleccionadoTXT = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TablaModificarUsuarioDGV = new System.Windows.Forms.DataGridView();
             this.label24 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ModificarBTN = new System.Windows.Forms.Button();
+            this.EliminarBTN = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.ConfirmarContraseniaSeleccionadoTXT = new System.Windows.Forms.TextBox();
+            this.ContraseniaSeleccionadoTXT = new System.Windows.Forms.TextBox();
+            this.CorreoSeleccionadoTXT = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -105,13 +101,13 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRegistroUsuarioDGV)).BeginInit();
             this.groupBox21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaModificarUsuarioDGV)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -136,14 +132,14 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.TablaRegistroUsuarioDGV);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.groupBox21);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.FechaActualDTP);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
@@ -154,20 +150,26 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registrar Usuario";
             // 
-            // dataGridView2
+            // TablaRegistroUsuarioDGV
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(772, 22);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(454, 564);
-            this.dataGridView2.TabIndex = 26;
-            this.dataGridView2.TabStop = false;
+            this.TablaRegistroUsuarioDGV.AllowUserToAddRows = false;
+            this.TablaRegistroUsuarioDGV.AllowUserToDeleteRows = false;
+            this.TablaRegistroUsuarioDGV.AllowUserToResizeColumns = false;
+            this.TablaRegistroUsuarioDGV.AllowUserToResizeRows = false;
+            this.TablaRegistroUsuarioDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaRegistroUsuarioDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaRegistroUsuarioDGV.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaRegistroUsuarioDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaRegistroUsuarioDGV.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaRegistroUsuarioDGV.Location = new System.Drawing.Point(772, 22);
+            this.TablaRegistroUsuarioDGV.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaRegistroUsuarioDGV.Name = "TablaRegistroUsuarioDGV";
+            this.TablaRegistroUsuarioDGV.ReadOnly = true;
+            this.TablaRegistroUsuarioDGV.RowHeadersWidth = 51;
+            this.TablaRegistroUsuarioDGV.RowTemplate.Height = 24;
+            this.TablaRegistroUsuarioDGV.Size = new System.Drawing.Size(454, 564);
+            this.TablaRegistroUsuarioDGV.TabIndex = 26;
+            this.TablaRegistroUsuarioDGV.TabStop = false;
             // 
             // label14
             // 
@@ -207,15 +209,15 @@
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.textBox4);
+            this.groupBox21.Controls.Add(this.NumeroNominaTXT);
             this.groupBox21.Controls.Add(this.label15);
-            this.groupBox21.Controls.Add(this.textBox6);
-            this.groupBox21.Controls.Add(this.textBox5);
+            this.groupBox21.Controls.Add(this.TelefonoCelularTXT);
+            this.groupBox21.Controls.Add(this.TelefonoCasaTXT);
             this.groupBox21.Controls.Add(this.label11);
-            this.groupBox21.Controls.Add(this.textBox3);
+            this.groupBox21.Controls.Add(this.SegundoApellidoTXT);
             this.groupBox21.Controls.Add(this.label10);
-            this.groupBox21.Controls.Add(this.textBox2);
-            this.groupBox21.Controls.Add(this.textBox1);
+            this.groupBox21.Controls.Add(this.PrimerApellidoTXT);
+            this.groupBox21.Controls.Add(this.NombreTXT);
             this.groupBox21.Controls.Add(this.label6);
             this.groupBox21.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.ForeColor = System.Drawing.Color.SteelBlue;
@@ -228,15 +230,16 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Información personal";
             // 
-            // textBox4
+            // NumeroNominaTXT
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(14, 68);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(323, 27);
-            this.textBox4.TabIndex = 1;
+            this.NumeroNominaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroNominaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroNominaTXT.Location = new System.Drawing.Point(14, 68);
+            this.NumeroNominaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NumeroNominaTXT.Name = "NumeroNominaTXT";
+            this.NumeroNominaTXT.ReadOnly = true;
+            this.NumeroNominaTXT.Size = new System.Drawing.Size(323, 27);
+            this.NumeroNominaTXT.TabIndex = 1;
             // 
             // label15
             // 
@@ -250,25 +253,25 @@
             this.label15.TabIndex = 35;
             this.label15.Text = "Número de nómina";
             // 
-            // textBox6
+            // TelefonoCelularTXT
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(190, 269);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(147, 27);
-            this.textBox6.TabIndex = 6;
+            this.TelefonoCelularTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TelefonoCelularTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCelularTXT.Location = new System.Drawing.Point(190, 269);
+            this.TelefonoCelularTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCelularTXT.Name = "TelefonoCelularTXT";
+            this.TelefonoCelularTXT.Size = new System.Drawing.Size(147, 27);
+            this.TelefonoCelularTXT.TabIndex = 6;
             // 
-            // textBox5
+            // TelefonoCasaTXT
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(14, 269);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(154, 27);
-            this.textBox5.TabIndex = 5;
+            this.TelefonoCasaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TelefonoCasaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCasaTXT.Location = new System.Drawing.Point(14, 269);
+            this.TelefonoCasaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCasaTXT.Name = "TelefonoCasaTXT";
+            this.TelefonoCasaTXT.Size = new System.Drawing.Size(154, 27);
+            this.TelefonoCasaTXT.TabIndex = 5;
             // 
             // label11
             // 
@@ -282,15 +285,15 @@
             this.label11.TabIndex = 32;
             this.label11.Text = "Teléfono celular";
             // 
-            // textBox3
+            // SegundoApellidoTXT
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(190, 200);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 27);
-            this.textBox3.TabIndex = 4;
+            this.SegundoApellidoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.SegundoApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SegundoApellidoTXT.Location = new System.Drawing.Point(190, 200);
+            this.SegundoApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.SegundoApellidoTXT.Name = "SegundoApellidoTXT";
+            this.SegundoApellidoTXT.Size = new System.Drawing.Size(147, 27);
+            this.SegundoApellidoTXT.TabIndex = 4;
             // 
             // label10
             // 
@@ -304,25 +307,25 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Teléfono de casa";
             // 
-            // textBox2
+            // PrimerApellidoTXT
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(14, 200);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 27);
-            this.textBox2.TabIndex = 3;
+            this.PrimerApellidoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrimerApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrimerApellidoTXT.Location = new System.Drawing.Point(14, 200);
+            this.PrimerApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrimerApellidoTXT.Name = "PrimerApellidoTXT";
+            this.PrimerApellidoTXT.Size = new System.Drawing.Size(154, 27);
+            this.PrimerApellidoTXT.TabIndex = 3;
             // 
-            // textBox1
+            // NombreTXT
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(14, 132);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 27);
-            this.textBox1.TabIndex = 2;
+            this.NombreTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NombreTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NombreTXT.Location = new System.Drawing.Point(14, 132);
+            this.NombreTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreTXT.Name = "NombreTXT";
+            this.NombreTXT.Size = new System.Drawing.Size(323, 27);
+            this.NombreTXT.TabIndex = 2;
             // 
             // label6
             // 
@@ -349,24 +352,27 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(605, 24);
+            this.label4.Location = new System.Drawing.Point(553, 18);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 15);
+            this.label4.Size = new System.Drawing.Size(191, 21);
             this.label4.TabIndex = 13;
             this.label4.Text = "Fecha actual de registro";
             // 
-            // dateTimePicker1
+            // FechaActualDTP
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(628, 44);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(116, 31);
-            this.dateTimePicker1.TabIndex = 12;
-            this.dateTimePicker1.TabStop = false;
+            this.FechaActualDTP.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.FechaActualDTP.Font = new System.Drawing.Font("Segoe UI", 13.2F);
+            this.FechaActualDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaActualDTP.Location = new System.Drawing.Point(557, 41);
+            this.FechaActualDTP.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaActualDTP.Name = "FechaActualDTP";
+            this.FechaActualDTP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.FechaActualDTP.Size = new System.Drawing.Size(187, 31);
+            this.FechaActualDTP.TabIndex = 12;
+            this.FechaActualDTP.TabStop = false;
             // 
             // label2
             // 
@@ -383,13 +389,13 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.ConfirmarContraseniaTXT);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.ContraseniaTXT);
+            this.groupBox2.Controls.Add(this.CorreoTXT);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.AceptarBTN);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox2.Location = new System.Drawing.Point(394, 252);
@@ -413,15 +419,15 @@
             this.label18.TabIndex = 38;
             this.label18.Text = "Confirmar contraseña";
             // 
-            // textBox9
+            // ConfirmarContraseniaTXT
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(12, 197);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(323, 27);
-            this.textBox9.TabIndex = 10;
+            this.ConfirmarContraseniaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ConfirmarContraseniaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmarContraseniaTXT.Location = new System.Drawing.Point(12, 197);
+            this.ConfirmarContraseniaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirmarContraseniaTXT.Name = "ConfirmarContraseniaTXT";
+            this.ConfirmarContraseniaTXT.Size = new System.Drawing.Size(323, 27);
+            this.ConfirmarContraseniaTXT.TabIndex = 10;
             // 
             // label3
             // 
@@ -447,25 +453,25 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "Correo electrónico";
             // 
-            // textBox8
+            // ContraseniaTXT
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(13, 132);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(323, 27);
-            this.textBox8.TabIndex = 9;
+            this.ContraseniaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ContraseniaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ContraseniaTXT.Location = new System.Drawing.Point(13, 132);
+            this.ContraseniaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ContraseniaTXT.Name = "ContraseniaTXT";
+            this.ContraseniaTXT.Size = new System.Drawing.Size(323, 27);
+            this.ContraseniaTXT.TabIndex = 9;
             // 
-            // textBox7
+            // CorreoTXT
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(13, 68);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(323, 27);
-            this.textBox7.TabIndex = 8;
+            this.CorreoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CorreoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CorreoTXT.Location = new System.Drawing.Point(13, 68);
+            this.CorreoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoTXT.Name = "CorreoTXT";
+            this.CorreoTXT.Size = new System.Drawing.Size(323, 27);
+            this.CorreoTXT.TabIndex = 8;
             // 
             // label17
             // 
@@ -479,33 +485,34 @@
             this.label17.TabIndex = 36;
             this.label17.Text = "Contraseña";
             // 
-            // button1
+            // AceptarBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(197, 280);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AceptarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.AceptarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AceptarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AceptarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AceptarBTN.Location = new System.Drawing.Point(197, 280);
+            this.AceptarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.AceptarBTN.Name = "AceptarBTN";
+            this.AceptarBTN.Size = new System.Drawing.Size(140, 39);
+            this.AceptarBTN.TabIndex = 11;
+            this.AceptarBTN.Text = "Aceptar";
+            this.AceptarBTN.UseVisualStyleBackColor = false;
+            this.AceptarBTN.Click += new System.EventHandler(this.AceptarBTN_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
+            this.tabPage2.Controls.Add(this.FechaModificadoTXT);
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.NombreCompletoCB);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.TablaModificarUsuarioDGV);
             this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.ModificarBTN);
+            this.tabPage2.Controls.Add(this.EliminarBTN);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -529,16 +536,16 @@
             this.label16.TabIndex = 51;
             this.label16.Text = "Fecha actual de registro";
             // 
-            // dateTimePicker2
+            // FechaModificadoTXT
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(1050, 32);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(176, 31);
-            this.dateTimePicker2.TabIndex = 50;
-            this.dateTimePicker2.TabStop = false;
+            this.FechaModificadoTXT.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaModificadoTXT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaModificadoTXT.Location = new System.Drawing.Point(1050, 32);
+            this.FechaModificadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaModificadoTXT.Name = "FechaModificadoTXT";
+            this.FechaModificadoTXT.Size = new System.Drawing.Size(176, 31);
+            this.FechaModificadoTXT.TabIndex = 50;
+            this.FechaModificadoTXT.TabStop = false;
             // 
             // label8
             // 
@@ -552,26 +559,28 @@
             this.label8.TabIndex = 49;
             this.label8.Text = "Nombre completo";
             // 
-            // comboBox1
+            // NombreCompletoCB
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(895, 85);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(331, 33);
-            this.comboBox1.TabIndex = 11;
+            this.NombreCompletoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NombreCompletoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NombreCompletoCB.FormattingEnabled = true;
+            this.NombreCompletoCB.Location = new System.Drawing.Point(895, 85);
+            this.NombreCompletoCB.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreCompletoCB.Name = "NombreCompletoCB";
+            this.NombreCompletoCB.Size = new System.Drawing.Size(331, 33);
+            this.NombreCompletoCB.TabIndex = 11;
+            this.NombreCompletoCB.SelectedIndexChanged += new System.EventHandler(this.NombreCompletoCB_SelectedIndexChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox16);
-            this.groupBox3.Controls.Add(this.textBox17);
-            this.groupBox3.Controls.Add(this.textBox18);
+            this.groupBox3.Controls.Add(this.TelefonoCelularSeleccionadoTXT);
+            this.groupBox3.Controls.Add(this.TelefonoCasaSeleccionadoTXT);
+            this.groupBox3.Controls.Add(this.SegundoApellidoSeleccionadoTXT);
+            this.groupBox3.Controls.Add(this.PrimerApellidoSeleccionadoTXT);
+            this.groupBox3.Controls.Add(this.NombreSeleccionadoTXT);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.NumeroNominaSeleccionadoTXT);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label21);
@@ -587,55 +596,55 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Información personal";
             // 
-            // textBox13
+            // TelefonoCelularSeleccionadoTXT
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(190, 253);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(147, 27);
-            this.textBox13.TabIndex = 6;
+            this.TelefonoCelularSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TelefonoCelularSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCelularSeleccionadoTXT.Location = new System.Drawing.Point(190, 253);
+            this.TelefonoCelularSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCelularSeleccionadoTXT.Name = "TelefonoCelularSeleccionadoTXT";
+            this.TelefonoCelularSeleccionadoTXT.Size = new System.Drawing.Size(147, 27);
+            this.TelefonoCelularSeleccionadoTXT.TabIndex = 6;
             // 
-            // textBox14
+            // TelefonoCasaSeleccionadoTXT
             // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Location = new System.Drawing.Point(14, 253);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(151, 27);
-            this.textBox14.TabIndex = 5;
+            this.TelefonoCasaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TelefonoCasaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCasaSeleccionadoTXT.Location = new System.Drawing.Point(14, 253);
+            this.TelefonoCasaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCasaSeleccionadoTXT.Name = "TelefonoCasaSeleccionadoTXT";
+            this.TelefonoCasaSeleccionadoTXT.Size = new System.Drawing.Size(151, 27);
+            this.TelefonoCasaSeleccionadoTXT.TabIndex = 5;
             // 
-            // textBox16
+            // SegundoApellidoSeleccionadoTXT
             // 
-            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Location = new System.Drawing.Point(190, 184);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(147, 27);
-            this.textBox16.TabIndex = 4;
+            this.SegundoApellidoSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.SegundoApellidoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SegundoApellidoSeleccionadoTXT.Location = new System.Drawing.Point(190, 184);
+            this.SegundoApellidoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.SegundoApellidoSeleccionadoTXT.Name = "SegundoApellidoSeleccionadoTXT";
+            this.SegundoApellidoSeleccionadoTXT.Size = new System.Drawing.Size(147, 27);
+            this.SegundoApellidoSeleccionadoTXT.TabIndex = 4;
             // 
-            // textBox17
+            // PrimerApellidoSeleccionadoTXT
             // 
-            this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Location = new System.Drawing.Point(14, 184);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(150, 27);
-            this.textBox17.TabIndex = 3;
+            this.PrimerApellidoSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrimerApellidoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrimerApellidoSeleccionadoTXT.Location = new System.Drawing.Point(14, 184);
+            this.PrimerApellidoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrimerApellidoSeleccionadoTXT.Name = "PrimerApellidoSeleccionadoTXT";
+            this.PrimerApellidoSeleccionadoTXT.Size = new System.Drawing.Size(150, 27);
+            this.PrimerApellidoSeleccionadoTXT.TabIndex = 3;
             // 
-            // textBox18
+            // NombreSeleccionadoTXT
             // 
-            this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox18.Location = new System.Drawing.Point(14, 117);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(323, 27);
-            this.textBox18.TabIndex = 2;
+            this.NombreSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NombreSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NombreSeleccionadoTXT.Location = new System.Drawing.Point(14, 117);
+            this.NombreSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreSeleccionadoTXT.Name = "NombreSeleccionadoTXT";
+            this.NombreSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
+            this.NombreSeleccionadoTXT.TabIndex = 2;
             // 
             // label32
             // 
@@ -661,15 +670,16 @@
             this.label30.TabIndex = 48;
             this.label30.Text = "Nombre(s)";
             // 
-            // textBox15
+            // NumeroNominaSeleccionadoTXT
             // 
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Location = new System.Drawing.Point(14, 54);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(323, 27);
-            this.textBox15.TabIndex = 1;
+            this.NumeroNominaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroNominaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroNominaSeleccionadoTXT.Location = new System.Drawing.Point(14, 54);
+            this.NumeroNominaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NumeroNominaSeleccionadoTXT.Name = "NumeroNominaSeleccionadoTXT";
+            this.NumeroNominaSeleccionadoTXT.ReadOnly = true;
+            this.NumeroNominaSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
+            this.NumeroNominaSeleccionadoTXT.TabIndex = 1;
             // 
             // label19
             // 
@@ -731,49 +741,27 @@
             this.label23.TabIndex = 42;
             this.label23.Text = "Primer apellido";
             // 
-            // dataGridView1
+            // TablaModificarUsuarioDGV
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(731, 122);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(495, 403);
-            this.dataGridView1.TabIndex = 24;
-            this.dataGridView1.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nomina";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Primer apellido";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Segundo apellido";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.TablaModificarUsuarioDGV.AllowUserToAddRows = false;
+            this.TablaModificarUsuarioDGV.AllowUserToDeleteRows = false;
+            this.TablaModificarUsuarioDGV.AllowUserToOrderColumns = true;
+            this.TablaModificarUsuarioDGV.AllowUserToResizeColumns = false;
+            this.TablaModificarUsuarioDGV.AllowUserToResizeRows = false;
+            this.TablaModificarUsuarioDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaModificarUsuarioDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaModificarUsuarioDGV.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaModificarUsuarioDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaModificarUsuarioDGV.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaModificarUsuarioDGV.Location = new System.Drawing.Point(731, 122);
+            this.TablaModificarUsuarioDGV.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaModificarUsuarioDGV.Name = "TablaModificarUsuarioDGV";
+            this.TablaModificarUsuarioDGV.ReadOnly = true;
+            this.TablaModificarUsuarioDGV.RowHeadersWidth = 51;
+            this.TablaModificarUsuarioDGV.RowTemplate.Height = 24;
+            this.TablaModificarUsuarioDGV.Size = new System.Drawing.Size(495, 403);
+            this.TablaModificarUsuarioDGV.TabIndex = 24;
+            this.TablaModificarUsuarioDGV.TabStop = false;
             // 
             // label24
             // 
@@ -787,37 +775,39 @@
             this.label24.TabIndex = 41;
             this.label24.Text = "Nombre(s)";
             // 
-            // button3
+            // ModificarBTN
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(731, 555);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 34);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ModificarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ModificarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ModificarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ModificarBTN.Location = new System.Drawing.Point(731, 555);
+            this.ModificarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.ModificarBTN.Name = "ModificarBTN";
+            this.ModificarBTN.Size = new System.Drawing.Size(156, 34);
+            this.ModificarBTN.TabIndex = 12;
+            this.ModificarBTN.Text = "Modificar";
+            this.ModificarBTN.UseVisualStyleBackColor = false;
+            this.ModificarBTN.Click += new System.EventHandler(this.ModificarBTN_Click);
             // 
-            // button2
+            // EliminarBTN
             // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1082, 555);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 34);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.EliminarBTN.BackColor = System.Drawing.Color.Crimson;
+            this.EliminarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EliminarBTN.Location = new System.Drawing.Point(1082, 555);
+            this.EliminarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.EliminarBTN.Name = "EliminarBTN";
+            this.EliminarBTN.Size = new System.Drawing.Size(145, 34);
+            this.EliminarBTN.TabIndex = 13;
+            this.EliminarBTN.Text = "Eliminar";
+            this.EliminarBTN.UseVisualStyleBackColor = false;
+            this.EliminarBTN.Click += new System.EventHandler(this.EliminarBTN_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox10);
-            this.groupBox4.Controls.Add(this.textBox11);
-            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.ConfirmarContraseniaSeleccionadoTXT);
+            this.groupBox4.Controls.Add(this.ContraseniaSeleccionadoTXT);
+            this.groupBox4.Controls.Add(this.CorreoSeleccionadoTXT);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.label25);
@@ -833,35 +823,35 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Información de ingreso";
             // 
-            // textBox10
+            // ConfirmarContraseniaSeleccionadoTXT
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(14, 187);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(323, 27);
-            this.textBox10.TabIndex = 10;
+            this.ConfirmarContraseniaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ConfirmarContraseniaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmarContraseniaSeleccionadoTXT.Location = new System.Drawing.Point(14, 187);
+            this.ConfirmarContraseniaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirmarContraseniaSeleccionadoTXT.Name = "ConfirmarContraseniaSeleccionadoTXT";
+            this.ConfirmarContraseniaSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
+            this.ConfirmarContraseniaSeleccionadoTXT.TabIndex = 10;
             // 
-            // textBox11
+            // ContraseniaSeleccionadoTXT
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Location = new System.Drawing.Point(14, 122);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(324, 27);
-            this.textBox11.TabIndex = 9;
+            this.ContraseniaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ContraseniaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ContraseniaSeleccionadoTXT.Location = new System.Drawing.Point(14, 122);
+            this.ContraseniaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ContraseniaSeleccionadoTXT.Name = "ContraseniaSeleccionadoTXT";
+            this.ContraseniaSeleccionadoTXT.Size = new System.Drawing.Size(324, 27);
+            this.ContraseniaSeleccionadoTXT.TabIndex = 9;
             // 
-            // textBox12
+            // CorreoSeleccionadoTXT
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Location = new System.Drawing.Point(14, 58);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(323, 27);
-            this.textBox12.TabIndex = 8;
+            this.CorreoSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CorreoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CorreoSeleccionadoTXT.Location = new System.Drawing.Point(14, 58);
+            this.CorreoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoSeleccionadoTXT.Name = "CorreoSeleccionadoTXT";
+            this.CorreoSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
+            this.CorreoSeleccionadoTXT.TabIndex = 8;
             // 
             // label28
             // 
@@ -883,9 +873,9 @@
             this.label26.Location = new System.Drawing.Point(10, 94);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(108, 25);
+            this.label26.Size = new System.Drawing.Size(165, 25);
             this.label26.TabIndex = 44;
-            this.label26.Text = "Contraseña";
+            this.label26.Text = "Contraseña nueva";
             // 
             // label25
             // 
@@ -895,9 +885,9 @@
             this.label25.Location = new System.Drawing.Point(10, 159);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(196, 25);
+            this.label25.Size = new System.Drawing.Size(181, 25);
             this.label25.TabIndex = 47;
-            this.label25.Text = "Confirmar contraseña";
+            this.label25.Text = "Contraseña anterior";
             // 
             // label29
             // 
@@ -1034,7 +1024,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaRegistroUsuarioDGV)).EndInit();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1044,7 +1034,7 @@
             this.tabPage2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaModificarUsuarioDGV)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1060,19 +1050,19 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox NumeroNominaTXT;
+        private System.Windows.Forms.TextBox SegundoApellidoTXT;
+        private System.Windows.Forms.TextBox PrimerApellidoTXT;
+        private System.Windows.Forms.TextBox NombreTXT;
+        private System.Windows.Forms.Button AceptarBTN;
+        private System.Windows.Forms.TextBox ConfirmarContraseniaTXT;
+        private System.Windows.Forms.TextBox ContraseniaTXT;
+        private System.Windows.Forms.TextBox CorreoTXT;
+        private System.Windows.Forms.TextBox TelefonoCelularTXT;
+        private System.Windows.Forms.TextBox TelefonoCasaTXT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaActualDTP;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel MenuContenedor;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1093,42 +1083,38 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView TablaRegistroUsuarioDGV;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox TelefonoCelularSeleccionadoTXT;
+        private System.Windows.Forms.TextBox TelefonoCasaSeleccionadoTXT;
+        private System.Windows.Forms.TextBox SegundoApellidoSeleccionadoTXT;
+        private System.Windows.Forms.TextBox PrimerApellidoSeleccionadoTXT;
+        private System.Windows.Forms.TextBox NombreSeleccionadoTXT;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox NumeroNominaSeleccionadoTXT;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView TablaModificarUsuarioDGV;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ModificarBTN;
+        private System.Windows.Forms.Button EliminarBTN;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox ConfirmarContraseniaSeleccionadoTXT;
+        private System.Windows.Forms.TextBox ContraseniaSeleccionadoTXT;
+        private System.Windows.Forms.TextBox CorreoSeleccionadoTXT;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NombreCompletoCB;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker FechaModificadoTXT;
     }
 }
