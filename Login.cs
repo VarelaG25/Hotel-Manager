@@ -7,18 +7,23 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace AAVD
 {
     public partial class Login : Form
     {
-        public int bdd { get; set; }
+        public static int IdUsuarioActual { get; set; }
         public Login()
         {
             InitializeComponent();
         }
-
+        public class LoginUsuario
+        {
+            public string Usuario { get; set; }
+            public string Contrasena { get; set; }
+        }
         private void Login_Usuario_TextChanged(object sender, EventArgs e)
         {
             label3.Visible = false;
@@ -31,22 +36,35 @@ namespace AAVD
 
         private void Login_Continuar_Click(object sender, EventArgs e)
         {
-            //var NuevoForm = new Clientes();
-            //Form ventanaActual = this.FindForm();
-            //NuevoForm.Show();
-            //NuevoForm.Size = ventanaActual.Size;
-            //NuevoForm.StartPosition = FormStartPosition.Manual;
-            //NuevoForm.Location = ventanaActual.Location;
-            //NuevoForm.Show();
-            //ventanaActual.Close();
-            //this.Hide();
+            var enlace = new EnlaceDB();
+            var tabla = new DataTable();
+            LoginUsuario login = new LoginUsuario();
+            login.Usuario = Login_Usuario.Text;
+            login.Contrasena = Login_Contrasena.Text;
+            tabla = enlace.consultarLogin(login);
 
-            //Clientes mainForm = new Clientes();
-            //mainForm.Show();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (login.Usuario == "" || login.Contrasena == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                int IdUsuario = Convert.ToInt32(tabla.Rows[0]["Id_Credenciales"]);
+                Login.IdUsuarioActual = IdUsuario;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+
+            //this.DialogResult = DialogResult.OK;
+            //this.Close();
         }
-                
+
     }
 
 }

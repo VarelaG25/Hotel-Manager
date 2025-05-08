@@ -34,43 +34,44 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label26 = new System.Windows.Forms.Label();
+            this.UsuarioActual1TXT = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.FechaActualDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.EliminarAmenidadBTN = new System.Windows.Forms.Button();
+            this.EliminarCaracteristicaBTN = new System.Windows.Forms.Button();
+            this.CampoCaracteristicasTXT = new System.Windows.Forms.TextBox();
+            this.CampoAmenidadTXT = new System.Windows.Forms.TextBox();
+            this.AgregarCaracteristicaBTN = new System.Windows.Forms.Button();
+            this.AgregarAmenidadBTN7 = new System.Windows.Forms.Button();
+            this.CaracteristicasCB = new System.Windows.Forms.CheckedListBox();
+            this.AmenidadesCB = new System.Windows.Forms.CheckedListBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.nivelHabitacion = new System.Windows.Forms.TextBox();
+            this.NivelHabitacionTXT = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.numeroCamas = new System.Windows.Forms.TextBox();
-            this.caracteristicas = new System.Windows.Forms.TextBox();
+            this.NumeroCamasTXT = new System.Windows.Forms.TextBox();
+            this.CaracteristicasTXT = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.tipoCama = new System.Windows.Forms.TextBox();
+            this.TipoCamaTXT = new System.Windows.Forms.TextBox();
             this.BTN_Registrar = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
-            this.amenidades = new System.Windows.Forms.TextBox();
-            this.precioHabitacion = new System.Windows.Forms.TextBox();
+            this.AmenidadesTXT = new System.Windows.Forms.TextBox();
+            this.PrecioTXT = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.PlayaCheckBox = new System.Windows.Forms.CheckBox();
-            this.PiscinaCheckBox = new System.Windows.Forms.CheckBox();
-            this.JardinCheckBox = new System.Windows.Forms.CheckBox();
+            this.CheckPlayaTXT = new System.Windows.Forms.CheckBox();
+            this.CheckPiscinaTXT = new System.Windows.Forms.CheckBox();
+            this.CheckJardinTXT = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cantidadPersonas = new System.Windows.Forms.TextBox();
+            this.CantidadPersonasTXT = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.tablaTipoHab = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TablaTipoHabitacion = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label40 = new System.Windows.Forms.Label();
@@ -95,7 +96,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.listaHabitaciones = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.UsuarioActual2TXT = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,6 +111,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.numeroHabitaciones = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.ciudades = new System.Windows.Forms.TextBox();
@@ -138,27 +143,19 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label46 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.label45 = new System.Windows.Forms.Label();
+            this.UsuarioActualTXT = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.TipoHabCB = new System.Windows.Forms.ComboBox();
             this.label43 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TablaTipoHabDTG = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -181,25 +178,13 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.MenuContenedor = new System.Windows.Forms.Panel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaTipoHab)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaTipoHabitacion)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -215,7 +200,7 @@
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaTipoHabDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox15.SuspendLayout();
             this.SuspendLayout();
@@ -252,9 +237,9 @@
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.groupBox10);
             this.tabPage3.Controls.Add(this.label28);
-            this.tabPage3.Controls.Add(this.dateTimePicker3);
+            this.tabPage3.Controls.Add(this.FechaActualDate);
             this.tabPage3.Controls.Add(this.groupBox9);
-            this.tabPage3.Controls.Add(this.tablaTipoHab);
+            this.tabPage3.Controls.Add(this.TablaTipoHabitacion);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
@@ -276,7 +261,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.label26);
+            this.groupBox10.Controls.Add(this.UsuarioActual1TXT);
             this.groupBox10.Controls.Add(this.pictureBox1);
             this.groupBox10.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -287,13 +272,13 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Usuario";
             // 
-            // label26
+            // UsuarioActual1TXT
             // 
-            this.label26.Location = new System.Drawing.Point(73, 44);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(131, 35);
-            this.label26.TabIndex = 13;
-            this.label26.Text = "User_123";
+            this.UsuarioActual1TXT.Location = new System.Drawing.Point(73, 44);
+            this.UsuarioActual1TXT.Name = "UsuarioActual1TXT";
+            this.UsuarioActual1TXT.Size = new System.Drawing.Size(131, 35);
+            this.UsuarioActual1TXT.TabIndex = 13;
+            this.UsuarioActual1TXT.Text = "User_123";
             // 
             // pictureBox1
             // 
@@ -317,45 +302,46 @@
             this.label28.TabIndex = 65;
             this.label28.Text = "Fecha actual de registro";
             // 
-            // dateTimePicker3
+            // FechaActualDate
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(1047, 73);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(171, 31);
-            this.dateTimePicker3.TabIndex = 64;
-            this.dateTimePicker3.TabStop = false;
+            this.FechaActualDate.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaActualDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaActualDate.Location = new System.Drawing.Point(1047, 73);
+            this.FechaActualDate.Name = "FechaActualDate";
+            this.FechaActualDate.Size = new System.Drawing.Size(171, 31);
+            this.FechaActualDate.TabIndex = 64;
+            this.FechaActualDate.TabStop = false;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.button8);
-            this.groupBox9.Controls.Add(this.button6);
-            this.groupBox9.Controls.Add(this.textBox2);
-            this.groupBox9.Controls.Add(this.textBox1);
-            this.groupBox9.Controls.Add(this.button4);
-            this.groupBox9.Controls.Add(this.button1);
-            this.groupBox9.Controls.Add(this.checkedListBox2);
-            this.groupBox9.Controls.Add(this.checkedListBox1);
+            this.groupBox9.Controls.Add(this.label47);
+            this.groupBox9.Controls.Add(this.EliminarAmenidadBTN);
+            this.groupBox9.Controls.Add(this.EliminarCaracteristicaBTN);
+            this.groupBox9.Controls.Add(this.CampoCaracteristicasTXT);
+            this.groupBox9.Controls.Add(this.CampoAmenidadTXT);
+            this.groupBox9.Controls.Add(this.AgregarCaracteristicaBTN);
+            this.groupBox9.Controls.Add(this.AgregarAmenidadBTN7);
+            this.groupBox9.Controls.Add(this.CaracteristicasCB);
+            this.groupBox9.Controls.Add(this.AmenidadesCB);
             this.groupBox9.Controls.Add(this.label31);
             this.groupBox9.Controls.Add(this.label29);
             this.groupBox9.Controls.Add(this.label32);
             this.groupBox9.Controls.Add(this.label11);
-            this.groupBox9.Controls.Add(this.nivelHabitacion);
+            this.groupBox9.Controls.Add(this.NivelHabitacionTXT);
             this.groupBox9.Controls.Add(this.label33);
-            this.groupBox9.Controls.Add(this.numeroCamas);
-            this.groupBox9.Controls.Add(this.caracteristicas);
+            this.groupBox9.Controls.Add(this.NumeroCamasTXT);
+            this.groupBox9.Controls.Add(this.CaracteristicasTXT);
             this.groupBox9.Controls.Add(this.label34);
-            this.groupBox9.Controls.Add(this.tipoCama);
+            this.groupBox9.Controls.Add(this.TipoCamaTXT);
             this.groupBox9.Controls.Add(this.BTN_Registrar);
             this.groupBox9.Controls.Add(this.label35);
-            this.groupBox9.Controls.Add(this.amenidades);
-            this.groupBox9.Controls.Add(this.precioHabitacion);
+            this.groupBox9.Controls.Add(this.AmenidadesTXT);
+            this.groupBox9.Controls.Add(this.PrecioTXT);
             this.groupBox9.Controls.Add(this.label27);
             this.groupBox9.Controls.Add(this.label36);
             this.groupBox9.Controls.Add(this.groupBox7);
             this.groupBox9.Controls.Add(this.label12);
-            this.groupBox9.Controls.Add(this.cantidadPersonas);
+            this.groupBox9.Controls.Add(this.CantidadPersonasTXT);
             this.groupBox9.Controls.Add(this.label17);
             this.groupBox9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.ForeColor = System.Drawing.Color.SteelBlue;
@@ -365,6 +351,113 @@
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Informacion del tipo de habitacion";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label47.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label47.Location = new System.Drawing.Point(231, 340);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(130, 12);
+            this.label47.TabIndex = 73;
+            this.label47.Text = "*Registro minimo $800.00";
+            // 
+            // EliminarAmenidadBTN
+            // 
+            this.EliminarAmenidadBTN.BackColor = System.Drawing.Color.Crimson;
+            this.EliminarAmenidadBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarAmenidadBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarAmenidadBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EliminarAmenidadBTN.Location = new System.Drawing.Point(732, 140);
+            this.EliminarAmenidadBTN.Name = "EliminarAmenidadBTN";
+            this.EliminarAmenidadBTN.Size = new System.Drawing.Size(251, 41);
+            this.EliminarAmenidadBTN.TabIndex = 72;
+            this.EliminarAmenidadBTN.Text = "Eliminar";
+            this.EliminarAmenidadBTN.UseVisualStyleBackColor = false;
+            // 
+            // EliminarCaracteristicaBTN
+            // 
+            this.EliminarCaracteristicaBTN.BackColor = System.Drawing.Color.Crimson;
+            this.EliminarCaracteristicaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarCaracteristicaBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarCaracteristicaBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EliminarCaracteristicaBTN.Location = new System.Drawing.Point(732, 416);
+            this.EliminarCaracteristicaBTN.Name = "EliminarCaracteristicaBTN";
+            this.EliminarCaracteristicaBTN.Size = new System.Drawing.Size(251, 41);
+            this.EliminarCaracteristicaBTN.TabIndex = 71;
+            this.EliminarCaracteristicaBTN.Text = "Eliminar";
+            this.EliminarCaracteristicaBTN.UseVisualStyleBackColor = false;
+            // 
+            // CampoCaracteristicasTXT
+            // 
+            this.CampoCaracteristicasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CampoCaracteristicasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CampoCaracteristicasTXT.Location = new System.Drawing.Point(732, 340);
+            this.CampoCaracteristicasTXT.MaxLength = 50;
+            this.CampoCaracteristicasTXT.Name = "CampoCaracteristicasTXT";
+            this.CampoCaracteristicasTXT.Size = new System.Drawing.Size(251, 27);
+            this.CampoCaracteristicasTXT.TabIndex = 70;
+            // 
+            // CampoAmenidadTXT
+            // 
+            this.CampoAmenidadTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CampoAmenidadTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CampoAmenidadTXT.Location = new System.Drawing.Point(732, 64);
+            this.CampoAmenidadTXT.MaxLength = 50;
+            this.CampoAmenidadTXT.Name = "CampoAmenidadTXT";
+            this.CampoAmenidadTXT.Size = new System.Drawing.Size(251, 27);
+            this.CampoAmenidadTXT.TabIndex = 69;
+            // 
+            // AgregarCaracteristicaBTN
+            // 
+            this.AgregarCaracteristicaBTN.BackColor = System.Drawing.Color.MidnightBlue;
+            this.AgregarCaracteristicaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarCaracteristicaBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarCaracteristicaBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AgregarCaracteristicaBTN.Location = new System.Drawing.Point(732, 373);
+            this.AgregarCaracteristicaBTN.Name = "AgregarCaracteristicaBTN";
+            this.AgregarCaracteristicaBTN.Size = new System.Drawing.Size(251, 41);
+            this.AgregarCaracteristicaBTN.TabIndex = 68;
+            this.AgregarCaracteristicaBTN.Text = "Agregar";
+            this.AgregarCaracteristicaBTN.UseVisualStyleBackColor = false;
+            this.AgregarCaracteristicaBTN.Click += new System.EventHandler(this.AgregarCaracteristicaBTN_Click);
+            // 
+            // AgregarAmenidadBTN7
+            // 
+            this.AgregarAmenidadBTN7.BackColor = System.Drawing.Color.MidnightBlue;
+            this.AgregarAmenidadBTN7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarAmenidadBTN7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarAmenidadBTN7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AgregarAmenidadBTN7.Location = new System.Drawing.Point(732, 97);
+            this.AgregarAmenidadBTN7.Name = "AgregarAmenidadBTN7";
+            this.AgregarAmenidadBTN7.Size = new System.Drawing.Size(251, 41);
+            this.AgregarAmenidadBTN7.TabIndex = 67;
+            this.AgregarAmenidadBTN7.Text = "Agregar";
+            this.AgregarAmenidadBTN7.UseVisualStyleBackColor = false;
+            this.AgregarAmenidadBTN7.Click += new System.EventHandler(this.AgregarAmenidadBTN7_Click);
+            // 
+            // CaracteristicasCB
+            // 
+            this.CaracteristicasCB.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.CaracteristicasCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.CaracteristicasCB.FormattingEnabled = true;
+            this.CaracteristicasCB.Location = new System.Drawing.Point(377, 340);
+            this.CaracteristicasCB.Name = "CaracteristicasCB";
+            this.CaracteristicasCB.Size = new System.Drawing.Size(346, 114);
+            this.CaracteristicasCB.TabIndex = 66;
+            this.CaracteristicasCB.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CaracteristicasCB_ItemCheck);
+            // 
+            // AmenidadesCB
+            // 
+            this.AmenidadesCB.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.AmenidadesCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.AmenidadesCB.FormattingEnabled = true;
+            this.AmenidadesCB.Location = new System.Drawing.Point(378, 64);
+            this.AmenidadesCB.Name = "AmenidadesCB";
+            this.AmenidadesCB.Size = new System.Drawing.Size(346, 114);
+            this.AmenidadesCB.TabIndex = 65;
+            this.AmenidadesCB.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.AmenidadesCB_ItemCheck);
             // 
             // label31
             // 
@@ -410,14 +503,15 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "*Por noche por persona";
             // 
-            // nivelHabitacion
+            // NivelHabitacionTXT
             // 
-            this.nivelHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.nivelHabitacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nivelHabitacion.Location = new System.Drawing.Point(11, 61);
-            this.nivelHabitacion.Name = "nivelHabitacion";
-            this.nivelHabitacion.Size = new System.Drawing.Size(350, 27);
-            this.nivelHabitacion.TabIndex = 1;
+            this.NivelHabitacionTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NivelHabitacionTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NivelHabitacionTXT.Location = new System.Drawing.Point(11, 61);
+            this.NivelHabitacionTXT.MaxLength = 50;
+            this.NivelHabitacionTXT.Name = "NivelHabitacionTXT";
+            this.NivelHabitacionTXT.Size = new System.Drawing.Size(350, 27);
+            this.NivelHabitacionTXT.TabIndex = 1;
             // 
             // label33
             // 
@@ -430,24 +524,26 @@
             this.label33.TabIndex = 54;
             this.label33.Text = "Número de camas";
             // 
-            // numeroCamas
+            // NumeroCamasTXT
             // 
-            this.numeroCamas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.numeroCamas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numeroCamas.Location = new System.Drawing.Point(11, 138);
-            this.numeroCamas.Name = "numeroCamas";
-            this.numeroCamas.Size = new System.Drawing.Size(350, 27);
-            this.numeroCamas.TabIndex = 2;
+            this.NumeroCamasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroCamasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroCamasTXT.Location = new System.Drawing.Point(11, 138);
+            this.NumeroCamasTXT.MaxLength = 1;
+            this.NumeroCamasTXT.Name = "NumeroCamasTXT";
+            this.NumeroCamasTXT.Size = new System.Drawing.Size(350, 27);
+            this.NumeroCamasTXT.TabIndex = 2;
             // 
-            // caracteristicas
+            // CaracteristicasTXT
             // 
-            this.caracteristicas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.caracteristicas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.caracteristicas.Location = new System.Drawing.Point(377, 460);
-            this.caracteristicas.Multiline = true;
-            this.caracteristicas.Name = "caracteristicas";
-            this.caracteristicas.Size = new System.Drawing.Size(347, 114);
-            this.caracteristicas.TabIndex = 11;
+            this.CaracteristicasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CaracteristicasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CaracteristicasTXT.Location = new System.Drawing.Point(377, 460);
+            this.CaracteristicasTXT.Multiline = true;
+            this.CaracteristicasTXT.Name = "CaracteristicasTXT";
+            this.CaracteristicasTXT.ReadOnly = true;
+            this.CaracteristicasTXT.Size = new System.Drawing.Size(347, 114);
+            this.CaracteristicasTXT.TabIndex = 11;
             // 
             // label34
             // 
@@ -460,14 +556,15 @@
             this.label34.TabIndex = 55;
             this.label34.Text = "Tipo de cama";
             // 
-            // tipoCama
+            // TipoCamaTXT
             // 
-            this.tipoCama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.tipoCama.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tipoCama.Location = new System.Drawing.Point(11, 222);
-            this.tipoCama.Name = "tipoCama";
-            this.tipoCama.Size = new System.Drawing.Size(347, 27);
-            this.tipoCama.TabIndex = 3;
+            this.TipoCamaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TipoCamaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TipoCamaTXT.Location = new System.Drawing.Point(11, 222);
+            this.TipoCamaTXT.MaxLength = 50;
+            this.TipoCamaTXT.Name = "TipoCamaTXT";
+            this.TipoCamaTXT.Size = new System.Drawing.Size(347, 27);
+            this.TipoCamaTXT.TabIndex = 3;
             // 
             // BTN_Registrar
             // 
@@ -481,6 +578,7 @@
             this.BTN_Registrar.TabIndex = 12;
             this.BTN_Registrar.Text = "Registrar";
             this.BTN_Registrar.UseVisualStyleBackColor = false;
+            this.BTN_Registrar.Click += new System.EventHandler(this.BTN_Registrar_Click);
             // 
             // label35
             // 
@@ -493,24 +591,26 @@
             this.label35.TabIndex = 56;
             this.label35.Text = "Precio";
             // 
-            // amenidades
+            // AmenidadesTXT
             // 
-            this.amenidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.amenidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.amenidades.Location = new System.Drawing.Point(377, 184);
-            this.amenidades.Multiline = true;
-            this.amenidades.Name = "amenidades";
-            this.amenidades.Size = new System.Drawing.Size(347, 114);
-            this.amenidades.TabIndex = 10;
+            this.AmenidadesTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.AmenidadesTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AmenidadesTXT.Location = new System.Drawing.Point(377, 184);
+            this.AmenidadesTXT.Multiline = true;
+            this.AmenidadesTXT.Name = "AmenidadesTXT";
+            this.AmenidadesTXT.ReadOnly = true;
+            this.AmenidadesTXT.Size = new System.Drawing.Size(347, 114);
+            this.AmenidadesTXT.TabIndex = 10;
             // 
-            // precioHabitacion
+            // PrecioTXT
             // 
-            this.precioHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.precioHabitacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.precioHabitacion.Location = new System.Drawing.Point(11, 301);
-            this.precioHabitacion.Name = "precioHabitacion";
-            this.precioHabitacion.Size = new System.Drawing.Size(348, 27);
-            this.precioHabitacion.TabIndex = 4;
+            this.PrecioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrecioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioTXT.Location = new System.Drawing.Point(11, 301);
+            this.PrecioTXT.MaxLength = 10;
+            this.PrecioTXT.Name = "PrecioTXT";
+            this.PrecioTXT.Size = new System.Drawing.Size(348, 27);
+            this.PrecioTXT.TabIndex = 4;
             // 
             // label27
             // 
@@ -536,9 +636,9 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.PlayaCheckBox);
-            this.groupBox7.Controls.Add(this.PiscinaCheckBox);
-            this.groupBox7.Controls.Add(this.JardinCheckBox);
+            this.groupBox7.Controls.Add(this.CheckPlayaTXT);
+            this.groupBox7.Controls.Add(this.CheckPiscinaTXT);
+            this.groupBox7.Controls.Add(this.CheckJardinTXT);
             this.groupBox7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.groupBox7.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox7.Location = new System.Drawing.Point(12, 461);
@@ -548,38 +648,38 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Habitacion con vista a";
             // 
-            // PlayaCheckBox
+            // CheckPlayaTXT
             // 
-            this.PlayaCheckBox.AutoSize = true;
-            this.PlayaCheckBox.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.PlayaCheckBox.Location = new System.Drawing.Point(16, 35);
-            this.PlayaCheckBox.Name = "PlayaCheckBox";
-            this.PlayaCheckBox.Size = new System.Drawing.Size(77, 29);
-            this.PlayaCheckBox.TabIndex = 7;
-            this.PlayaCheckBox.Text = "Playa";
-            this.PlayaCheckBox.UseVisualStyleBackColor = true;
+            this.CheckPlayaTXT.AutoSize = true;
+            this.CheckPlayaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.CheckPlayaTXT.Location = new System.Drawing.Point(16, 35);
+            this.CheckPlayaTXT.Name = "CheckPlayaTXT";
+            this.CheckPlayaTXT.Size = new System.Drawing.Size(77, 29);
+            this.CheckPlayaTXT.TabIndex = 7;
+            this.CheckPlayaTXT.Text = "Playa";
+            this.CheckPlayaTXT.UseVisualStyleBackColor = true;
             // 
-            // PiscinaCheckBox
+            // CheckPiscinaTXT
             // 
-            this.PiscinaCheckBox.AutoSize = true;
-            this.PiscinaCheckBox.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.PiscinaCheckBox.Location = new System.Drawing.Point(16, 70);
-            this.PiscinaCheckBox.Name = "PiscinaCheckBox";
-            this.PiscinaCheckBox.Size = new System.Drawing.Size(90, 29);
-            this.PiscinaCheckBox.TabIndex = 8;
-            this.PiscinaCheckBox.Text = "Piscina";
-            this.PiscinaCheckBox.UseVisualStyleBackColor = true;
+            this.CheckPiscinaTXT.AutoSize = true;
+            this.CheckPiscinaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.CheckPiscinaTXT.Location = new System.Drawing.Point(16, 70);
+            this.CheckPiscinaTXT.Name = "CheckPiscinaTXT";
+            this.CheckPiscinaTXT.Size = new System.Drawing.Size(90, 29);
+            this.CheckPiscinaTXT.TabIndex = 8;
+            this.CheckPiscinaTXT.Text = "Piscina";
+            this.CheckPiscinaTXT.UseVisualStyleBackColor = true;
             // 
-            // JardinCheckBox
+            // CheckJardinTXT
             // 
-            this.JardinCheckBox.AutoSize = true;
-            this.JardinCheckBox.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.JardinCheckBox.Location = new System.Drawing.Point(16, 101);
-            this.JardinCheckBox.Name = "JardinCheckBox";
-            this.JardinCheckBox.Size = new System.Drawing.Size(83, 29);
-            this.JardinCheckBox.TabIndex = 9;
-            this.JardinCheckBox.Text = "Jardin";
-            this.JardinCheckBox.UseVisualStyleBackColor = true;
+            this.CheckJardinTXT.AutoSize = true;
+            this.CheckJardinTXT.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.CheckJardinTXT.Location = new System.Drawing.Point(16, 101);
+            this.CheckJardinTXT.Name = "CheckJardinTXT";
+            this.CheckJardinTXT.Size = new System.Drawing.Size(83, 29);
+            this.CheckJardinTXT.TabIndex = 9;
+            this.CheckJardinTXT.Text = "Jardin";
+            this.CheckJardinTXT.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -592,14 +692,15 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "*Por habitacion";
             // 
-            // cantidadPersonas
+            // CantidadPersonasTXT
             // 
-            this.cantidadPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.cantidadPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cantidadPersonas.Location = new System.Drawing.Point(11, 398);
-            this.cantidadPersonas.Name = "cantidadPersonas";
-            this.cantidadPersonas.Size = new System.Drawing.Size(348, 27);
-            this.cantidadPersonas.TabIndex = 5;
+            this.CantidadPersonasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CantidadPersonasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CantidadPersonasTXT.Location = new System.Drawing.Point(11, 398);
+            this.CantidadPersonasTXT.MaxLength = 1;
+            this.CantidadPersonasTXT.Name = "CantidadPersonasTXT";
+            this.CantidadPersonasTXT.Size = new System.Drawing.Size(348, 27);
+            this.CantidadPersonasTXT.TabIndex = 5;
             // 
             // label17
             // 
@@ -611,84 +712,25 @@
             this.label17.TabIndex = 40;
             this.label17.Text = "Caracteristicas";
             // 
-            // tablaTipoHab
+            // TablaTipoHabitacion
             // 
-            this.tablaTipoHab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.tablaTipoHab.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.tablaTipoHab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaTipoHab.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.tablaTipoHab.GridColor = System.Drawing.Color.MidnightBlue;
-            this.tablaTipoHab.Location = new System.Drawing.Point(1047, 179);
-            this.tablaTipoHab.Name = "tablaTipoHab";
-            this.tablaTipoHab.RowHeadersWidth = 51;
-            this.tablaTipoHab.RowTemplate.Height = 24;
-            this.tablaTipoHab.Size = new System.Drawing.Size(382, 639);
-            this.tablaTipoHab.TabIndex = 61;
-            this.tablaTipoHab.TabStop = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nivel";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 81;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "# de camas";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 132;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo de camas";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 159;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "# de personas";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 155;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Frente a";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 106;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Caracteristicas";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Amenidades";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 142;
+            this.TablaTipoHabitacion.AllowUserToAddRows = false;
+            this.TablaTipoHabitacion.AllowUserToDeleteRows = false;
+            this.TablaTipoHabitacion.AllowUserToResizeColumns = false;
+            this.TablaTipoHabitacion.AllowUserToResizeRows = false;
+            this.TablaTipoHabitacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaTipoHabitacion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaTipoHabitacion.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaTipoHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaTipoHabitacion.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaTipoHabitacion.Location = new System.Drawing.Point(1047, 179);
+            this.TablaTipoHabitacion.Name = "TablaTipoHabitacion";
+            this.TablaTipoHabitacion.ReadOnly = true;
+            this.TablaTipoHabitacion.RowHeadersWidth = 51;
+            this.TablaTipoHabitacion.RowTemplate.Height = 24;
+            this.TablaTipoHabitacion.Size = new System.Drawing.Size(382, 639);
+            this.TablaTipoHabitacion.TabIndex = 61;
+            this.TablaTipoHabitacion.TabStop = false;
             // 
             // label10
             // 
@@ -968,7 +1010,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.UsuarioActual2TXT);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -979,13 +1021,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuario";
             // 
-            // label1
+            // UsuarioActual2TXT
             // 
-            this.label1.Location = new System.Drawing.Point(73, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 35);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "User_123";
+            this.UsuarioActual2TXT.Location = new System.Drawing.Point(73, 44);
+            this.UsuarioActual2TXT.Name = "UsuarioActual2TXT";
+            this.UsuarioActual2TXT.Size = new System.Drawing.Size(131, 35);
+            this.UsuarioActual2TXT.TabIndex = 13;
+            this.UsuarioActual2TXT.Text = "User_123";
             // 
             // pictureBox2
             // 
@@ -1138,6 +1180,51 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Información general";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Crimson;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button9.Location = new System.Drawing.Point(17, 708);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(215, 41);
+            this.button9.TabIndex = 75;
+            this.button9.Text = "Eliminar";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(17, 632);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(215, 27);
+            this.textBox3.TabIndex = 74;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button10.Location = new System.Drawing.Point(17, 665);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(215, 41);
+            this.button10.TabIndex = 73;
+            this.button10.Text = "Agregar";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.checkedListBox3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(17, 527);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(211, 92);
+            this.checkedListBox3.TabIndex = 67;
             // 
             // numeroHabitaciones
             // 
@@ -1429,11 +1516,11 @@
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.label44);
-            this.tabPage2.Controls.Add(this.comboBox6);
+            this.tabPage2.Controls.Add(this.TipoHabCB);
             this.tabPage2.Controls.Add(this.label43);
             this.tabPage2.Controls.Add(this.groupBox11);
             this.tabPage2.Controls.Add(this.comboBox5);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.TablaTipoHabDTG);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.dateTimePicker4);
             this.tabPage2.Controls.Add(this.label8);
@@ -1460,7 +1547,7 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.label45);
+            this.groupBox12.Controls.Add(this.UsuarioActualTXT);
             this.groupBox12.Controls.Add(this.pictureBox3);
             this.groupBox12.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -1471,13 +1558,13 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Usuario";
             // 
-            // label45
+            // UsuarioActualTXT
             // 
-            this.label45.Location = new System.Drawing.Point(73, 44);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(131, 35);
-            this.label45.TabIndex = 13;
-            this.label45.Text = "User_123";
+            this.UsuarioActualTXT.Location = new System.Drawing.Point(73, 44);
+            this.UsuarioActualTXT.Name = "UsuarioActualTXT";
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(131, 35);
+            this.UsuarioActualTXT.TabIndex = 13;
+            this.UsuarioActualTXT.Text = "User_123";
             // 
             // pictureBox3
             // 
@@ -1527,15 +1614,16 @@
             this.label44.TabIndex = 57;
             this.label44.Text = "Seleccionar tipo de habitacion";
             // 
-            // comboBox6
+            // TipoHabCB
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox6.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(753, 773);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(269, 33);
-            this.comboBox6.TabIndex = 8;
+            this.TipoHabCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TipoHabCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoHabCB.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoHabCB.FormattingEnabled = true;
+            this.TipoHabCB.Location = new System.Drawing.Point(753, 773);
+            this.TipoHabCB.Name = "TipoHabCB";
+            this.TipoHabCB.Size = new System.Drawing.Size(269, 33);
+            this.TipoHabCB.TabIndex = 8;
             // 
             // label43
             // 
@@ -1589,6 +1677,7 @@
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(6, 73);
@@ -1599,6 +1688,7 @@
             // comboBox5
             // 
             this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(22, 773);
@@ -1606,84 +1696,25 @@
             this.comboBox5.Size = new System.Drawing.Size(269, 33);
             this.comboBox5.TabIndex = 3;
             // 
-            // dataGridView2
+            // TablaTipoHabDTG
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20});
-            this.dataGridView2.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(753, 319);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(671, 402);
-            this.dataGridView2.TabIndex = 19;
-            this.dataGridView2.TabStop = false;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Nivel";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 81;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "# de camas";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 132;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Tipo de camas";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 159;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Precio";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 90;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "# de personas";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 155;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "Frente a";
-            this.Column18.MinimumWidth = 6;
-            this.Column18.Name = "Column18";
-            this.Column18.Width = 106;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "Caracteristicas";
-            this.Column19.MinimumWidth = 6;
-            this.Column19.Name = "Column19";
-            this.Column19.Width = 160;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "Amenidades";
-            this.Column20.MinimumWidth = 6;
-            this.Column20.Name = "Column20";
-            this.Column20.Width = 142;
+            this.TablaTipoHabDTG.AllowUserToAddRows = false;
+            this.TablaTipoHabDTG.AllowUserToDeleteRows = false;
+            this.TablaTipoHabDTG.AllowUserToResizeColumns = false;
+            this.TablaTipoHabDTG.AllowUserToResizeRows = false;
+            this.TablaTipoHabDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaTipoHabDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaTipoHabDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaTipoHabDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaTipoHabDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaTipoHabDTG.Location = new System.Drawing.Point(753, 319);
+            this.TablaTipoHabDTG.Name = "TablaTipoHabDTG";
+            this.TablaTipoHabDTG.ReadOnly = true;
+            this.TablaTipoHabDTG.RowHeadersWidth = 51;
+            this.TablaTipoHabDTG.RowTemplate.Height = 24;
+            this.TablaTipoHabDTG.Size = new System.Drawing.Size(671, 402);
+            this.TablaTipoHabDTG.TabIndex = 19;
+            this.TablaTipoHabDTG.TabStop = false;
             // 
             // label14
             // 
@@ -1869,6 +1900,7 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(6, 73);
@@ -1894,143 +1926,6 @@
             this.MenuContenedor.Name = "MenuContenedor";
             this.MenuContenedor.Size = new System.Drawing.Size(1508, 74);
             this.MenuContenedor.TabIndex = 25;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.checkedListBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            ""});
-            this.checkedListBox1.Location = new System.Drawing.Point(378, 64);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(346, 114);
-            this.checkedListBox1.TabIndex = 65;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.checkedListBox2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(377, 340);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(346, 114);
-            this.checkedListBox2.TabIndex = 66;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(732, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 41);
-            this.button1.TabIndex = 67;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(732, 373);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(251, 41);
-            this.button4.TabIndex = 68;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(732, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 27);
-            this.textBox1.TabIndex = 69;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(732, 340);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 27);
-            this.textBox2.TabIndex = 70;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Crimson;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(732, 416);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(251, 41);
-            this.button6.TabIndex = 71;
-            this.button6.Text = "Eliminar";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Crimson;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(732, 140);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(251, 41);
-            this.button8.TabIndex = 72;
-            this.button8.Text = "Eliminar";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // checkedListBox3
-            // 
-            this.checkedListBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.checkedListBox3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(17, 527);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(211, 92);
-            this.checkedListBox3.TabIndex = 67;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Crimson;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(17, 708);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(215, 41);
-            this.button9.TabIndex = 75;
-            this.button9.Text = "Eliminar";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(17, 632);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 27);
-            this.textBox3.TabIndex = 74;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(17, 665);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(215, 41);
-            this.button10.TabIndex = 73;
-            this.button10.Text = "Agregar";
-            this.button10.UseVisualStyleBackColor = false;
             // 
             // Hoteles
             // 
@@ -2058,7 +1953,7 @@
             this.groupBox9.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaTipoHab)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaTipoHabitacion)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -2083,7 +1978,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaTipoHabDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
@@ -2127,19 +2022,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridView TablaTipoHabDTG;
         private System.Windows.Forms.Panel MenuContenedor;
         private System.Windows.Forms.TextBox nombreHotel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UsuarioActual2TXT;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label6;
@@ -2164,37 +2051,29 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn País;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView tablaTipoHab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridView TablaTipoHabitacion;
         private System.Windows.Forms.Button BTN_Registrar;
-        private System.Windows.Forms.TextBox amenidades;
+        private System.Windows.Forms.TextBox AmenidadesTXT;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.CheckBox PlayaCheckBox;
-        private System.Windows.Forms.CheckBox PiscinaCheckBox;
-        private System.Windows.Forms.CheckBox JardinCheckBox;
-        private System.Windows.Forms.TextBox cantidadPersonas;
+        private System.Windows.Forms.CheckBox CheckPlayaTXT;
+        private System.Windows.Forms.CheckBox CheckPiscinaTXT;
+        private System.Windows.Forms.CheckBox CheckJardinTXT;
+        private System.Windows.Forms.TextBox CantidadPersonasTXT;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox precioHabitacion;
+        private System.Windows.Forms.TextBox PrecioTXT;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox tipoCama;
+        private System.Windows.Forms.TextBox TipoCamaTXT;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox numeroCamas;
+        private System.Windows.Forms.TextBox NumeroCamasTXT;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox nivelHabitacion;
+        private System.Windows.Forms.TextBox NivelHabitacionTXT;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox caracteristicas;
+        private System.Windows.Forms.TextBox CaracteristicasTXT;
         private System.Windows.Forms.TextBox serviciosAdicionales;
         private System.Windows.Forms.TextBox habitacionesTotales;
         private System.Windows.Forms.Label label24;
@@ -2220,10 +2099,10 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label UsuarioActual1TXT;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker FechaActualDate;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label31;
@@ -2232,29 +2111,30 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox TipoHabCB;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label UsuarioActualTXT;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox ciudades;
         private System.Windows.Forms.TextBox estado;
         private System.Windows.Forms.TextBox pais;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckedListBox AmenidadesCB;
+        private System.Windows.Forms.TextBox CampoAmenidadTXT;
+        private System.Windows.Forms.Button AgregarCaracteristicaBTN;
+        private System.Windows.Forms.Button AgregarAmenidadBTN7;
+        private System.Windows.Forms.CheckedListBox CaracteristicasCB;
+        private System.Windows.Forms.Button EliminarAmenidadBTN;
+        private System.Windows.Forms.Button EliminarCaracteristicaBTN;
+        private System.Windows.Forms.TextBox CampoCaracteristicasTXT;
         private System.Windows.Forms.CheckedListBox checkedListBox3;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label47;
     }
 }

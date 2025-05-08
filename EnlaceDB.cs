@@ -48,16 +48,7 @@ namespace AAVD
 
         private static void conectar()
         {
-            /*
-			Para que funcione el ConfigurationManager
-			en la sección de "Referencias" de su proyecto, en el "Solution Explorer"
-			dar clic al botón derecho del mouse y dar clic a "Add Reference"
-			Luego elegir la opción System.Configuration
-			
-			tal como lo vimos en clase.
-			*/
             string cnn = ConfigurationManager.ConnectionStrings["BaseDatos"].ToString(); 
-			// Cambiar Grupo01 por el que ustedes hayan definido en el App.Confif
             _conexion = new SqlConnection(cnn);
             _conexion.Open();
         }
@@ -65,80 +56,7 @@ namespace AAVD
         {
             _conexion.Close();
         }
-
-        public bool Autentificar(string us, string ps)
-        {
-            bool isValid = false;
-            try
-            {
-                conectar();
-                string qry = "SP_ValidaUser";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 9000;
-
-                var parametro1 = _comandosql.Parameters.Add("@u", SqlDbType.Char, 20);
-                parametro1.Value = us;
-                var parametro2 = _comandosql.Parameters.Add("@p", SqlDbType.Char, 20);
-                parametro2.Value = ps;
-
-                _adaptador.SelectCommand = _comandosql;
-                _adaptador.Fill(_tabla);
-
-                if(_tabla.Rows.Count > 0)
-                {
-                    isValid = true;
-                }
-
-            }
-            catch(SqlException e)
-            {
-                isValid = false;
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return isValid;
-        }
-
-        public DataTable get_Users()
-        {
-            var msg = "";
-            DataTable tabla = new DataTable();
-            try
-            {
-                conectar();
-				// Ejemplo de cómo ejecutar un query, 
-				// PERO lo correcto es siempre usar SP para cualquier consulta a la base de datos
-                string qry = "Select Nombre, email, Fecha_modif from Usuarios where Activo = 0;";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.Text;
-						// Esta opción solo la podrían utilizar si hacen un EXEC al SP concatenando los parámetros.
-                _comandosql.CommandTimeout = 1200;
-
-                _adaptador.SelectCommand = _comandosql;
-                _adaptador.Fill(tabla);
-
-            }
-            catch (SqlException e)
-            {
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return tabla;
-        }
-
-		// Ejemplo de método para recibir una consulta en forma de tabla
-		// Cuando el SP ejecutará un SELECT
-        public DataTable ConsultarUsuarios(/*string opc*/)
+        public DataTable ConsultarUsuarios()
         {
             var msg = "";
             DataTable tabla = new DataTable();
@@ -150,13 +68,36 @@ namespace AAVD
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                //var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
-                //parametro1.Value = ;
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
 
+            return tabla;
+        } 
+        public DataTable ConsultarUbicacion()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarUbicacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
 
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(tabla);
-                // la ejecución del SP espera que regrese datos en formato tabla
             }
             catch (SqlException e)
             {
@@ -171,7 +112,69 @@ namespace AAVD
 
             return tabla;
         }
+        public DataTable ConsultarBarraUsuario()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarBarraUsuario";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
 
+                var Id_Credencial = Login.IdUsuarioActual;
+                _comandosql.Parameters.AddWithValue("@Id_Credenciales", Id_Credencial);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarLogin(Login.LoginUsuario param)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarLogin";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@correoUsuario", param.Usuario);
+                _comandosql.Parameters.AddWithValue("@contraseniaUsuario", param.Contrasena);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public DataTable consultarUsuarioEspecifico(int NumeroNomina)
         {
             var msg = "";
@@ -188,7 +191,6 @@ namespace AAVD
 
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(tabla);
-                // la ejecución del SP espera que regrese datos en formato tabla
             }
             catch (SqlException e)
             {
@@ -203,47 +205,148 @@ namespace AAVD
 
             return tabla;
         }
-
-        // Ejemplo de método para ejecutar un SP que no se espera que regrese información, 
-        // solo que ejecute ya sea un INSERT, UPDATE o DELETE
-        public bool Add_Deptos(string opc, string depto)
+        public DataTable consultarUsuarioLogeado(int Id_Credenciales)
         {
             var msg = "";
-            var add = true;
+            DataTable tabla = new DataTable();
             try
             {
                 conectar();
-                string qry = "sp_Gestiona_Deptos";
+                string qry = "SP_ConsultarUsuarioLogeado";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
-                parametro1.Value = opc;
-                var parametro2 = _comandosql.Parameters.Add("@Nombre", SqlDbType.VarChar, 20);
-                parametro2.Value = depto;
+                _comandosql.Parameters.AddWithValue("@Id_Credenciales", Id_Credenciales);
 
-                _adaptador.InsertCommand = _comandosql;
-				// También se tienen las propiedades del adaptador: UpdateCommand  y DeleteCommand
-                
-                _comandosql.ExecuteNonQuery();
-
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
             }
             catch (SqlException e)
             {
-                add = false;
                 msg = "Excepción de base de datos: \n";
                 msg += e.Message;
                 MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             finally
             {
-                desconectar();                
+                desconectar();
             }
 
-            return add;
+            return tabla;
         }
+        public DataTable consultarTipoHabitacion()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarTipoHabitacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
 
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarAmenidad()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarAmenidad";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarCaracteristica()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarCaracteristica";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarCliente()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarCliente";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public bool Insertar_Usuario(Usuario.UsuarioDatos param)
         {
             var msg = "";
@@ -263,6 +366,7 @@ namespace AAVD
                 _comandosql.Parameters.AddWithValue("@segundoApellido", param.SegundoApellido);
                 _comandosql.Parameters.AddWithValue("@fechaRegistroUsuario", param.FechaRegistroUsuario);
                 _comandosql.Parameters.AddWithValue("@fechaModificacionUsuario", param.FechaModificacionUsuario);
+                _comandosql.Parameters.AddWithValue("@Id_Admin", param.Id_Admin);
 
                 // Parámetros para la tabla InicioSesion
                 _comandosql.Parameters.AddWithValue("@correoUsuario", param.CorreoUsuario);
@@ -271,6 +375,277 @@ namespace AAVD
                 // Parámetros para la tabla Telefono
                 _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);
                 _comandosql.Parameters.AddWithValue("@telefonoCasa", param.TelefonoCasa);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_Cliente(Clientes.ClienteDatos param)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarCliente";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Usuario", param.Id_Usuario);
+                _comandosql.Parameters.AddWithValue("@Id_Ubicacion", param.Id_Ubicacion);
+                _comandosql.Parameters.AddWithValue("@nombreCliente", param.Nombre);
+                _comandosql.Parameters.AddWithValue("@primerApellidoCliente", param.PrimerApellido);
+                _comandosql.Parameters.AddWithValue("@segundoApellidoCliente", param.SegundoApellido);
+                _comandosql.Parameters.AddWithValue("@fechaNacimientoCliente", param.FechaNacimiento);
+                _comandosql.Parameters.AddWithValue("@estadoCivil", param.EstadoCivil);
+                _comandosql.Parameters.AddWithValue("@rfcCliente", param.RFC);
+                _comandosql.Parameters.AddWithValue("@fechaRegistroCliente", param.FechaRegistro);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_TipoHab(Hoteles.TipoHab param, out int Id_TipoHab)
+        {
+            var msg = "";
+            var add = true;
+            Id_TipoHab = -1;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarTipoHabitacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@nivelHabitacion", param.nivelHabitacion);
+                _comandosql.Parameters.AddWithValue("@numeroCamas", param.numeroCamas);
+                _comandosql.Parameters.AddWithValue("@tipoCama", param.tipoCama);
+                _comandosql.Parameters.AddWithValue("@precio", param.precio);
+                _comandosql.Parameters.AddWithValue("@numeroPersonas", param.numeroPersonas);
+                _comandosql.Parameters.AddWithValue("@frenteA", param.frenteA);
+
+                SqlParameter outputParam = new SqlParameter("@ExtraidoId_TipoHab", SqlDbType.Int);
+                outputParam.Direction = ParameterDirection.Output;
+                _comandosql.Parameters.Add(outputParam);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+
+                Id_TipoHab = Convert.ToInt32(outputParam.Value); 
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_Ubicacion(Clientes.ClienteDatos param, out int Id_Ubicacion)
+        {
+            var msg = "";
+            var add = true;
+            Id_Ubicacion = -1;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarUbicacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@pais", param.Pais);
+                _comandosql.Parameters.AddWithValue("@estado", param.Estado);
+                _comandosql.Parameters.AddWithValue("@ciudad", param.Ciudad);
+                _comandosql.Parameters.AddWithValue("@domicilio", param.Domicilio);
+                _comandosql.Parameters.AddWithValue("@codigoPostal", param.CodigoPostal);
+
+                SqlParameter outputParam = new SqlParameter("@Id_Ubicacion", SqlDbType.Int);
+                outputParam.Direction = ParameterDirection.Output;
+                _comandosql.Parameters.Add(outputParam);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+
+                Id_Ubicacion = Convert.ToInt32(outputParam.Value); 
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_Amenidad(Hoteles.Amenidad param, out int Id_Amenidad)
+        {
+            var msg = "";
+            var add = true;
+            Id_Amenidad = -1;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarAmenidad";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@nombreAmenidad", param.nombreAmenidad);
+
+                SqlParameter outputParam = new SqlParameter("@ExtraidoId_Amenidad", SqlDbType.Int);
+                outputParam.Direction = ParameterDirection.Output;
+                _comandosql.Parameters.Add(outputParam);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+                Id_Amenidad = Convert.ToInt32(outputParam.Value);
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_Caracteristica(Hoteles.Caracteristica param, out int Id_Caracteristica)
+        {
+            var msg = "";
+            var add = true;
+            Id_Caracteristica = -1;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarCaracteristica";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@nombreCaracteristica", param.nombreCaracteristica);
+
+                SqlParameter outputParam = new SqlParameter("@ExtraidoId_Caracteristica", SqlDbType.Int);
+                outputParam.Direction = ParameterDirection.Output;
+                _comandosql.Parameters.Add(outputParam);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+                Id_Caracteristica = Convert.ToInt32(outputParam.Value);
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_TipoHab_Amenidad(Hoteles.Amenidad param, int Id_TipoHab)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarTipoHab_Amenidad";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_TipoHab", Id_TipoHab);
+                _comandosql.Parameters.AddWithValue("@Id_Amenidad", param.Id_Amenidad);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_TipoHab_Caracteristica(Hoteles.Caracteristica param, int Id_TipoHab)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarTipoHab_Caracteristica";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_TipoHab", Id_TipoHab);
+                _comandosql.Parameters.AddWithValue("@Id_Caracteristica", param.Id_Caracteristica);
 
                 // Ejecutar el comando
                 _comandosql.ExecuteNonQuery();

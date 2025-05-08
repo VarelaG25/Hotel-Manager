@@ -94,11 +94,14 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.MenuContenedor = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.UsuarioActualTXT = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.TipoUsuario = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaRegistroUsuarioDGV)).BeginInit();
@@ -113,6 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -132,6 +136,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.TablaRegistroUsuarioDGV);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label12);
@@ -236,6 +241,7 @@
             this.NumeroNominaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NumeroNominaTXT.Location = new System.Drawing.Point(14, 68);
             this.NumeroNominaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NumeroNominaTXT.MaxLength = 10;
             this.NumeroNominaTXT.Name = "NumeroNominaTXT";
             this.NumeroNominaTXT.ReadOnly = true;
             this.NumeroNominaTXT.Size = new System.Drawing.Size(323, 27);
@@ -259,6 +265,7 @@
             this.TelefonoCelularTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TelefonoCelularTXT.Location = new System.Drawing.Point(190, 269);
             this.TelefonoCelularTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCelularTXT.MaxLength = 10;
             this.TelefonoCelularTXT.Name = "TelefonoCelularTXT";
             this.TelefonoCelularTXT.Size = new System.Drawing.Size(147, 27);
             this.TelefonoCelularTXT.TabIndex = 6;
@@ -269,6 +276,7 @@
             this.TelefonoCasaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TelefonoCasaTXT.Location = new System.Drawing.Point(14, 269);
             this.TelefonoCasaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCasaTXT.MaxLength = 10;
             this.TelefonoCasaTXT.Name = "TelefonoCasaTXT";
             this.TelefonoCasaTXT.Size = new System.Drawing.Size(154, 27);
             this.TelefonoCasaTXT.TabIndex = 5;
@@ -291,6 +299,7 @@
             this.SegundoApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SegundoApellidoTXT.Location = new System.Drawing.Point(190, 200);
             this.SegundoApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.SegundoApellidoTXT.MaxLength = 50;
             this.SegundoApellidoTXT.Name = "SegundoApellidoTXT";
             this.SegundoApellidoTXT.Size = new System.Drawing.Size(147, 27);
             this.SegundoApellidoTXT.TabIndex = 4;
@@ -313,6 +322,7 @@
             this.PrimerApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PrimerApellidoTXT.Location = new System.Drawing.Point(14, 200);
             this.PrimerApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrimerApellidoTXT.MaxLength = 50;
             this.PrimerApellidoTXT.Name = "PrimerApellidoTXT";
             this.PrimerApellidoTXT.Size = new System.Drawing.Size(154, 27);
             this.PrimerApellidoTXT.TabIndex = 3;
@@ -323,6 +333,7 @@
             this.NombreTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NombreTXT.Location = new System.Drawing.Point(14, 132);
             this.NombreTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreTXT.MaxLength = 50;
             this.NombreTXT.Name = "NombreTXT";
             this.NombreTXT.Size = new System.Drawing.Size(323, 27);
             this.NombreTXT.TabIndex = 2;
@@ -425,6 +436,7 @@
             this.ConfirmarContraseniaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConfirmarContraseniaTXT.Location = new System.Drawing.Point(12, 197);
             this.ConfirmarContraseniaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirmarContraseniaTXT.MaxLength = 50;
             this.ConfirmarContraseniaTXT.Name = "ConfirmarContraseniaTXT";
             this.ConfirmarContraseniaTXT.Size = new System.Drawing.Size(323, 27);
             this.ConfirmarContraseniaTXT.TabIndex = 10;
@@ -459,6 +471,7 @@
             this.ContraseniaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ContraseniaTXT.Location = new System.Drawing.Point(13, 132);
             this.ContraseniaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ContraseniaTXT.MaxLength = 50;
             this.ContraseniaTXT.Name = "ContraseniaTXT";
             this.ContraseniaTXT.Size = new System.Drawing.Size(323, 27);
             this.ContraseniaTXT.TabIndex = 9;
@@ -469,6 +482,7 @@
             this.CorreoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CorreoTXT.Location = new System.Drawing.Point(13, 68);
             this.CorreoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoTXT.MaxLength = 255;
             this.CorreoTXT.Name = "CorreoTXT";
             this.CorreoTXT.Size = new System.Drawing.Size(323, 27);
             this.CorreoTXT.TabIndex = 8;
@@ -602,6 +616,7 @@
             this.TelefonoCelularSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TelefonoCelularSeleccionadoTXT.Location = new System.Drawing.Point(190, 253);
             this.TelefonoCelularSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCelularSeleccionadoTXT.MaxLength = 10;
             this.TelefonoCelularSeleccionadoTXT.Name = "TelefonoCelularSeleccionadoTXT";
             this.TelefonoCelularSeleccionadoTXT.Size = new System.Drawing.Size(147, 27);
             this.TelefonoCelularSeleccionadoTXT.TabIndex = 6;
@@ -612,6 +627,7 @@
             this.TelefonoCasaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TelefonoCasaSeleccionadoTXT.Location = new System.Drawing.Point(14, 253);
             this.TelefonoCasaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCasaSeleccionadoTXT.MaxLength = 10;
             this.TelefonoCasaSeleccionadoTXT.Name = "TelefonoCasaSeleccionadoTXT";
             this.TelefonoCasaSeleccionadoTXT.Size = new System.Drawing.Size(151, 27);
             this.TelefonoCasaSeleccionadoTXT.TabIndex = 5;
@@ -622,6 +638,7 @@
             this.SegundoApellidoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SegundoApellidoSeleccionadoTXT.Location = new System.Drawing.Point(190, 184);
             this.SegundoApellidoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.SegundoApellidoSeleccionadoTXT.MaxLength = 50;
             this.SegundoApellidoSeleccionadoTXT.Name = "SegundoApellidoSeleccionadoTXT";
             this.SegundoApellidoSeleccionadoTXT.Size = new System.Drawing.Size(147, 27);
             this.SegundoApellidoSeleccionadoTXT.TabIndex = 4;
@@ -632,6 +649,7 @@
             this.PrimerApellidoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PrimerApellidoSeleccionadoTXT.Location = new System.Drawing.Point(14, 184);
             this.PrimerApellidoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrimerApellidoSeleccionadoTXT.MaxLength = 50;
             this.PrimerApellidoSeleccionadoTXT.Name = "PrimerApellidoSeleccionadoTXT";
             this.PrimerApellidoSeleccionadoTXT.Size = new System.Drawing.Size(150, 27);
             this.PrimerApellidoSeleccionadoTXT.TabIndex = 3;
@@ -642,6 +660,7 @@
             this.NombreSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NombreSeleccionadoTXT.Location = new System.Drawing.Point(14, 117);
             this.NombreSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreSeleccionadoTXT.MaxLength = 50;
             this.NombreSeleccionadoTXT.Name = "NombreSeleccionadoTXT";
             this.NombreSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
             this.NombreSeleccionadoTXT.TabIndex = 2;
@@ -676,6 +695,7 @@
             this.NumeroNominaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NumeroNominaSeleccionadoTXT.Location = new System.Drawing.Point(14, 54);
             this.NumeroNominaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NumeroNominaSeleccionadoTXT.MaxLength = 10;
             this.NumeroNominaSeleccionadoTXT.Name = "NumeroNominaSeleccionadoTXT";
             this.NumeroNominaSeleccionadoTXT.ReadOnly = true;
             this.NumeroNominaSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
@@ -829,6 +849,7 @@
             this.ConfirmarContraseniaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConfirmarContraseniaSeleccionadoTXT.Location = new System.Drawing.Point(14, 187);
             this.ConfirmarContraseniaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirmarContraseniaSeleccionadoTXT.MaxLength = 50;
             this.ConfirmarContraseniaSeleccionadoTXT.Name = "ConfirmarContraseniaSeleccionadoTXT";
             this.ConfirmarContraseniaSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
             this.ConfirmarContraseniaSeleccionadoTXT.TabIndex = 10;
@@ -839,6 +860,7 @@
             this.ContraseniaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ContraseniaSeleccionadoTXT.Location = new System.Drawing.Point(14, 122);
             this.ContraseniaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ContraseniaSeleccionadoTXT.MaxLength = 50;
             this.ContraseniaSeleccionadoTXT.Name = "ContraseniaSeleccionadoTXT";
             this.ContraseniaSeleccionadoTXT.Size = new System.Drawing.Size(324, 27);
             this.ContraseniaSeleccionadoTXT.TabIndex = 9;
@@ -849,6 +871,7 @@
             this.CorreoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CorreoSeleccionadoTXT.Location = new System.Drawing.Point(14, 58);
             this.CorreoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoSeleccionadoTXT.MaxLength = 255;
             this.CorreoSeleccionadoTXT.Name = "CorreoSeleccionadoTXT";
             this.CorreoSeleccionadoTXT.Size = new System.Drawing.Size(323, 27);
             this.CorreoSeleccionadoTXT.TabIndex = 8;
@@ -939,7 +962,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.UsuarioActualTXT);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -952,14 +975,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuario";
             // 
-            // label1
+            // UsuarioActualTXT
             // 
-            this.label1.Location = new System.Drawing.Point(56, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 28);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "User_123";
+            this.UsuarioActualTXT.Location = new System.Drawing.Point(56, 36);
+            this.UsuarioActualTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsuarioActualTXT.Name = "UsuarioActualTXT";
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(98, 28);
+            this.UsuarioActualTXT.TabIndex = 13;
+            this.UsuarioActualTXT.Text = "User_123";
             // 
             // pictureBox2
             // 
@@ -1005,6 +1028,47 @@
             this.pictureBox4.TabIndex = 25;
             this.pictureBox4.TabStop = false;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.TipoUsuario);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox5.Location = new System.Drawing.Point(394, 118);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Size = new System.Drawing.Size(350, 130);
+            this.groupBox5.TabIndex = 39;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Usuario";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label27.Location = new System.Drawing.Point(8, 34);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(146, 25);
+            this.label27.TabIndex = 38;
+            this.label27.Text = "Tipo de Usuario";
+            // 
+            // TipoUsuario
+            // 
+            this.TipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoUsuario.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoUsuario.FormattingEnabled = true;
+            this.TipoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Operativo"});
+            this.TipoUsuario.Location = new System.Drawing.Point(12, 62);
+            this.TipoUsuario.Name = "TipoUsuario";
+            this.TipoUsuario.Size = new System.Drawing.Size(323, 33);
+            this.TipoUsuario.TabIndex = 26;
+            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1041,6 +1105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1066,7 +1132,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel MenuContenedor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UsuarioActualTXT;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
@@ -1116,5 +1182,8 @@
         private System.Windows.Forms.ComboBox NombreCompletoCB;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker FechaModificadoTXT;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox TipoUsuario;
     }
 }

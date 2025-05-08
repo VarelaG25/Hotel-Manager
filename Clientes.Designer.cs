@@ -35,28 +35,21 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.UsuarioActualTXT = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.TablaClientesDTG = new System.Windows.Forms.DataGridView();
+            this.CorreoTXT = new System.Windows.Forms.TextBox();
+            this.RFCTXT = new System.Windows.Forms.TextBox();
+            this.EstadoCivilCB = new System.Windows.Forms.ComboBox();
+            this.TelefonoCelularTXT = new System.Windows.Forms.TextBox();
+            this.TelefonoCasaTXT = new System.Windows.Forms.TextBox();
+            this.FechaNacimientoDTP = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SegundoApellidoTXT = new System.Windows.Forms.TextBox();
+            this.PrimerApellidoTXT = new System.Windows.Forms.TextBox();
+            this.NombreTXT = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -69,20 +62,29 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FechaRegistroDTP = new System.Windows.Forms.DateTimePicker();
+            this.AceptarBTN = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.CodigoPostalTXT = new System.Windows.Forms.TextBox();
+            this.CiudadCB = new System.Windows.Forms.ComboBox();
+            this.EstadoCB = new System.Windows.Forms.ComboBox();
+            this.PaisCB = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -95,11 +97,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label30 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -115,19 +112,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MenuContenedor = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientesDTG)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -196,7 +191,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.UsuarioActualTXT);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -209,14 +204,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuario";
             // 
-            // label1
+            // UsuarioActualTXT
             // 
-            this.label1.Location = new System.Drawing.Point(56, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 28);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "User_123";
+            this.UsuarioActualTXT.Location = new System.Drawing.Point(56, 36);
+            this.UsuarioActualTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsuarioActualTXT.Name = "UsuarioActualTXT";
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(98, 28);
+            this.UsuarioActualTXT.TabIndex = 13;
+            this.UsuarioActualTXT.Text = "User_123";
             // 
             // pictureBox2
             // 
@@ -245,20 +240,17 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox19);
-            this.tabPage1.Controls.Add(this.textBox20);
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.dateTimePicker2);
+            this.tabPage1.Controls.Add(this.TablaClientesDTG);
+            this.tabPage1.Controls.Add(this.CorreoTXT);
+            this.tabPage1.Controls.Add(this.RFCTXT);
+            this.tabPage1.Controls.Add(this.EstadoCivilCB);
+            this.tabPage1.Controls.Add(this.TelefonoCelularTXT);
+            this.tabPage1.Controls.Add(this.TelefonoCasaTXT);
+            this.tabPage1.Controls.Add(this.FechaNacimientoDTP);
             this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.SegundoApellidoTXT);
+            this.tabPage1.Controls.Add(this.PrimerApellidoTXT);
+            this.tabPage1.Controls.Add(this.NombreTXT);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label15);
@@ -271,8 +263,8 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.FechaRegistroDTP);
+            this.tabPage1.Controls.Add(this.AceptarBTN);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox2);
@@ -284,143 +276,94 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registrar Cliente";
             // 
-            // dataGridView2
+            // TablaClientesDTG
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dataGridView2.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(688, 80);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(514, 436);
-            this.dataGridView2.TabIndex = 25;
-            this.dataGridView2.TabStop = false;
+            this.TablaClientesDTG.AllowUserToAddRows = false;
+            this.TablaClientesDTG.AllowUserToDeleteRows = false;
+            this.TablaClientesDTG.AllowUserToResizeColumns = false;
+            this.TablaClientesDTG.AllowUserToResizeRows = false;
+            this.TablaClientesDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaClientesDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaClientesDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaClientesDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaClientesDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaClientesDTG.Location = new System.Drawing.Point(688, 80);
+            this.TablaClientesDTG.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaClientesDTG.MultiSelect = false;
+            this.TablaClientesDTG.Name = "TablaClientesDTG";
+            this.TablaClientesDTG.ReadOnly = true;
+            this.TablaClientesDTG.RowHeadersWidth = 51;
+            this.TablaClientesDTG.RowTemplate.Height = 24;
+            this.TablaClientesDTG.Size = new System.Drawing.Size(514, 436);
+            this.TablaClientesDTG.TabIndex = 25;
+            this.TablaClientesDTG.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn1
+            // CorreoTXT
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "RFC";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.CorreoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CorreoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CorreoTXT.Location = new System.Drawing.Point(28, 535);
+            this.CorreoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoTXT.Name = "CorreoTXT";
+            this.CorreoTXT.Size = new System.Drawing.Size(301, 24);
+            this.CorreoTXT.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn2
+            // RFCTXT
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.RFCTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.RFCTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RFCTXT.Location = new System.Drawing.Point(28, 471);
+            this.RFCTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.RFCTXT.Name = "RFCTXT";
+            this.RFCTXT.Size = new System.Drawing.Size(301, 24);
+            this.RFCTXT.TabIndex = 8;
             // 
-            // dataGridViewTextBoxColumn3
+            // EstadoCivilCB
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Primer apellido";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Segundo apellido";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(360, 266);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(300, 24);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox19
-            // 
-            this.textBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox19.Location = new System.Drawing.Point(360, 197);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(300, 24);
-            this.textBox19.TabIndex = 12;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox20.Location = new System.Drawing.Point(360, 124);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(300, 24);
-            this.textBox20.TabIndex = 11;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(28, 535);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(301, 24);
-            this.textBox8.TabIndex = 9;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(28, 471);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(301, 24);
-            this.textBox7.TabIndex = 8;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.EstadoCivilCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.EstadoCivilCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EstadoCivilCB.FormattingEnabled = true;
+            this.EstadoCivilCB.Items.AddRange(new object[] {
             "Soltero",
-            "Casado"});
-            this.comboBox2.Location = new System.Drawing.Point(29, 399);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(301, 33);
-            this.comboBox2.TabIndex = 7;
+            "Casado",
+            "Divorciado",
+            "Viudo"});
+            this.EstadoCivilCB.Location = new System.Drawing.Point(29, 399);
+            this.EstadoCivilCB.Margin = new System.Windows.Forms.Padding(2);
+            this.EstadoCivilCB.Name = "EstadoCivilCB";
+            this.EstadoCivilCB.Size = new System.Drawing.Size(301, 33);
+            this.EstadoCivilCB.TabIndex = 7;
             // 
-            // textBox6
+            // TelefonoCelularTXT
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(182, 327);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(147, 24);
-            this.textBox6.TabIndex = 6;
+            this.TelefonoCelularTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TelefonoCelularTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCelularTXT.Location = new System.Drawing.Point(182, 327);
+            this.TelefonoCelularTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCelularTXT.Name = "TelefonoCelularTXT";
+            this.TelefonoCelularTXT.Size = new System.Drawing.Size(147, 24);
+            this.TelefonoCelularTXT.TabIndex = 6;
             // 
-            // textBox5
+            // TelefonoCasaTXT
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(29, 327);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(134, 24);
-            this.textBox5.TabIndex = 5;
+            this.TelefonoCasaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TelefonoCasaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCasaTXT.Location = new System.Drawing.Point(29, 327);
+            this.TelefonoCasaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoCasaTXT.Name = "TelefonoCasaTXT";
+            this.TelefonoCasaTXT.Size = new System.Drawing.Size(134, 24);
+            this.TelefonoCasaTXT.TabIndex = 5;
             // 
-            // dateTimePicker2
+            // FechaNacimientoDTP
             // 
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(29, 260);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(301, 31);
-            this.dateTimePicker2.TabIndex = 4;
+            this.FechaNacimientoDTP.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.FechaNacimientoDTP.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaNacimientoDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaNacimientoDTP.Location = new System.Drawing.Point(29, 260);
+            this.FechaNacimientoDTP.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaNacimientoDTP.Name = "FechaNacimientoDTP";
+            this.FechaNacimientoDTP.Size = new System.Drawing.Size(301, 31);
+            this.FechaNacimientoDTP.TabIndex = 4;
             // 
             // label18
             // 
@@ -434,35 +377,35 @@
             this.label18.TabIndex = 31;
             this.label18.Text = "Fecha de nacimiento";
             // 
-            // textBox3
+            // SegundoApellidoTXT
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(182, 197);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 24);
-            this.textBox3.TabIndex = 3;
+            this.SegundoApellidoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.SegundoApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SegundoApellidoTXT.Location = new System.Drawing.Point(182, 197);
+            this.SegundoApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.SegundoApellidoTXT.Name = "SegundoApellidoTXT";
+            this.SegundoApellidoTXT.Size = new System.Drawing.Size(147, 24);
+            this.SegundoApellidoTXT.TabIndex = 3;
             // 
-            // textBox2
+            // PrimerApellidoTXT
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(29, 197);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 24);
-            this.textBox2.TabIndex = 2;
+            this.PrimerApellidoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrimerApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrimerApellidoTXT.Location = new System.Drawing.Point(29, 197);
+            this.PrimerApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrimerApellidoTXT.Name = "PrimerApellidoTXT";
+            this.PrimerApellidoTXT.Size = new System.Drawing.Size(134, 24);
+            this.PrimerApellidoTXT.TabIndex = 2;
             // 
-            // textBox1
+            // NombreTXT
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(29, 124);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 24);
-            this.textBox1.TabIndex = 1;
+            this.NombreTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NombreTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NombreTXT.Location = new System.Drawing.Point(29, 124);
+            this.NombreTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreTXT.Name = "NombreTXT";
+            this.NombreTXT.Size = new System.Drawing.Size(300, 24);
+            this.NombreTXT.TabIndex = 1;
             // 
             // label17
             // 
@@ -608,30 +551,31 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Fecha actual de registro";
             // 
-            // dateTimePicker1
+            // FechaRegistroDTP
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1027, 45);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(176, 31);
-            this.dateTimePicker1.TabIndex = 12;
-            this.dateTimePicker1.TabStop = false;
+            this.FechaRegistroDTP.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaRegistroDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaRegistroDTP.Location = new System.Drawing.Point(1027, 45);
+            this.FechaRegistroDTP.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaRegistroDTP.Name = "FechaRegistroDTP";
+            this.FechaRegistroDTP.Size = new System.Drawing.Size(176, 31);
+            this.FechaRegistroDTP.TabIndex = 12;
+            this.FechaRegistroDTP.TabStop = false;
             // 
-            // button1
+            // AceptarBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1063, 535);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 40);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AceptarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.AceptarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AceptarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AceptarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AceptarBTN.Location = new System.Drawing.Point(1063, 535);
+            this.AceptarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.AceptarBTN.Name = "AceptarBTN";
+            this.AceptarBTN.Size = new System.Drawing.Size(140, 40);
+            this.AceptarBTN.TabIndex = 15;
+            this.AceptarBTN.Text = "Aceptar";
+            this.AceptarBTN.UseVisualStyleBackColor = false;
+            this.AceptarBTN.Click += new System.EventHandler(this.AceptarBTN_Click);
             // 
             // label2
             // 
@@ -647,7 +591,10 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox21);
+            this.groupBox5.Controls.Add(this.CodigoPostalTXT);
+            this.groupBox5.Controls.Add(this.CiudadCB);
+            this.groupBox5.Controls.Add(this.EstadoCB);
+            this.groupBox5.Controls.Add(this.PaisCB);
             this.groupBox5.Controls.Add(this.label32);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.SteelBlue;
@@ -660,15 +607,45 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ubicacion";
             // 
-            // textBox21
+            // CodigoPostalTXT
             // 
-            this.textBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox21.Location = new System.Drawing.Point(8, 268);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(300, 27);
-            this.textBox21.TabIndex = 14;
+            this.CodigoPostalTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CodigoPostalTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CodigoPostalTXT.Location = new System.Drawing.Point(9, 261);
+            this.CodigoPostalTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.CodigoPostalTXT.Name = "CodigoPostalTXT";
+            this.CodigoPostalTXT.Size = new System.Drawing.Size(300, 27);
+            this.CodigoPostalTXT.TabIndex = 35;
+            // 
+            // CiudadCB
+            // 
+            this.CiudadCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CiudadCB.FormattingEnabled = true;
+            this.CiudadCB.Location = new System.Drawing.Point(9, 192);
+            this.CiudadCB.Margin = new System.Windows.Forms.Padding(2);
+            this.CiudadCB.Name = "CiudadCB";
+            this.CiudadCB.Size = new System.Drawing.Size(301, 36);
+            this.CiudadCB.TabIndex = 35;
+            // 
+            // EstadoCB
+            // 
+            this.EstadoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.EstadoCB.FormattingEnabled = true;
+            this.EstadoCB.Location = new System.Drawing.Point(9, 127);
+            this.EstadoCB.Margin = new System.Windows.Forms.Padding(2);
+            this.EstadoCB.Name = "EstadoCB";
+            this.EstadoCB.Size = new System.Drawing.Size(301, 36);
+            this.EstadoCB.TabIndex = 34;
+            // 
+            // PaisCB
+            // 
+            this.PaisCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PaisCB.FormattingEnabled = true;
+            this.PaisCB.Location = new System.Drawing.Point(9, 57);
+            this.PaisCB.Margin = new System.Windows.Forms.Padding(2);
+            this.PaisCB.Name = "PaisCB";
+            this.PaisCB.Size = new System.Drawing.Size(301, 36);
+            this.PaisCB.TabIndex = 32;
             // 
             // label32
             // 
@@ -698,14 +675,13 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.label33);
             this.tabPage2.Controls.Add(this.dateTimePicker4);
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.label31);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.label25);
@@ -714,7 +690,6 @@
             this.tabPage2.Controls.Add(this.label29);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.label30);
-            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label7);
@@ -727,9 +702,104 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Cliente";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.comboBox6);
+            this.groupBox3.Controls.Add(this.comboBox7);
+            this.groupBox3.Controls.Add(this.comboBox8);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox3.Location = new System.Drawing.Point(356, 70);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(320, 310);
+            this.groupBox3.TabIndex = 49;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ubicacion";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(9, 261);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(300, 27);
+            this.textBox2.TabIndex = 35;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(9, 192);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(301, 36);
+            this.comboBox6.TabIndex = 35;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(9, 127);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(301, 36);
+            this.comboBox7.TabIndex = 34;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(9, 57);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(301, 36);
+            this.comboBox8.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(4, 234);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 25);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Código Postal";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label33.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label33.Location = new System.Drawing.Point(1006, 15);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(191, 21);
+            this.label33.TabIndex = 48;
+            this.label33.Text = "Fecha actual de registro";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker4.Location = new System.Drawing.Point(1010, 36);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePicker4.Size = new System.Drawing.Size(187, 31);
+            this.dateTimePicker4.TabIndex = 47;
+            this.dateTimePicker4.TabStop = false;
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(694, 38);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -761,41 +831,19 @@
             this.label19.TabIndex = 45;
             this.label19.Text = "Fecha de nacimiento";
             // 
-            // label20
+            // button3
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label20.Location = new System.Drawing.Point(356, 171);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 25);
-            this.label20.TabIndex = 44;
-            this.label20.Text = "Estado";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label21.Location = new System.Drawing.Point(356, 236);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 25);
-            this.label21.TabIndex = 43;
-            this.label21.Text = "Ciudad";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label22.Location = new System.Drawing.Point(356, 100);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(46, 25);
-            this.label22.TabIndex = 42;
-            this.label22.Text = "País";
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(694, 536);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 35);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Modificar";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label23
             // 
@@ -926,67 +974,6 @@
             this.label30.TabIndex = 34;
             this.label30.Text = "Nombre(s)";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox3.Location = new System.Drawing.Point(352, 70);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(320, 510);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Ubicacion";
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Location = new System.Drawing.Point(9, 193);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(300, 27);
-            this.textBox11.TabIndex = 13;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Location = new System.Drawing.Point(9, 128);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(300, 27);
-            this.textBox12.TabIndex = 12;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(9, 58);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(300, 27);
-            this.textBox13.TabIndex = 11;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(196, 461);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 41);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.textBox9);
@@ -1033,6 +1020,7 @@
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Soltero",
@@ -1065,11 +1053,13 @@
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.CalendarFont = new System.Drawing.Font("Segoe UI", 13.2F);
+            this.dateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 13.2F);
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker3.Location = new System.Drawing.Point(10, 193);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(301, 34);
+            this.dateTimePicker3.Size = new System.Drawing.Size(301, 31);
             this.dateTimePicker3.TabIndex = 4;
             // 
             // textBox16
@@ -1159,30 +1149,6 @@
             this.MenuContenedor.Size = new System.Drawing.Size(1443, 67);
             this.MenuContenedor.TabIndex = 24;
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label33.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label33.Location = new System.Drawing.Point(1006, 15);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(191, 21);
-            this.label33.TabIndex = 48;
-            this.label33.Text = "Fecha actual de registro";
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(1010, 36);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker4.Size = new System.Drawing.Size(187, 31);
-            this.dateTimePicker4.TabIndex = 47;
-            this.dateTimePicker4.TabStop = false;
-            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1209,14 +1175,14 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientesDTG)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1234,18 +1200,18 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UsuarioActualTXT;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker FechaRegistroDTP;
+        private System.Windows.Forms.Button AceptarBTN;
+        private System.Windows.Forms.TextBox TelefonoCelularTXT;
+        private System.Windows.Forms.TextBox TelefonoCasaTXT;
+        private System.Windows.Forms.TextBox SegundoApellidoTXT;
+        private System.Windows.Forms.TextBox PrimerApellidoTXT;
+        private System.Windows.Forms.TextBox NombreTXT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -1253,21 +1219,15 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox RFCTXT;
+        private System.Windows.Forms.ComboBox EstadoCivilCB;
+        private System.Windows.Forms.DateTimePicker FechaNacimientoDTP;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox CorreoTXT;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
@@ -1291,15 +1251,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridView TablaClientesDTG;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
@@ -1308,12 +1261,20 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.TextBox CodigoPostalTXT;
+        private System.Windows.Forms.ComboBox CiudadCB;
+        private System.Windows.Forms.ComboBox EstadoCB;
+        private System.Windows.Forms.ComboBox PaisCB;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.Label label1;
     }
 }

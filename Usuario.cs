@@ -21,7 +21,7 @@ namespace AAVD
         public class UsuarioDatos
         {
             public int Id_Usuario { get; set; }
-            public int Id_Admin { get; set; }
+            public bool Id_Admin { get; set; }
             public int Id_Credenciales { get; set; }
             public int NumeroNomina { get; set; }
             public string NombreUsuario { get; set; }
@@ -71,10 +71,26 @@ namespace AAVD
             // Validar que los teléfonos contengan solo números
             usuario.TelefonoCelular = TelefonoCelularTXT.Text;
             usuario.TelefonoCasa = TelefonoCasaTXT.Text;
+            usuario.Id_Admin = TipoUsuario.SelectedItem.ToString() == "Administrador" ? true : false;
             if ((usuario.TelefonoCasa.Length != 10 && usuario.TelefonoCasa.Length > 0) ||
                 (usuario.TelefonoCelular.Length != 10 && usuario.TelefonoCelular.Length > 0))
             {
                 MessageBox.Show("Cada número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!usuario.TelefonoCasa.All(char.IsDigit) || !usuario.TelefonoCelular.All(char.IsDigit))
+            {
+                MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(usuario.CorreoUsuario == "" || usuario.NombreUsuario == "" || usuario.PrimerApellido == "" || usuario.SegundoApellido == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(usuario.CorreoUsuario, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("El correo electrónico no tiene un formato válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // Credenciales
@@ -161,6 +177,11 @@ namespace AAVD
                 usuario.SegundoApellido = SegundoApellidoSeleccionadoTXT.Text;
                 usuario.TelefonoCelular = TelefonoCelularSeleccionadoTXT.Text;
                 usuario.TelefonoCasa = TelefonoCasaSeleccionadoTXT.Text;
+                if (!usuario.TelefonoCasa.All(char.IsDigit) || !usuario.TelefonoCelular.All(char.IsDigit))
+                {
+                    MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if ((usuario.TelefonoCasa.Length != 10 && usuario.TelefonoCasa.Length > 0) ||
                 (usuario.TelefonoCelular.Length != 10 && usuario.TelefonoCelular.Length > 0))
                 {
@@ -193,6 +214,8 @@ namespace AAVD
         public void cargarTablaUsuario()
         {
             var enlace = new EnlaceDB();
+            var tablaUsuarioActual = enlace.ConsultarBarraUsuario();
+            UsuarioActualTXT.Text = tablaUsuarioActual.Rows[0]["nombreUsuario"].ToString();
             var tabla = new DataTable();
             tabla = enlace.ConsultarUsuarios();
             // Asignar el DataSource a la columna combinada
@@ -271,6 +294,8 @@ namespace AAVD
             TablaModificarUsuarioDGV.Columns["telefonoCasa"].DisplayIndex = 7;
             TablaModificarUsuarioDGV.Columns["fechaRegistroUsuario"].DisplayIndex = 8;
             TablaModificarUsuarioDGV.Columns["fechaModificacionUsuario"].DisplayIndex = 9;
+
+            TipoUsuario.SelectedIndex = 0;
         }
     }
 }

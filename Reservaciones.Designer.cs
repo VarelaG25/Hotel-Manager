@@ -33,7 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.UsuarioActualTXT = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -193,7 +193,7 @@
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.UsuarioActualTXT);
             this.tabPage1.Controls.Add(this.textBox20);
             this.tabPage1.Controls.Add(this.label34);
             this.tabPage1.Controls.Add(this.textBox8);
@@ -236,21 +236,21 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AAVD.Properties.Resources.user_azul;
-            this.pictureBox2.Location = new System.Drawing.Point(1250, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(1215, 15);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // UsuarioActualTXT
             // 
-            this.label1.Location = new System.Drawing.Point(1308, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 28);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "User_123";
+            this.UsuarioActualTXT.Location = new System.Drawing.Point(1271, 19);
+            this.UsuarioActualTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsuarioActualTXT.Name = "UsuarioActualTXT";
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(90, 28);
+            this.UsuarioActualTXT.TabIndex = 13;
+            this.UsuarioActualTXT.Text = "User_123";
             // 
             // textBox20
             // 
@@ -1660,7 +1660,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel MenuContenedor;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UsuarioActualTXT;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.Label label15;
