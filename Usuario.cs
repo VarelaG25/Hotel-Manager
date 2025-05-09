@@ -88,11 +88,6 @@ namespace AAVD
                 MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(usuario.CorreoUsuario, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-            {
-                MessageBox.Show("El correo electrónico no tiene un formato válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             // Credenciales
             usuario.CorreoUsuario = CorreoTXT.Text;
             usuario.ContrasenaUsuario = ContraseniaTXT.Text;
@@ -121,7 +116,7 @@ namespace AAVD
         private void NombreCompletoCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             int seleccion = Convert.ToInt32(NombreCompletoCB.SelectedValue);
-            if (seleccion > 0)
+            if (seleccion >= 0)
             {
                 // Asignar el valor al TextBox
                 var enlace = new EnlaceDB();
@@ -157,6 +152,7 @@ namespace AAVD
                 {
                     MessageBox.Show("Usuario eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarTablaUsuario();
+                    NombreCompletoCB.SelectedIndex = 0;
                 }
             }
         }
@@ -177,6 +173,14 @@ namespace AAVD
                 usuario.SegundoApellido = SegundoApellidoSeleccionadoTXT.Text;
                 usuario.TelefonoCelular = TelefonoCelularSeleccionadoTXT.Text;
                 usuario.TelefonoCasa = TelefonoCasaSeleccionadoTXT.Text;
+                if( string.IsNullOrEmpty(usuario.TelefonoCelular) || string.IsNullOrEmpty(usuario.TelefonoCasa) || string.IsNullOrEmpty(usuario.NombreUsuario)
+                    || string.IsNullOrEmpty(usuario.PrimerApellido) || string.IsNullOrEmpty(usuario.SegundoApellido) || string.IsNullOrEmpty(usuario.CorreoUsuario)
+                    || string.IsNullOrEmpty(usuario.ContrasenaUsuario))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 if (!usuario.TelefonoCasa.All(char.IsDigit) || !usuario.TelefonoCelular.All(char.IsDigit))
                 {
                     MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

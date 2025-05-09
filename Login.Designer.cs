@@ -93,7 +93,7 @@ namespace AAVD
             this.Login_Usuario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_Usuario.Name = "Login_Usuario";
             this.Login_Usuario.Size = new System.Drawing.Size(246, 16);
-            this.Login_Usuario.TabIndex = 1;
+            this.Login_Usuario.TabIndex = 0;
             this.Login_Usuario.TextChanged += new System.EventHandler(this.Login_Usuario_TextChanged);
             // 
             // Login_Continuar
@@ -106,7 +106,7 @@ namespace AAVD
             this.Login_Continuar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_Continuar.Name = "Login_Continuar";
             this.Login_Continuar.Size = new System.Drawing.Size(209, 50);
-            this.Login_Continuar.TabIndex = 3;
+            this.Login_Continuar.TabIndex = 2;
             this.Login_Continuar.Text = "Ingresar";
             this.Login_Continuar.UseVisualStyleBackColor = false;
             this.Login_Continuar.Click += new System.EventHandler(this.Login_Continuar_Click);
@@ -120,7 +120,7 @@ namespace AAVD
             this.Login_SQL.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_SQL.Name = "Login_SQL";
             this.Login_SQL.Size = new System.Drawing.Size(63, 29);
-            this.Login_SQL.TabIndex = 4;
+            this.Login_SQL.TabIndex = 3;
             this.Login_SQL.TabStop = true;
             this.Login_SQL.Text = "SQL";
             this.Login_SQL.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@ namespace AAVD
             this.Login_CQL.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_CQL.Name = "Login_CQL";
             this.Login_CQL.Size = new System.Drawing.Size(64, 29);
-            this.Login_CQL.TabIndex = 5;
+            this.Login_CQL.TabIndex = 4;
             this.Login_CQL.TabStop = true;
             this.Login_CQL.Text = "CQL";
             this.Login_CQL.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@ namespace AAVD
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(341, 48);
-            this.panel6.TabIndex = 14;
+            this.panel6.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -254,7 +254,7 @@ namespace AAVD
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(341, 48);
-            this.panel5.TabIndex = 13;
+            this.panel5.TabIndex = 1;
             // 
             // label2
             // 
@@ -278,7 +278,7 @@ namespace AAVD
             this.Login_Contrasena.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_Contrasena.Name = "Login_Contrasena";
             this.Login_Contrasena.Size = new System.Drawing.Size(250, 16);
-            this.Login_Contrasena.TabIndex = 2;
+            this.Login_Contrasena.TabIndex = 1;
             this.Login_Contrasena.UseSystemPasswordChar = true;
             this.Login_Contrasena.TextChanged += new System.EventHandler(this.Login_Contrasena_TextChanged);
             // 

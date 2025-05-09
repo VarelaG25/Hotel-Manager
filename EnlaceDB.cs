@@ -205,6 +205,66 @@ namespace AAVD
 
             return tabla;
         }
+        public DataTable consultarIdUsuario(int Id_Credenciaes)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsutarIdUsuarios";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Credenciales", Id_Credenciaes);
+                
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarClienteEspecifico(int Id_Cliente)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarClienteEspecifico";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Cliente", Id_Cliente);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public DataTable consultarUsuarioLogeado(int Id_Credenciales)
         {
             var msg = "";
@@ -401,13 +461,12 @@ namespace AAVD
             try
             {
                 conectar();
-                string qry = "SP_InsertarCliente";
+                string qry = "SP_InsertarClientes";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
                 _comandosql.Parameters.AddWithValue("@Id_Usuario", param.Id_Usuario);
-                _comandosql.Parameters.AddWithValue("@Id_Ubicacion", param.Id_Ubicacion);
                 _comandosql.Parameters.AddWithValue("@nombreCliente", param.Nombre);
                 _comandosql.Parameters.AddWithValue("@primerApellidoCliente", param.PrimerApellido);
                 _comandosql.Parameters.AddWithValue("@segundoApellidoCliente", param.SegundoApellido);
@@ -415,6 +474,16 @@ namespace AAVD
                 _comandosql.Parameters.AddWithValue("@estadoCivil", param.EstadoCivil);
                 _comandosql.Parameters.AddWithValue("@rfcCliente", param.RFC);
                 _comandosql.Parameters.AddWithValue("@fechaRegistroCliente", param.FechaRegistro);
+                _comandosql.Parameters.AddWithValue("@correoCliente", param.Correo);
+
+                _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);
+                _comandosql.Parameters.AddWithValue("@telefonoCasa", param.TelefonoCasa);
+
+                _comandosql.Parameters.AddWithValue("@pais", param.Pais);
+                _comandosql.Parameters.AddWithValue("@ciudad", param.Ciudad);
+                _comandosql.Parameters.AddWithValue("@estado", param.Estado);
+                _comandosql.Parameters.AddWithValue("@codigoPostal", param.CodigoPostal);
+                _comandosql.Parameters.AddWithValue("@domicilio", param.Domicilio);
 
                 // Ejecutar el comando
                 _comandosql.ExecuteNonQuery();
@@ -463,50 +532,6 @@ namespace AAVD
                 _comandosql.ExecuteNonQuery();
 
                 Id_TipoHab = Convert.ToInt32(outputParam.Value); 
-                add = true;
-            }
-            catch (SqlException e)
-            {
-                add = false;
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return add;
-        }
-        public bool Insertar_Ubicacion(Clientes.ClienteDatos param, out int Id_Ubicacion)
-        {
-            var msg = "";
-            var add = true;
-            Id_Ubicacion = -1;
-            try
-            {
-                conectar();
-                string qry = "SP_InsertarUbicacion";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                // Parámetros para la tabla Usuario
-                _comandosql.Parameters.AddWithValue("@pais", param.Pais);
-                _comandosql.Parameters.AddWithValue("@estado", param.Estado);
-                _comandosql.Parameters.AddWithValue("@ciudad", param.Ciudad);
-                _comandosql.Parameters.AddWithValue("@domicilio", param.Domicilio);
-                _comandosql.Parameters.AddWithValue("@codigoPostal", param.CodigoPostal);
-
-                SqlParameter outputParam = new SqlParameter("@Id_Ubicacion", SqlDbType.Int);
-                outputParam.Direction = ParameterDirection.Output;
-                _comandosql.Parameters.Add(outputParam);
-
-                // Ejecutar el comando
-                _comandosql.ExecuteNonQuery();
-
-                Id_Ubicacion = Convert.ToInt32(outputParam.Value); 
                 add = true;
             }
             catch (SqlException e)
@@ -698,6 +723,39 @@ namespace AAVD
 
             return add;
         }
+        public bool Borrar_Cliente(int Id_Cliente)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_BorrarCliente";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@Id_Cliente", Id_Cliente);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
 
         public bool Actualizar_Usuario(Usuario.UsuarioDatos param)
         {
@@ -721,6 +779,51 @@ namespace AAVD
                 // Parámetros para la tabla InicioSesion
                 _comandosql.Parameters.AddWithValue("@correoUsuario", param.CorreoUsuario);
                 _comandosql.Parameters.AddWithValue("@contrasenaUsuario", param.ContrasenaUsuario);
+
+                // Parámetros para la tabla Telefono
+                _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);
+                _comandosql.Parameters.AddWithValue("@telefonoCasa", param.TelefonoCasa);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Actualizar_Cliente(Clientes.ClienteDatos param)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_ActualizarClientes";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@Id_Cliente", param.Id_Cliente);
+                _comandosql.Parameters.AddWithValue("@Id_Usuario", param.Id_Usuario);
+                _comandosql.Parameters.AddWithValue("@nombreCliente", param.Nombre);
+                _comandosql.Parameters.AddWithValue("@primerApellidoCliente", param.PrimerApellido);
+                _comandosql.Parameters.AddWithValue("@segundoApellidoCliente", param.SegundoApellido);
+                _comandosql.Parameters.AddWithValue("@fechaNacimientoCliente", param.FechaNacimiento);
+                _comandosql.Parameters.AddWithValue("@rfcCliente", param.RFC);
+                _comandosql.Parameters.AddWithValue("@correoCliente", param.Correo);
+                _comandosql.Parameters.AddWithValue("@fechaModificacionCliente", param.FechaModificacion);
 
                 // Parámetros para la tabla Telefono
                 _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);

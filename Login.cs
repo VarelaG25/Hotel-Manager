@@ -57,14 +57,11 @@ namespace AAVD
             {
                 int IdUsuario = Convert.ToInt32(tabla.Rows[0]["Id_Credenciales"]);
                 Login.IdUsuarioActual = IdUsuario;
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-
-            //this.DialogResult = DialogResult.OK;
-            //this.Close();
         }
-
     }
 
 }
