@@ -379,6 +379,34 @@ namespace AAVD
 
             return tabla;
         }
+        public DataTable consultarServicioAdicional()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarServicioAdicional";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public DataTable consultarCliente()
         {
             var msg = "";
@@ -390,6 +418,38 @@ namespace AAVD
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable ValidarUbicacionUnica(string pais, string estado, string ciudad)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ValidarUbicacionUnica";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@pais", pais);
+                _comandosql.Parameters.AddWithValue("@estado", estado);
+                _comandosql.Parameters.AddWithValue("@ciudad", ciudad);
 
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(tabla);
@@ -467,6 +527,7 @@ namespace AAVD
                 _comandosql.CommandTimeout = 1200;
 
                 _comandosql.Parameters.AddWithValue("@Id_Usuario", param.Id_Usuario);
+                _comandosql.Parameters.AddWithValue("@Id_Ubicacion", param.Id_Ubicacion);
                 _comandosql.Parameters.AddWithValue("@nombreCliente", param.Nombre);
                 _comandosql.Parameters.AddWithValue("@primerApellidoCliente", param.PrimerApellido);
                 _comandosql.Parameters.AddWithValue("@segundoApellidoCliente", param.SegundoApellido);
@@ -609,6 +670,125 @@ namespace AAVD
                 _comandosql.ExecuteNonQuery();
                 add = true;
                 Id_Caracteristica = Convert.ToInt32(outputParam.Value);
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_ServicioAdicional(Hoteles.ServicioAdicional param, out int ExtraidoId_ServicioAdicional)
+        {
+            var msg = "";
+            var add = true;
+            @ExtraidoId_ServicioAdicional = -1;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarServicioAdicional";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@nombreServicio", param.nombreServicio);
+
+                SqlParameter outputParam = new SqlParameter("@ExtraidoId_ServicioAdicional", SqlDbType.Int);
+                outputParam.Direction = ParameterDirection.Output;
+                _comandosql.Parameters.Add(outputParam);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+                ExtraidoId_ServicioAdicional = Convert.ToInt32(outputParam.Value);
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_Hotel_ServicioAdicional(Hoteles.ServicioAdicional param, int Id_Hotel)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarServicioAdicional";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_ServicioAdicional", param.Id_ServicioAdicional);
+                _comandosql.Parameters.AddWithValue("@Id_Hotel", Id_Hotel);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Insertar_Hotel(Hoteles.Hotel param, out int ExtraidoId_Hotel)
+        {
+            var msg = "";
+            var add = true;
+            ExtraidoId_Hotel = -1;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarHotel";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Usuario", param.Id_Usuario);
+                _comandosql.Parameters.AddWithValue("@Id_Ubicacion", param.Id_Ubicacion);
+                _comandosql.Parameters.AddWithValue("@nombreHotel", param.NombreHotel);
+                _comandosql.Parameters.AddWithValue("@zonaTuristica", param.ZonaTuristica);
+                _comandosql.Parameters.AddWithValue("@numeroPisos", param.NumPisos);
+                _comandosql.Parameters.AddWithValue("@fechaOperacion", param.FechaOperacion);
+                _comandosql.Parameters.AddWithValue("@frentePlaya", param.FrentePlaya);
+                _comandosql.Parameters.AddWithValue("@numeroPiscinas", param.NumPiscinas);
+                _comandosql.Parameters.AddWithValue("@salonEventos", param.SalonEventos);
+                _comandosql.Parameters.AddWithValue("@numHabitaciones", param.NumHabitaciones);
+                _comandosql.Parameters.AddWithValue("@fechaRegistro", param.FechaRegistro);
+
+                SqlParameter outputParam = new SqlParameter("@ExtraidoId_Hotel", SqlDbType.Int);
+                outputParam.Direction = ParameterDirection.Output;
+                _comandosql.Parameters.Add(outputParam);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+                ExtraidoId_Hotel = Convert.ToInt32(outputParam.Value);
             }
             catch (SqlException e)
             {

@@ -980,7 +980,6 @@
             this.TablaClientesRegistradosDTG.Margin = new System.Windows.Forms.Padding(2);
             this.TablaClientesRegistradosDTG.Name = "TablaClientesRegistradosDTG";
             this.TablaClientesRegistradosDTG.ReadOnly = true;
-            this.TablaClientesRegistradosDTG.RowHeadersVisible = false;
             this.TablaClientesRegistradosDTG.RowHeadersWidth = 51;
             this.TablaClientesRegistradosDTG.RowTemplate.Height = 24;
             this.TablaClientesRegistradosDTG.Size = new System.Drawing.Size(503, 438);
@@ -1193,6 +1192,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Clientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load_1);
             this.panel1.ResumeLayout(false);

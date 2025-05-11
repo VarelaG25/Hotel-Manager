@@ -78,67 +78,61 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label41 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.listaHotel = new System.Windows.Forms.ComboBox();
+            this.HotelCB = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.habitacionesTotales = new System.Windows.Forms.TextBox();
-            this.habitacionesRestantes = new System.Windows.Forms.TextBox();
+            this.HabitacionesTotalesTXT = new System.Windows.Forms.TextBox();
+            this.HabitacionesRestantesTXT = new System.Windows.Forms.TextBox();
             this.BTN_AsignarHabitacion = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivelHabitacionHotel = new System.Windows.Forms.TextBox();
+            this.TablaTHAsignadasDTG = new System.Windows.Forms.DataGridView();
+            this.NivelHabitacionHotelTXT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.habitacionesAsignadas = new System.Windows.Forms.TextBox();
+            this.BTN_RegistrarHotel = new System.Windows.Forms.Button();
+            this.HabitacionesAsignadasTXT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.listaHabitaciones = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.UsuarioActual2TXT = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.País = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zonaTuristica = new System.Windows.Forms.TextBox();
+            this.HotelesRegistradosDTG = new System.Windows.Forms.DataGridView();
+            this.ZonaTuristicaTXT = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.numeroPisos = new System.Windows.Forms.TextBox();
-            this.domicilio = new System.Windows.Forms.TextBox();
+            this.NumeroPisosTXT = new System.Windows.Forms.TextBox();
+            this.DomicilioTXT = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.nombreHotel = new System.Windows.Forms.TextBox();
+            this.NombreHotelTXT = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.numeroHabitaciones = new System.Windows.Forms.TextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.ServiciosTXT = new System.Windows.Forms.TextBox();
+            this.EliminarBTN = new System.Windows.Forms.Button();
+            this.ServicioTXT = new System.Windows.Forms.TextBox();
+            this.ServicioAdicionalCB = new System.Windows.Forms.CheckedListBox();
+            this.AgregarBTN = new System.Windows.Forms.Button();
+            this.NumeroHabitacionesTXT = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.ciudades = new System.Windows.Forms.TextBox();
-            this.estado = new System.Windows.Forms.TextBox();
-            this.pais = new System.Windows.Forms.TextBox();
+            this.CiudadCB = new System.Windows.Forms.ComboBox();
+            this.PaisCB = new System.Windows.Forms.ComboBox();
+            this.EstadoCB = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.fechaOperacion = new System.Windows.Forms.DateTimePicker();
+            this.FechaOperacionDTP = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
-            this.BTN_RegistrarHotel = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.noPlaya = new System.Windows.Forms.RadioButton();
-            this.siPlaya = new System.Windows.Forms.RadioButton();
-            this.serviciosAdicionales = new System.Windows.Forms.TextBox();
+            this.NoPlayaCH = new System.Windows.Forms.RadioButton();
+            this.PlayaCH = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.noSalon = new System.Windows.Forms.RadioButton();
             this.siSalon = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.numeroPiscinas = new System.Windows.Forms.TextBox();
+            this.NumeroPiscinasTXT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaRegistroDTP = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label46 = new System.Windows.Forms.Label();
@@ -188,11 +182,12 @@
             this.tabPage1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaTHAsignadasDTG)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HotelesRegistradosDTG)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -375,6 +370,7 @@
             this.EliminarAmenidadBTN.TabIndex = 72;
             this.EliminarAmenidadBTN.Text = "Eliminar";
             this.EliminarAmenidadBTN.UseVisualStyleBackColor = false;
+            this.EliminarAmenidadBTN.Click += new System.EventHandler(this.EliminarAmenidadBTN_Click);
             // 
             // EliminarCaracteristicaBTN
             // 
@@ -749,18 +745,18 @@
             this.tabPage1.Controls.Add(this.label40);
             this.tabPage1.Controls.Add(this.groupBox8);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.dataGridView3);
-            this.tabPage1.Controls.Add(this.zonaTuristica);
+            this.tabPage1.Controls.Add(this.HotelesRegistradosDTG);
+            this.tabPage1.Controls.Add(this.ZonaTuristicaTXT);
             this.tabPage1.Controls.Add(this.label23);
-            this.tabPage1.Controls.Add(this.numeroPisos);
-            this.tabPage1.Controls.Add(this.domicilio);
+            this.tabPage1.Controls.Add(this.NumeroPisosTXT);
+            this.tabPage1.Controls.Add(this.DomicilioTXT);
             this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Controls.Add(this.nombreHotel);
+            this.tabPage1.Controls.Add(this.NombreHotelTXT);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.FechaRegistroDTP);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
@@ -786,10 +782,10 @@
             this.groupBox8.Controls.Add(this.label41);
             this.groupBox8.Controls.Add(this.groupBox6);
             this.groupBox8.Controls.Add(this.BTN_AsignarHabitacion);
-            this.groupBox8.Controls.Add(this.dataGridView5);
-            this.groupBox8.Controls.Add(this.nivelHabitacionHotel);
+            this.groupBox8.Controls.Add(this.TablaTHAsignadasDTG);
+            this.groupBox8.Controls.Add(this.NivelHabitacionHotelTXT);
             this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Controls.Add(this.habitacionesAsignadas);
+            this.groupBox8.Controls.Add(this.HabitacionesAsignadasTXT);
             this.groupBox8.Controls.Add(this.label7);
             this.groupBox8.Controls.Add(this.label30);
             this.groupBox8.Controls.Add(this.listaHabitaciones);
@@ -807,7 +803,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold);
             this.label41.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label41.Location = new System.Drawing.Point(1, 424);
+            this.label41.Location = new System.Drawing.Point(1, 426);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(296, 25);
             this.label41.TabIndex = 51;
@@ -815,12 +811,12 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.listaHotel);
+            this.groupBox6.Controls.Add(this.HotelCB);
             this.groupBox6.Controls.Add(this.label39);
             this.groupBox6.Controls.Add(this.label5);
             this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.habitacionesTotales);
-            this.groupBox6.Controls.Add(this.habitacionesRestantes);
+            this.groupBox6.Controls.Add(this.HabitacionesTotalesTXT);
+            this.groupBox6.Controls.Add(this.HabitacionesRestantesTXT);
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox6.Location = new System.Drawing.Point(7, 33);
@@ -830,18 +826,15 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Informacion del hotel";
             // 
-            // listaHotel
+            // HotelCB
             // 
-            this.listaHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.listaHotel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.listaHotel.FormattingEnabled = true;
-            this.listaHotel.Items.AddRange(new object[] {
-            "Soltero",
-            "Casado"});
-            this.listaHotel.Location = new System.Drawing.Point(10, 69);
-            this.listaHotel.Name = "listaHotel";
-            this.listaHotel.Size = new System.Drawing.Size(437, 25);
-            this.listaHotel.TabIndex = 22;
+            this.HotelCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HotelCB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.HotelCB.FormattingEnabled = true;
+            this.HotelCB.Location = new System.Drawing.Point(10, 69);
+            this.HotelCB.Name = "HotelCB";
+            this.HotelCB.Size = new System.Drawing.Size(437, 25);
+            this.HotelCB.TabIndex = 22;
             // 
             // label39
             // 
@@ -876,23 +869,23 @@
             this.label24.TabIndex = 47;
             this.label24.Text = "Habitaciones totales";
             // 
-            // habitacionesTotales
+            // HabitacionesTotalesTXT
             // 
-            this.habitacionesTotales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.habitacionesTotales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.habitacionesTotales.Location = new System.Drawing.Point(10, 136);
-            this.habitacionesTotales.Name = "habitacionesTotales";
-            this.habitacionesTotales.Size = new System.Drawing.Size(201, 27);
-            this.habitacionesTotales.TabIndex = 23;
+            this.HabitacionesTotalesTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HabitacionesTotalesTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HabitacionesTotalesTXT.Location = new System.Drawing.Point(10, 136);
+            this.HabitacionesTotalesTXT.Name = "HabitacionesTotalesTXT";
+            this.HabitacionesTotalesTXT.Size = new System.Drawing.Size(201, 27);
+            this.HabitacionesTotalesTXT.TabIndex = 23;
             // 
-            // habitacionesRestantes
+            // HabitacionesRestantesTXT
             // 
-            this.habitacionesRestantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.habitacionesRestantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.habitacionesRestantes.Location = new System.Drawing.Point(246, 136);
-            this.habitacionesRestantes.Name = "habitacionesRestantes";
-            this.habitacionesRestantes.Size = new System.Drawing.Size(201, 27);
-            this.habitacionesRestantes.TabIndex = 24;
+            this.HabitacionesRestantesTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HabitacionesRestantesTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HabitacionesRestantesTXT.Location = new System.Drawing.Point(246, 136);
+            this.HabitacionesRestantesTXT.Name = "HabitacionesRestantesTXT";
+            this.HabitacionesRestantesTXT.Size = new System.Drawing.Size(201, 27);
+            this.HabitacionesRestantesTXT.TabIndex = 24;
             // 
             // BTN_AsignarHabitacion
             // 
@@ -900,57 +893,41 @@
             this.BTN_AsignarHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_AsignarHabitacion.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_AsignarHabitacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTN_AsignarHabitacion.Location = new System.Drawing.Point(136, 709);
+            this.BTN_AsignarHabitacion.Location = new System.Drawing.Point(131, 706);
             this.BTN_AsignarHabitacion.Name = "BTN_AsignarHabitacion";
-            this.BTN_AsignarHabitacion.Size = new System.Drawing.Size(225, 40);
+            this.BTN_AsignarHabitacion.Size = new System.Drawing.Size(209, 40);
             this.BTN_AsignarHabitacion.TabIndex = 28;
-            this.BTN_AsignarHabitacion.Text = "asignar";
+            this.BTN_AsignarHabitacion.Text = "Asignar Habitacion";
             this.BTN_AsignarHabitacion.UseVisualStyleBackColor = false;
             // 
-            // dataGridView5
+            // TablaTHAsignadasDTG
             // 
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.dataGridView5.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView5.Location = new System.Drawing.Point(7, 452);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(455, 251);
-            this.dataGridView5.TabIndex = 49;
-            this.dataGridView5.TabStop = false;
+            this.TablaTHAsignadasDTG.AllowUserToAddRows = false;
+            this.TablaTHAsignadasDTG.AllowUserToDeleteRows = false;
+            this.TablaTHAsignadasDTG.AllowUserToResizeColumns = false;
+            this.TablaTHAsignadasDTG.AllowUserToResizeRows = false;
+            this.TablaTHAsignadasDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaTHAsignadasDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaTHAsignadasDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaTHAsignadasDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaTHAsignadasDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaTHAsignadasDTG.Location = new System.Drawing.Point(7, 460);
+            this.TablaTHAsignadasDTG.Name = "TablaTHAsignadasDTG";
+            this.TablaTHAsignadasDTG.ReadOnly = true;
+            this.TablaTHAsignadasDTG.RowHeadersWidth = 51;
+            this.TablaTHAsignadasDTG.RowTemplate.Height = 24;
+            this.TablaTHAsignadasDTG.Size = new System.Drawing.Size(455, 229);
+            this.TablaTHAsignadasDTG.TabIndex = 49;
+            this.TablaTHAsignadasDTG.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn9
+            // NivelHabitacionHotelTXT
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Hotel";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "TipoHab";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Hab asignadas";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // nivelHabitacionHotel
-            // 
-            this.nivelHabitacionHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.nivelHabitacionHotel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nivelHabitacionHotel.Location = new System.Drawing.Point(6, 388);
-            this.nivelHabitacionHotel.Name = "nivelHabitacionHotel";
-            this.nivelHabitacionHotel.Size = new System.Drawing.Size(225, 27);
-            this.nivelHabitacionHotel.TabIndex = 26;
+            this.NivelHabitacionHotelTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NivelHabitacionHotelTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NivelHabitacionHotelTXT.Location = new System.Drawing.Point(6, 388);
+            this.NivelHabitacionHotelTXT.Name = "NivelHabitacionHotelTXT";
+            this.NivelHabitacionHotelTXT.Size = new System.Drawing.Size(212, 27);
+            this.NivelHabitacionHotelTXT.TabIndex = 26;
             // 
             // label9
             // 
@@ -963,21 +940,36 @@
             this.label9.TabIndex = 52;
             this.label9.Text = "Nivel de habitacion";
             // 
-            // habitacionesAsignadas
+            // BTN_RegistrarHotel
             // 
-            this.habitacionesAsignadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.habitacionesAsignadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.habitacionesAsignadas.Location = new System.Drawing.Point(237, 388);
-            this.habitacionesAsignadas.Name = "habitacionesAsignadas";
-            this.habitacionesAsignadas.Size = new System.Drawing.Size(225, 27);
-            this.habitacionesAsignadas.TabIndex = 27;
+            this.BTN_RegistrarHotel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BTN_RegistrarHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_RegistrarHotel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_RegistrarHotel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BTN_RegistrarHotel.Location = new System.Drawing.Point(141, 706);
+            this.BTN_RegistrarHotel.Name = "BTN_RegistrarHotel";
+            this.BTN_RegistrarHotel.Size = new System.Drawing.Size(225, 40);
+            this.BTN_RegistrarHotel.TabIndex = 19;
+            this.BTN_RegistrarHotel.Text = "Registrar Hotel";
+            this.BTN_RegistrarHotel.UseVisualStyleBackColor = false;
+            this.BTN_RegistrarHotel.Click += new System.EventHandler(this.BTN_RegistrarHotel_Click);
+            // 
+            // HabitacionesAsignadasTXT
+            // 
+            this.HabitacionesAsignadasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HabitacionesAsignadasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HabitacionesAsignadasTXT.Location = new System.Drawing.Point(253, 388);
+            this.HabitacionesAsignadasTXT.Name = "HabitacionesAsignadasTXT";
+            this.HabitacionesAsignadasTXT.Size = new System.Drawing.Size(209, 27);
+            this.HabitacionesAsignadasTXT.TabIndex = 27;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(233, 360);
+            this.label7.Location = new System.Drawing.Point(248, 360);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(221, 25);
             this.label7.TabIndex = 51;
@@ -988,7 +980,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label30.Location = new System.Drawing.Point(82, 211);
+            this.label30.Location = new System.Drawing.Point(85, 211);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(289, 25);
             this.label30.TabIndex = 30;
@@ -999,13 +991,9 @@
             this.listaHabitaciones.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.listaHabitaciones.ForeColor = System.Drawing.Color.MidnightBlue;
             this.listaHabitaciones.FormattingEnabled = true;
-            this.listaHabitaciones.Items.AddRange(new object[] {
-            "Premiun",
-            "Oro",
-            "Estandar"});
-            this.listaHabitaciones.Location = new System.Drawing.Point(87, 239);
+            this.listaHabitaciones.Location = new System.Drawing.Point(11, 239);
             this.listaHabitaciones.Name = "listaHabitaciones";
-            this.listaHabitaciones.Size = new System.Drawing.Size(284, 114);
+            this.listaHabitaciones.Size = new System.Drawing.Size(451, 114);
             this.listaHabitaciones.TabIndex = 25;
             // 
             // groupBox1
@@ -1040,50 +1028,34 @@
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // dataGridView3
+            // HotelesRegistradosDTG
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Hotel,
-            this.Ciudad,
-            this.País});
-            this.dataGridView3.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView3.Location = new System.Drawing.Point(1039, 156);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(403, 654);
-            this.dataGridView3.TabIndex = 28;
-            this.dataGridView3.TabStop = false;
+            this.HotelesRegistradosDTG.AllowUserToAddRows = false;
+            this.HotelesRegistradosDTG.AllowUserToDeleteRows = false;
+            this.HotelesRegistradosDTG.AllowUserToResizeColumns = false;
+            this.HotelesRegistradosDTG.AllowUserToResizeRows = false;
+            this.HotelesRegistradosDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.HotelesRegistradosDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.HotelesRegistradosDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.HotelesRegistradosDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HotelesRegistradosDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.HotelesRegistradosDTG.Location = new System.Drawing.Point(1039, 156);
+            this.HotelesRegistradosDTG.Name = "HotelesRegistradosDTG";
+            this.HotelesRegistradosDTG.ReadOnly = true;
+            this.HotelesRegistradosDTG.RowHeadersWidth = 51;
+            this.HotelesRegistradosDTG.RowTemplate.Height = 24;
+            this.HotelesRegistradosDTG.Size = new System.Drawing.Size(403, 654);
+            this.HotelesRegistradosDTG.TabIndex = 28;
+            this.HotelesRegistradosDTG.TabStop = false;
             // 
-            // Hotel
+            // ZonaTuristicaTXT
             // 
-            this.Hotel.HeaderText = "Hotel";
-            this.Hotel.MinimumWidth = 6;
-            this.Hotel.Name = "Hotel";
-            // 
-            // Ciudad
-            // 
-            this.Ciudad.HeaderText = "Ciudad";
-            this.Ciudad.MinimumWidth = 6;
-            this.Ciudad.Name = "Ciudad";
-            // 
-            // País
-            // 
-            this.País.HeaderText = "País";
-            this.País.MinimumWidth = 6;
-            this.País.Name = "País";
-            // 
-            // zonaTuristica
-            // 
-            this.zonaTuristica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.zonaTuristica.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.zonaTuristica.Location = new System.Drawing.Point(33, 521);
-            this.zonaTuristica.Name = "zonaTuristica";
-            this.zonaTuristica.Size = new System.Drawing.Size(210, 24);
-            this.zonaTuristica.TabIndex = 7;
+            this.ZonaTuristicaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ZonaTuristicaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ZonaTuristicaTXT.Location = new System.Drawing.Point(33, 521);
+            this.ZonaTuristicaTXT.Name = "ZonaTuristicaTXT";
+            this.ZonaTuristicaTXT.Size = new System.Drawing.Size(210, 24);
+            this.ZonaTuristicaTXT.TabIndex = 7;
             // 
             // label23
             // 
@@ -1096,23 +1068,23 @@
             this.label23.TabIndex = 41;
             this.label23.Text = "Zona turística";
             // 
-            // numeroPisos
+            // NumeroPisosTXT
             // 
-            this.numeroPisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.numeroPisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numeroPisos.Location = new System.Drawing.Point(284, 133);
-            this.numeroPisos.Name = "numeroPisos";
-            this.numeroPisos.Size = new System.Drawing.Size(225, 24);
-            this.numeroPisos.TabIndex = 8;
+            this.NumeroPisosTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroPisosTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroPisosTXT.Location = new System.Drawing.Point(284, 133);
+            this.NumeroPisosTXT.Name = "NumeroPisosTXT";
+            this.NumeroPisosTXT.Size = new System.Drawing.Size(225, 24);
+            this.NumeroPisosTXT.TabIndex = 8;
             // 
-            // domicilio
+            // DomicilioTXT
             // 
-            this.domicilio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.domicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.domicilio.Location = new System.Drawing.Point(33, 454);
-            this.domicilio.Name = "domicilio";
-            this.domicilio.Size = new System.Drawing.Size(210, 24);
-            this.domicilio.TabIndex = 6;
+            this.DomicilioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.DomicilioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DomicilioTXT.Location = new System.Drawing.Point(33, 454);
+            this.DomicilioTXT.Name = "DomicilioTXT";
+            this.DomicilioTXT.Size = new System.Drawing.Size(210, 24);
+            this.DomicilioTXT.TabIndex = 6;
             // 
             // label20
             // 
@@ -1125,14 +1097,14 @@
             this.label20.TabIndex = 40;
             this.label20.Text = "Domicilio";
             // 
-            // nombreHotel
+            // NombreHotelTXT
             // 
-            this.nombreHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.nombreHotel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nombreHotel.Location = new System.Drawing.Point(35, 133);
-            this.nombreHotel.Name = "nombreHotel";
-            this.nombreHotel.Size = new System.Drawing.Size(212, 24);
-            this.nombreHotel.TabIndex = 1;
+            this.NombreHotelTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NombreHotelTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NombreHotelTXT.Location = new System.Drawing.Point(35, 133);
+            this.NombreHotelTXT.Name = "NombreHotelTXT";
+            this.NombreHotelTXT.Size = new System.Drawing.Size(212, 24);
+            this.NombreHotelTXT.TabIndex = 1;
             // 
             // label15
             // 
@@ -1156,22 +1128,17 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button9);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.button10);
-            this.groupBox4.Controls.Add(this.checkedListBox3);
-            this.groupBox4.Controls.Add(this.numeroHabitaciones);
+            this.groupBox4.Controls.Add(this.groupBox13);
+            this.groupBox4.Controls.Add(this.NumeroHabitacionesTXT);
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Controls.Add(this.fechaOperacion);
-            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.FechaOperacionDTP);
             this.groupBox4.Controls.Add(this.BTN_RegistrarHotel);
+            this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.groupBox2);
-            this.groupBox4.Controls.Add(this.serviciosAdicionales);
             this.groupBox4.Controls.Add(this.groupBox3);
             this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Controls.Add(this.numeroPiscinas);
+            this.groupBox4.Controls.Add(this.NumeroPiscinasTXT);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox4.Location = new System.Drawing.Point(15, 61);
@@ -1181,65 +1148,94 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Información general";
             // 
-            // button9
+            // groupBox13
             // 
-            this.button9.BackColor = System.Drawing.Color.Crimson;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(17, 708);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(215, 41);
-            this.button9.TabIndex = 75;
-            this.button9.Text = "Eliminar";
-            this.button9.UseVisualStyleBackColor = false;
+            this.groupBox13.Controls.Add(this.ServiciosTXT);
+            this.groupBox13.Controls.Add(this.EliminarBTN);
+            this.groupBox13.Controls.Add(this.ServicioTXT);
+            this.groupBox13.Controls.Add(this.ServicioAdicionalCB);
+            this.groupBox13.Controls.Add(this.AgregarBTN);
+            this.groupBox13.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.groupBox13.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox13.Location = new System.Drawing.Point(17, 490);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(476, 206);
+            this.groupBox13.TabIndex = 17;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Servicios adicionales";
             // 
-            // textBox3
+            // ServiciosTXT
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(17, 632);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 27);
-            this.textBox3.TabIndex = 74;
+            this.ServiciosTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ServiciosTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ServiciosTXT.Location = new System.Drawing.Point(259, 30);
+            this.ServiciosTXT.Multiline = true;
+            this.ServiciosTXT.Name = "ServiciosTXT";
+            this.ServiciosTXT.ReadOnly = true;
+            this.ServiciosTXT.Size = new System.Drawing.Size(211, 122);
+            this.ServiciosTXT.TabIndex = 18;
             // 
-            // button10
+            // EliminarBTN
             // 
-            this.button10.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(17, 665);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(215, 41);
-            this.button10.TabIndex = 73;
-            this.button10.Text = "Agregar";
-            this.button10.UseVisualStyleBackColor = false;
+            this.EliminarBTN.BackColor = System.Drawing.Color.Crimson;
+            this.EliminarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EliminarBTN.Location = new System.Drawing.Point(259, 158);
+            this.EliminarBTN.Name = "EliminarBTN";
+            this.EliminarBTN.Size = new System.Drawing.Size(211, 41);
+            this.EliminarBTN.TabIndex = 75;
+            this.EliminarBTN.Text = "Eliminar Servicio";
+            this.EliminarBTN.UseVisualStyleBackColor = false;
             // 
-            // checkedListBox3
+            // ServicioTXT
             // 
-            this.checkedListBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.checkedListBox3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(17, 527);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(211, 92);
-            this.checkedListBox3.TabIndex = 67;
+            this.ServicioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ServicioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ServicioTXT.Location = new System.Drawing.Point(6, 128);
+            this.ServicioTXT.Name = "ServicioTXT";
+            this.ServicioTXT.Size = new System.Drawing.Size(211, 24);
+            this.ServicioTXT.TabIndex = 74;
             // 
-            // numeroHabitaciones
+            // ServicioAdicionalCB
             // 
-            this.numeroHabitaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.numeroHabitaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numeroHabitaciones.Location = new System.Drawing.Point(270, 460);
-            this.numeroHabitaciones.Name = "numeroHabitaciones";
-            this.numeroHabitaciones.Size = new System.Drawing.Size(225, 27);
-            this.numeroHabitaciones.TabIndex = 17;
+            this.ServicioAdicionalCB.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.ServicioAdicionalCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ServicioAdicionalCB.FormattingEnabled = true;
+            this.ServicioAdicionalCB.Location = new System.Drawing.Point(6, 30);
+            this.ServicioAdicionalCB.Name = "ServicioAdicionalCB";
+            this.ServicioAdicionalCB.Size = new System.Drawing.Size(211, 92);
+            this.ServicioAdicionalCB.TabIndex = 67;
+            this.ServicioAdicionalCB.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ServicioAdicionalCB_ItemCheck);
+            // 
+            // AgregarBTN
+            // 
+            this.AgregarBTN.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.AgregarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AgregarBTN.Location = new System.Drawing.Point(6, 158);
+            this.AgregarBTN.Name = "AgregarBTN";
+            this.AgregarBTN.Size = new System.Drawing.Size(211, 41);
+            this.AgregarBTN.TabIndex = 73;
+            this.AgregarBTN.Text = "Agregar Servicio";
+            this.AgregarBTN.UseVisualStyleBackColor = false;
+            this.AgregarBTN.Click += new System.EventHandler(this.AgregarBTN_Click);
+            // 
+            // NumeroHabitacionesTXT
+            // 
+            this.NumeroHabitacionesTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroHabitacionesTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroHabitacionesTXT.Location = new System.Drawing.Point(270, 460);
+            this.NumeroHabitacionesTXT.Name = "NumeroHabitacionesTXT";
+            this.NumeroHabitacionesTXT.Size = new System.Drawing.Size(225, 27);
+            this.NumeroHabitacionesTXT.TabIndex = 17;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.ciudades);
-            this.groupBox5.Controls.Add(this.estado);
-            this.groupBox5.Controls.Add(this.pais);
+            this.groupBox5.Controls.Add(this.CiudadCB);
+            this.groupBox5.Controls.Add(this.PaisCB);
+            this.groupBox5.Controls.Add(this.EstadoCB);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Controls.Add(this.label16);
@@ -1252,32 +1248,38 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ubicacion";
             // 
-            // ciudades
+            // CiudadCB
             // 
-            this.ciudades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.ciudades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ciudades.Location = new System.Drawing.Point(11, 196);
-            this.ciudades.Name = "ciudades";
-            this.ciudades.Size = new System.Drawing.Size(185, 27);
-            this.ciudades.TabIndex = 5;
+            this.CiudadCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CiudadCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CiudadCB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.CiudadCB.FormattingEnabled = true;
+            this.CiudadCB.Location = new System.Drawing.Point(11, 196);
+            this.CiudadCB.Name = "CiudadCB";
+            this.CiudadCB.Size = new System.Drawing.Size(185, 25);
+            this.CiudadCB.TabIndex = 42;
             // 
-            // estado
+            // PaisCB
             // 
-            this.estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.estado.Location = new System.Drawing.Point(11, 132);
-            this.estado.Name = "estado";
-            this.estado.Size = new System.Drawing.Size(185, 27);
-            this.estado.TabIndex = 4;
+            this.PaisCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PaisCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PaisCB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.PaisCB.FormattingEnabled = true;
+            this.PaisCB.Location = new System.Drawing.Point(11, 68);
+            this.PaisCB.Name = "PaisCB";
+            this.PaisCB.Size = new System.Drawing.Size(185, 25);
+            this.PaisCB.TabIndex = 41;
             // 
-            // pais
+            // EstadoCB
             // 
-            this.pais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.pais.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pais.Location = new System.Drawing.Point(11, 68);
-            this.pais.Name = "pais";
-            this.pais.Size = new System.Drawing.Size(185, 27);
-            this.pais.TabIndex = 3;
+            this.EstadoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.EstadoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EstadoCB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.EstadoCB.FormattingEnabled = true;
+            this.EstadoCB.Location = new System.Drawing.Point(11, 132);
+            this.EstadoCB.Name = "EstadoCB";
+            this.EstadoCB.Size = new System.Drawing.Size(185, 25);
+            this.EstadoCB.TabIndex = 40;
             // 
             // label19
             // 
@@ -1323,15 +1325,15 @@
             this.label38.TabIndex = 51;
             this.label38.Text = "Núm de habitaciones";
             // 
-            // fechaOperacion
+            // FechaOperacionDTP
             // 
-            this.fechaOperacion.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaOperacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaOperacion.Location = new System.Drawing.Point(268, 147);
-            this.fechaOperacion.Name = "fechaOperacion";
-            this.fechaOperacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fechaOperacion.Size = new System.Drawing.Size(225, 31);
-            this.fechaOperacion.TabIndex = 9;
+            this.FechaOperacionDTP.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaOperacionDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaOperacionDTP.Location = new System.Drawing.Point(268, 147);
+            this.FechaOperacionDTP.Name = "FechaOperacionDTP";
+            this.FechaOperacionDTP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.FechaOperacionDTP.Size = new System.Drawing.Size(225, 31);
+            this.FechaOperacionDTP.TabIndex = 9;
             // 
             // label21
             // 
@@ -1344,23 +1346,10 @@
             this.label21.TabIndex = 41;
             this.label21.Text = "Fecha de operación";
             // 
-            // BTN_RegistrarHotel
-            // 
-            this.BTN_RegistrarHotel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BTN_RegistrarHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_RegistrarHotel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_RegistrarHotel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTN_RegistrarHotel.Location = new System.Drawing.Point(269, 708);
-            this.BTN_RegistrarHotel.Name = "BTN_RegistrarHotel";
-            this.BTN_RegistrarHotel.Size = new System.Drawing.Size(225, 40);
-            this.BTN_RegistrarHotel.TabIndex = 19;
-            this.BTN_RegistrarHotel.Text = "registrar";
-            this.BTN_RegistrarHotel.UseVisualStyleBackColor = false;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.noPlaya);
-            this.groupBox2.Controls.Add(this.siPlaya);
+            this.groupBox2.Controls.Add(this.NoPlayaCH);
+            this.groupBox2.Controls.Add(this.PlayaCH);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox2.Location = new System.Drawing.Point(268, 198);
@@ -1370,41 +1359,31 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Frente a la playa";
             // 
-            // noPlaya
+            // NoPlayaCH
             // 
-            this.noPlaya.AutoSize = true;
-            this.noPlaya.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.noPlaya.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.noPlaya.Location = new System.Drawing.Point(144, 33);
-            this.noPlaya.Name = "noPlaya";
-            this.noPlaya.Size = new System.Drawing.Size(55, 29);
-            this.noPlaya.TabIndex = 12;
-            this.noPlaya.TabStop = true;
-            this.noPlaya.Text = "No";
-            this.noPlaya.UseVisualStyleBackColor = true;
+            this.NoPlayaCH.AutoSize = true;
+            this.NoPlayaCH.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.NoPlayaCH.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.NoPlayaCH.Location = new System.Drawing.Point(144, 33);
+            this.NoPlayaCH.Name = "NoPlayaCH";
+            this.NoPlayaCH.Size = new System.Drawing.Size(55, 29);
+            this.NoPlayaCH.TabIndex = 12;
+            this.NoPlayaCH.TabStop = true;
+            this.NoPlayaCH.Text = "No";
+            this.NoPlayaCH.UseVisualStyleBackColor = true;
             // 
-            // siPlaya
+            // PlayaCH
             // 
-            this.siPlaya.AutoSize = true;
-            this.siPlaya.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.siPlaya.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.siPlaya.Location = new System.Drawing.Point(17, 33);
-            this.siPlaya.Name = "siPlaya";
-            this.siPlaya.Size = new System.Drawing.Size(45, 29);
-            this.siPlaya.TabIndex = 11;
-            this.siPlaya.TabStop = true;
-            this.siPlaya.Text = "Sí";
-            this.siPlaya.UseVisualStyleBackColor = true;
-            // 
-            // serviciosAdicionales
-            // 
-            this.serviciosAdicionales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.serviciosAdicionales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.serviciosAdicionales.Location = new System.Drawing.Point(267, 527);
-            this.serviciosAdicionales.Multiline = true;
-            this.serviciosAdicionales.Name = "serviciosAdicionales";
-            this.serviciosAdicionales.Size = new System.Drawing.Size(226, 158);
-            this.serviciosAdicionales.TabIndex = 18;
+            this.PlayaCH.AutoSize = true;
+            this.PlayaCH.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.PlayaCH.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.PlayaCH.Location = new System.Drawing.Point(17, 33);
+            this.PlayaCH.Name = "PlayaCH";
+            this.PlayaCH.Size = new System.Drawing.Size(45, 29);
+            this.PlayaCH.TabIndex = 11;
+            this.PlayaCH.TabStop = true;
+            this.PlayaCH.Text = "Sí";
+            this.PlayaCH.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -1456,25 +1435,14 @@
             this.label22.TabIndex = 42;
             this.label22.Text = "Núm de piscinas";
             // 
-            // label25
+            // NumeroPiscinasTXT
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label25.Location = new System.Drawing.Point(12, 499);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(188, 25);
-            this.label25.TabIndex = 25;
-            this.label25.Text = "Servicios adicionales";
-            // 
-            // numeroPiscinas
-            // 
-            this.numeroPiscinas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.numeroPiscinas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numeroPiscinas.Location = new System.Drawing.Point(268, 314);
-            this.numeroPiscinas.Name = "numeroPiscinas";
-            this.numeroPiscinas.Size = new System.Drawing.Size(225, 27);
-            this.numeroPiscinas.TabIndex = 13;
+            this.NumeroPiscinasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroPiscinasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroPiscinasTXT.Location = new System.Drawing.Point(268, 314);
+            this.NumeroPiscinasTXT.Name = "NumeroPiscinasTXT";
+            this.NumeroPiscinasTXT.Size = new System.Drawing.Size(225, 27);
+            this.NumeroPiscinasTXT.TabIndex = 13;
             // 
             // label4
             // 
@@ -1487,15 +1455,15 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Fecha actual de registro";
             // 
-            // dateTimePicker1
+            // FechaRegistroDTP
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1074, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(136, 31);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.TabStop = false;
+            this.FechaRegistroDTP.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaRegistroDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaRegistroDTP.Location = new System.Drawing.Point(1074, 64);
+            this.FechaRegistroDTP.Name = "FechaRegistroDTP";
+            this.FechaRegistroDTP.Size = new System.Drawing.Size(136, 31);
+            this.FechaRegistroDTP.TabIndex = 14;
+            this.FechaRegistroDTP.TabStop = false;
             // 
             // label2
             // 
@@ -1960,12 +1928,14 @@
             this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaTHAsignadasDTG)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HotelesRegistradosDTG)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1991,11 +1961,11 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox numeroPisos;
-        private System.Windows.Forms.TextBox domicilio;
+        private System.Windows.Forms.TextBox NumeroPisosTXT;
+        private System.Windows.Forms.TextBox DomicilioTXT;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker fechaOperacion;
+        private System.Windows.Forms.DateTimePicker FechaRegistroDTP;
+        private System.Windows.Forms.DateTimePicker FechaOperacionDTP;
         private System.Windows.Forms.Button BTN_RegistrarHotel;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox15;
@@ -2005,9 +1975,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox zonaTuristica;
-        private System.Windows.Forms.TextBox numeroPiscinas;
+        private System.Windows.Forms.TextBox ZonaTuristicaTXT;
+        private System.Windows.Forms.TextBox NumeroPiscinasTXT;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -2024,7 +1993,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridView TablaTipoHabDTG;
         private System.Windows.Forms.Panel MenuContenedor;
-        private System.Windows.Forms.TextBox nombreHotel;
+        private System.Windows.Forms.TextBox NombreHotelTXT;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label UsuarioActual2TXT;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -2037,18 +2006,15 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton noPlaya;
-        private System.Windows.Forms.RadioButton siPlaya;
+        private System.Windows.Forms.RadioButton NoPlayaCH;
+        private System.Windows.Forms.RadioButton PlayaCH;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton noSalon;
         private System.Windows.Forms.RadioButton siSalon;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hotel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn País;
+        private System.Windows.Forms.DataGridView HotelesRegistradosDTG;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView TablaTipoHabitacion;
@@ -2074,25 +2040,22 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox CaracteristicasTXT;
-        private System.Windows.Forms.TextBox serviciosAdicionales;
-        private System.Windows.Forms.TextBox habitacionesTotales;
+        private System.Windows.Forms.TextBox ServiciosTXT;
+        private System.Windows.Forms.TextBox HabitacionesTotalesTXT;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox habitacionesAsignadas;
+        private System.Windows.Forms.TextBox HabitacionesAsignadasTXT;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox habitacionesRestantes;
+        private System.Windows.Forms.TextBox HabitacionesRestantesTXT;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox nivelHabitacionHotel;
+        private System.Windows.Forms.TextBox NivelHabitacionHotelTXT;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BTN_AsignarHabitacion;
         private System.Windows.Forms.CheckedListBox listaHabitaciones;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridView TablaTHAsignadasDTG;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.ComboBox listaHotel;
-        private System.Windows.Forms.TextBox numeroHabitaciones;
+        private System.Windows.Forms.ComboBox HotelCB;
+        private System.Windows.Forms.TextBox NumeroHabitacionesTXT;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
@@ -2120,9 +2083,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox ciudades;
-        private System.Windows.Forms.TextBox estado;
-        private System.Windows.Forms.TextBox pais;
         private System.Windows.Forms.CheckedListBox AmenidadesCB;
         private System.Windows.Forms.TextBox CampoAmenidadTXT;
         private System.Windows.Forms.Button AgregarCaracteristicaBTN;
@@ -2131,10 +2091,14 @@
         private System.Windows.Forms.Button EliminarAmenidadBTN;
         private System.Windows.Forms.Button EliminarCaracteristicaBTN;
         private System.Windows.Forms.TextBox CampoCaracteristicasTXT;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.CheckedListBox ServicioAdicionalCB;
+        private System.Windows.Forms.Button EliminarBTN;
+        private System.Windows.Forms.TextBox ServicioTXT;
+        private System.Windows.Forms.Button AgregarBTN;
         private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.ComboBox EstadoCB;
+        private System.Windows.Forms.ComboBox CiudadCB;
+        private System.Windows.Forms.ComboBox PaisCB;
+        private System.Windows.Forms.GroupBox groupBox13;
     }
 }
