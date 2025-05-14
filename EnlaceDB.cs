@@ -435,6 +435,124 @@ namespace AAVD
 
             return tabla;
         }
+        public DataTable consultarHotel()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarHotel";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarPisosXHotel(int Id_Hotel)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarPisosHotel";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Hotel", Id_Hotel);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarHabitaciones(int Id)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarHabitacionesContadas";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Hotel", Id);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarHabitacionesRestantes(int Id_Hotel)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_HabitacionesRestantes";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Id_Hotel", Id_Hotel);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public DataTable ValidarUbicacionUnica(string pais, string estado, string ciudad)
         {
             var msg = "";
@@ -495,6 +613,42 @@ namespace AAVD
                 // Parámetros para la tabla Telefono
                 _comandosql.Parameters.AddWithValue("@telefonoCelular", param.TelefonoCelular);
                 _comandosql.Parameters.AddWithValue("@telefonoCasa", param.TelefonoCasa);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool SP_InsertarHabitaciones(Hoteles.Habitacion param)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_InsertarHabitaciones";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Habitaciones
+                _comandosql.Parameters.AddWithValue("@Id_Hotel", param.Id_Hotel);
+                _comandosql.Parameters.AddWithValue("@Id_TipoHab", param.Id_TipoHab);
+                _comandosql.Parameters.AddWithValue("@habitacionesAsigadas", param.NumeroHabitacion);
+                _comandosql.Parameters.AddWithValue("@pisos", param.Piso);
 
                 // Ejecutar el comando
                 _comandosql.ExecuteNonQuery();
@@ -685,11 +839,10 @@ namespace AAVD
 
             return add;
         }
-        public bool Insertar_ServicioAdicional(Hoteles.ServicioAdicional param, out int ExtraidoId_ServicioAdicional)
+        public bool Insertar_ServicioAdicional(Hoteles.ServicioAdicional param)
         {
             var msg = "";
             var add = true;
-            @ExtraidoId_ServicioAdicional = -1;
             try
             {
                 conectar();
@@ -700,14 +853,9 @@ namespace AAVD
 
                 _comandosql.Parameters.AddWithValue("@nombreServicio", param.nombreServicio);
 
-                SqlParameter outputParam = new SqlParameter("@ExtraidoId_ServicioAdicional", SqlDbType.Int);
-                outputParam.Direction = ParameterDirection.Output;
-                _comandosql.Parameters.Add(outputParam);
-
                 // Ejecutar el comando
                 _comandosql.ExecuteNonQuery();
                 add = true;
-                ExtraidoId_ServicioAdicional = Convert.ToInt32(outputParam.Value);
             }
             catch (SqlException e)
             {
@@ -730,7 +878,7 @@ namespace AAVD
             try
             {
                 conectar();
-                string qry = "SP_InsertarServicioAdicional";
+                string qry = "SP_InsertarHotel_ServicioAdicional";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
@@ -780,6 +928,12 @@ namespace AAVD
                 _comandosql.Parameters.AddWithValue("@salonEventos", param.SalonEventos);
                 _comandosql.Parameters.AddWithValue("@numHabitaciones", param.NumHabitaciones);
                 _comandosql.Parameters.AddWithValue("@fechaRegistro", param.FechaRegistro);
+
+                _comandosql.Parameters.AddWithValue("@pais", param.Pais);
+                _comandosql.Parameters.AddWithValue("@ciudad", param.Ciudad);
+                _comandosql.Parameters.AddWithValue("@estado", param.Estado);
+                _comandosql.Parameters.AddWithValue("@codigoPostal", param.CodigoPostal);
+                _comandosql.Parameters.AddWithValue("@domicilio", param.Domicilio);
 
                 SqlParameter outputParam = new SqlParameter("@ExtraidoId_Hotel", SqlDbType.Int);
                 outputParam.Direction = ParameterDirection.Output;
@@ -917,6 +1071,39 @@ namespace AAVD
 
                 // Parámetros para la tabla Usuario
                 _comandosql.Parameters.AddWithValue("@Id_Cliente", Id_Cliente);
+
+                // Ejecutar el comando
+                _comandosql.ExecuteNonQuery();
+                add = true;
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+        public bool Borrar_TipoHab(int Id_TipoHab)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "SP_EliminarTipoHabitacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Parámetros para la tabla Usuario
+                _comandosql.Parameters.AddWithValue("@Id_TipoHab", Id_TipoHab);
 
                 // Ejecutar el comando
                 _comandosql.ExecuteNonQuery();

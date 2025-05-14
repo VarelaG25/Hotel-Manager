@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static AAVD.Hoteles;
 
 namespace AAVD
 {
@@ -27,7 +28,22 @@ namespace AAVD
             public double precio { get; set; }
             public int numeroPersonas { get; set; }
             public string frenteA { get; set; }
+            public override string ToString()
+            {
+                return nivelHabitacion;
+            }
         }
+        // --------------------------------------------------- Habitaciones -------------------------------------------------
+        public class Habitacion
+        {
+            public int Id_Habitaciones { get; set; }
+            public int Id_Hotel { get; set; }
+            public int Id_TipoHab { get; set; }
+            public int NumeroHabitacion { get; set; }
+            public int Piso { get; set; }
+            public string Estatus { get; set; }
+        }
+        // --------------------------------------------------- Hotel -------------------------------------------------
         public class Hotel : Ubicacion
         {
             public int Id_Hotel { get; set; }
@@ -43,6 +59,7 @@ namespace AAVD
             public DateTime FechaRegistro { get; set; }
             public DateTime FechaModificacion { get; set; }
         }
+        // --------------------------------------------------- Amenidades -------------------------------------------------
         public class Amenidad
         {
             public int Id_Amenidad { get; set; }
@@ -52,6 +69,7 @@ namespace AAVD
                 return nombreAmenidad;
             }
         }
+        // --------------------------------------------------- Caracteristicas -------------------------------------------------
         public class Caracteristica
         {
             public int Id_Caracteristica { get; set; }
@@ -62,6 +80,7 @@ namespace AAVD
                 return nombreCaracteristica;
             }
         }
+        // --------------------------------------------------- Servicio Adicional -------------------------------------------------
         public class ServicioAdicional
         {
             public int Id_ServicioAdicional { get; set; }
@@ -72,6 +91,7 @@ namespace AAVD
                 return nombreServicio;
             }
         }
+        // --------------------------------------------------- Inicializacion de ventana -------------------------------------------------
         private void AbrirControlEnPanel(System.Windows.Forms.UserControl control)
         {
             MenuContenedor.Controls.Clear();
@@ -88,6 +108,7 @@ namespace AAVD
             this.FindForm().StartPosition = FormStartPosition.Manual;
             this.FindForm().Location = NuevoForm.Location;
         }
+        // --------------------------------------------------- Botones -------------------------------------------------
         private void BTN_Registrar_Click(object sender, EventArgs e)
         {
             TipoHab tipoHab = new TipoHab();
@@ -104,6 +125,7 @@ namespace AAVD
                 MessageBox.Show("El precio debe contener solo números y un punto decimal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            tipoHab.precio = Convert.ToDouble(PrecioTXT.Text);
             if (PrecioTXT.Text.Count(c => c == '.') > 1)
             {
                 MessageBox.Show("El precio solo puede contener un punto decimal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -111,7 +133,7 @@ namespace AAVD
             }
             if (tipoHab.precio < 800)
             {
-                MessageBox.Show("El precio no puede ser menor a 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El precio no puede ser menor a 800", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             tipoHab.numeroCamas = Convert.ToInt32(NumeroCamasTXT.Text);
@@ -121,7 +143,6 @@ namespace AAVD
                 return;
             }
             tipoHab.tipoCama = TipoCamaTXT.Text;
-            tipoHab.precio = Convert.ToDouble(PrecioTXT.Text);
             tipoHab.numeroPersonas = Convert.ToInt32(CantidadPersonasTXT.Text);
             if (CheckJardinTXT.Checked)
             {
@@ -215,8 +236,7 @@ namespace AAVD
             var enlace = new EnlaceDB();
             ServicioAdicional servicioAdicional = new ServicioAdicional();
             servicioAdicional.nombreServicio = ServicioTXT.Text;
-            int Id_Generado;
-            bool resultado = enlace.Insertar_ServicioAdicional(servicioAdicional, out Id_Generado);
+            bool resultado = enlace.Insertar_ServicioAdicional(servicioAdicional);
             if (!resultado)
             {
                 MessageBox.Show("Error al registrar el servicio adicional", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -224,12 +244,85 @@ namespace AAVD
             }
             else
             {
-                MessageBox.Show("Servicio Adicional registrado correctamente: " + Id_Generado, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Servicio Adicional registrado correctamente: " + servicioAdicional.nombreServicio, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ServicioTXT.Clear();
             }
             CargarTablasTipoHab();
 
         }
+        private void BTN_RegistrarHotel_Click(object sender, EventArgs e)
+        {
+            var enlace = new EnlaceDB();
+            Hotel hotel = new Hotel();
+            ServicioAdicional servicio = new ServicioAdicional();
+            var tabla = new DataTable();
+            tabla = enlace.consultarUsuarioLogeado(Login.IdUsuarioActual);
+            hotel.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
+            hotel.NombreHotel = NombreHotelTXT.Text;
+            hotel.ZonaTuristica = ZonaTuristicaTXT.Text;
+            if (!NumeroPisosTXT.Text.All(char.IsDigit) || !NumeroPiscinasTXT.Text.All(char.IsDigit) || !NumeroHabitacionesTXT.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("El número de pisos, piscinas o habitaciones deben contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            hotel.NumPisos = Convert.ToInt32(NumeroPisosTXT.Text);
+            hotel.FechaOperacion = DateTime.Parse(FechaOperacionDTP.Text);
+            hotel.FechaRegistro = DateTime.Parse(FechaRegistroDTP.Text);
+            hotel.NumPiscinas = Convert.ToInt32(NumeroPiscinasTXT.Text);
+            hotel.NumHabitaciones = Convert.ToInt32(NumeroHabitacionesTXT.Text);
+            hotel.Pais = PaisCB.Text;
+            hotel.Estado = EstadoCB.Text;
+            hotel.Ciudad = CiudadCB.Text;
+            hotel.Domicilio = DomicilioTXT.Text;
+            if (hotel.NumPisos < 0 || hotel.NumHabitaciones < 0 || hotel.NumPiscinas < 0)
+            {
+                MessageBox.Show("El número de pisos, habitaciones o piscinas no puede ser menor a 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(hotel.NombreHotel) || string.IsNullOrEmpty(hotel.ZonaTuristica) || string.IsNullOrEmpty(hotel.Pais)
+                || string.IsNullOrEmpty(hotel.Estado) || string.IsNullOrEmpty(hotel.Ciudad) || string.IsNullOrEmpty(hotel.Domicilio))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // Sacar el Id de la ubicacion, y si se repite guardar la que ya esta
+            var tablaUbicacion = new DataTable();
+            tablaUbicacion = enlace.ValidarUbicacionUnica(hotel.Pais, hotel.Estado, hotel.Ciudad);
+            hotel.Id_Ubicacion = tablaUbicacion.Rows.Count < 1 ? 0 : Convert.ToInt32(tablaUbicacion.Rows[0]["Id_Ubicacion"]);
+            if ((!PlayaCH.Checked && !NoPlayaCH.Checked) || (PlayaCH.Checked && NoPlayaCH.Checked)
+                || (!siSalon.Checked && !noSalon.Checked) || (siSalon.Checked && noSalon.Checked))
+            {
+                MessageBox.Show("Debe seleccionar una de las opciones disponibles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (PlayaCH.Checked) hotel.FrentePlaya = 1;
+            if (NoPlayaCH.Checked) hotel.FrentePlaya = 0;
+            if (siSalon.Checked) hotel.SalonEventos = 1;
+            if (noSalon.Checked) hotel.SalonEventos = 0;
+            int Id_Generado;
+            if ((enlace.Insertar_Hotel(hotel, out Id_Generado)) == false)
+            {
+                MessageBox.Show("Error al registrar el hotel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                foreach (var item in ServicioAdicionalCB.CheckedItems)
+                {
+                    if (item is ServicioAdicional servicioSeleccionado)
+                    {
+                        enlace.Insertar_Hotel_ServicioAdicional(servicioSeleccionado, Id_Generado);
+                    }
+                }
+            }
+            MessageBox.Show("Se registro correctamente el hotel: " + hotel.NombreHotel, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CargarTablasTipoHab();
+        }
+        private void EliminarAmenidadBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+        // --------------------------------------------------- Checkbox -------------------------------------------------
         private void AmenidadesCB_ItemCheck(object sender, EventArgs e)
         {
             BeginInvoke((Action)(() =>
@@ -270,6 +363,34 @@ namespace AAVD
                 ServiciosTXT.Text = sb.ToString().TrimEnd(' ', ',');
             }));
         }
+        private void listaHabitaciones_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // Solo permitir un elemento marcado a la vez
+            if (e.NewValue == CheckState.Checked)
+            {
+                for (int i = 0; i < listaHabitaciones.Items.Count; i++)
+                {
+                    if (i != e.Index && listaHabitaciones.GetItemChecked(i))
+                    {
+                        listaHabitaciones.SetItemChecked(i, false);
+                    }
+                }
+            }
+            // Actualizar el TextBox después del cambio de estado
+            BeginInvoke((Action)(() =>
+            {
+                var item = listaHabitaciones.Items[e.Index];
+                if (item is TipoHab tipoHab && listaHabitaciones.GetItemChecked(e.Index))
+                {
+                    NivelHabitacionHotelTXT.Text = tipoHab.nivelHabitacion;
+                }
+                else
+                {
+                    NivelHabitacionHotelTXT.Clear();
+                }
+            }));
+        }
+        // --------------------------------------------------- Carga de datos -------------------------------------------------
         private void CargarTablasTipoHab()
         {
 
@@ -283,18 +404,28 @@ namespace AAVD
             TipoHabCB.DisplayMember = "nivelHabitacion";
             TipoHabCB.ValueMember = "Id_TipoHab";
             TipoHabCB.DataSource = tabla;
-
+            var tablaHotel = new DataTable();
+            tablaHotel = enlace.consultarHotel();
+            HotelCB.DisplayMember = "nombreHotel";
+            HotelCB.ValueMember = "Id_Hotel";
+            HotelCB.DataSource = tablaHotel;
+            // Cargar tabla
+            int Id = Convert.ToInt32(HotelCB.SelectedValue);
+            var tablaHabitaciones = enlace.consultarHabitaciones(Id);
+            var tablaRestantes = enlace.consultarHabitacionesRestantes(Id);
             if (tabla.Rows.Count > 0)
             {
+                // Cargar tabla
                 TablaTipoHabitacion.DataSource = tabla;
+                // Visibles
                 TablaTipoHabitacion.Columns["Id_TipoHab"].Visible = false;
+                // Nombre de la columna
                 TablaTipoHabitacion.Columns["nivelHabitacion"].HeaderText = "Nivel Habitacion";
                 TablaTipoHabitacion.Columns["numeroCamas"].HeaderText = "# de Camas";
                 TablaTipoHabitacion.Columns["tipoCama"].HeaderText = "Tipo de Cama";
                 TablaTipoHabitacion.Columns["precio"].HeaderText = "Precio";
                 TablaTipoHabitacion.Columns["numeroPersonas"].HeaderText = "# de Personas";
                 TablaTipoHabitacion.Columns["frenteA"].HeaderText = "Frente a";
-
                 TablaTipoHabitacion.Columns["Id_TipoHab"].DisplayIndex = 0;
                 TablaTipoHabitacion.Columns["nivelHabitacion"].DisplayIndex = 1;
                 TablaTipoHabitacion.Columns["numeroCamas"].DisplayIndex = 2;
@@ -302,18 +433,19 @@ namespace AAVD
                 TablaTipoHabitacion.Columns["precio"].DisplayIndex = 4;
                 TablaTipoHabitacion.Columns["numeroPersonas"].DisplayIndex = 5;
                 TablaTipoHabitacion.Columns["frenteA"].DisplayIndex = 6;
-
                 TablaTipoHabitacion.Columns["precio"].DefaultCellStyle.Format = "C2";
-
+                // Cargar tabla
                 TablaTipoHabDTG.DataSource = tabla;
+                // Visibles
                 TablaTipoHabDTG.Columns["Id_TipoHab"].Visible = false;
+                // Nombre de la columna
                 TablaTipoHabDTG.Columns["nivelHabitacion"].HeaderText = "Nivel Habitacion";
                 TablaTipoHabDTG.Columns["numeroCamas"].HeaderText = "# de Camas";
                 TablaTipoHabDTG.Columns["tipoCama"].HeaderText = "Tipo de Cama";
                 TablaTipoHabDTG.Columns["precio"].HeaderText = "Precio";
                 TablaTipoHabDTG.Columns["numeroPersonas"].HeaderText = "# de Personas";
                 TablaTipoHabDTG.Columns["frenteA"].HeaderText = "Frente a";
-
+                // Orden de la tabla
                 TablaTipoHabDTG.Columns["Id_TipoHab"].DisplayIndex = 0;
                 TablaTipoHabDTG.Columns["nivelHabitacion"].DisplayIndex = 1;
                 TablaTipoHabDTG.Columns["numeroCamas"].DisplayIndex = 2;
@@ -321,13 +453,92 @@ namespace AAVD
                 TablaTipoHabDTG.Columns["precio"].DisplayIndex = 4;
                 TablaTipoHabDTG.Columns["numeroPersonas"].DisplayIndex = 5;
                 TablaTipoHabDTG.Columns["frenteA"].DisplayIndex = 6;
-
                 TablaTipoHabDTG.Columns["precio"].DefaultCellStyle.Format = "C2";
             }
+            if (tablaHotel.Rows.Count > 0)
+            {
+                // Cargar tabla
+                HotelesRegistradosDTG.DataSource = tablaHotel;
+                // Visibles
+                HotelesRegistradosDTG.Columns["Id_Hotel"].Visible = false;
+                HotelesRegistradosDTG.Columns["Id_Usuario"].Visible = false;
+                HotelesRegistradosDTG.Columns["Id_Ubicacion"].Visible = false;
+                HotelesRegistradosDTG.Columns["fechaModificacionHotel"].Visible = false;
+                HotelesRegistradosDTG.Columns["salonEventos"].Visible = false;
+                HotelesRegistradosDTG.Columns["estatus"].Visible = false;
+                HotelesRegistradosDTG.Columns["frentePlaya"].Visible = false;
+                // Nombre de la columna
+                HotelesRegistradosDTG.Columns["nombreHotel"].HeaderText = "Nombre Hotel";
+                HotelesRegistradosDTG.Columns["zonaTuristica"].HeaderText = "Zona Turistica";
+                HotelesRegistradosDTG.Columns["numeroPisos"].HeaderText = "# de Pisos";
+                HotelesRegistradosDTG.Columns["fechaOperacion"].HeaderText = "Fecha Operacion";
+                HotelesRegistradosDTG.Columns["numeroPiscinas"].HeaderText = "# de Piscinas";
+                HotelesRegistradosDTG.Columns["SalonEventos"].HeaderText = "Salon Eventos";
+                HotelesRegistradosDTG.Columns["FrentePlaya"].HeaderText = "Frente a la Playa";
+                HotelesRegistradosDTG.Columns["numHabitaciones"].HeaderText = "# de Habitaciones";
+                HotelesRegistradosDTG.Columns["fechaRegistroHotel"].HeaderText = "Fecha de registro";
+                HotelesRegistradosDTG.Columns["Estatus"].HeaderText = "Estatus";
+                // Orden de la tabla
+                HotelesRegistradosDTG.Columns["nombreHotel"].DisplayIndex = 1;
+                HotelesRegistradosDTG.Columns["zonaTuristica"].DisplayIndex = 2;
+                HotelesRegistradosDTG.Columns["numeroPisos"].DisplayIndex = 3;
+                HotelesRegistradosDTG.Columns["fechaOperacion"].DisplayIndex = 4;
+                HotelesRegistradosDTG.Columns["numeroPiscinas"].DisplayIndex = 5;
+                HotelesRegistradosDTG.Columns["salonEventos"].DisplayIndex = 6;
+                HotelesRegistradosDTG.Columns["FrentePlaya"].DisplayIndex = 7;
+                HotelesRegistradosDTG.Columns["numHabitaciones"].DisplayIndex = 8;
+                HotelesRegistradosDTG.Columns["fechaRegistroHotel"].DisplayIndex = 9;
+                HotelesRegistradosDTG.Columns["estatus"].DisplayIndex = 10;
+                // Cargar tabla
+                TablaHotelDTG.DataSource = tablaHotel;
+                // Visibles
+                TablaHotelDTG.Columns["Id_Hotel"].Visible = false;
+                TablaHotelDTG.Columns["Id_Usuario"].Visible = false;
+                TablaHotelDTG.Columns["Id_Ubicacion"].Visible = false;
+                TablaHotelDTG.Columns["fechaModificacionHotel"].Visible = false;
+                TablaHotelDTG.Columns["salonEventos"].Visible = false;
+                TablaHotelDTG.Columns["estatus"].Visible = false;
+                TablaHotelDTG.Columns["frentePlaya"].Visible = false;
+                // Nombre de la columna
+                TablaHotelDTG.Columns["nombreHotel"].HeaderText = "Nombre Hotel";
+                TablaHotelDTG.Columns["zonaTuristica"].HeaderText = "Zona Turistica";
+                TablaHotelDTG.Columns["numeroPisos"].HeaderText = "# de Pisos";
+                TablaHotelDTG.Columns["fechaOperacion"].HeaderText = "Fecha Operacion";
+                TablaHotelDTG.Columns["numeroPiscinas"].HeaderText = "# de Piscinas";
+                TablaHotelDTG.Columns["SalonEventos"].HeaderText = "Salon Eventos";
+                TablaHotelDTG.Columns["FrentePlaya"].HeaderText = "Frente a la Playa";
+                TablaHotelDTG.Columns["numHabitaciones"].HeaderText = "# de Habitaciones";
+                TablaHotelDTG.Columns["fechaRegistroHotel"].HeaderText = "Fecha de registro";
+                TablaHotelDTG.Columns["Estatus"].HeaderText = "Estatus";
+                // Orden de la tabla
+                TablaHotelDTG.Columns["nombreHotel"].DisplayIndex = 1;
+                TablaHotelDTG.Columns["zonaTuristica"].DisplayIndex = 2;
+                TablaHotelDTG.Columns["numeroPisos"].DisplayIndex = 3;
+                TablaHotelDTG.Columns["fechaOperacion"].DisplayIndex = 4;
+                TablaHotelDTG.Columns["numeroPiscinas"].DisplayIndex = 5;
+                TablaHotelDTG.Columns["salonEventos"].DisplayIndex = 6;
+                TablaHotelDTG.Columns["FrentePlaya"].DisplayIndex = 7;
+                TablaHotelDTG.Columns["numHabitaciones"].DisplayIndex = 8;
+                TablaHotelDTG.Columns["fechaRegistroHotel"].DisplayIndex = 9;
+                TablaHotelDTG.Columns["estatus"].DisplayIndex = 10;
+
+            }
+            if (tablaHabitaciones.Rows.Count > 0 )
+            {
+                TablaTHAsignadasDTG.DataSource = tablaHabitaciones;
+            }
+            if (tablaRestantes.Rows.Count > 0)
+            {
+                int habRegistradas = Convert.ToInt32(tablaRestantes.Rows[0]["Restantes"].ToString());
+                int habTotales = Convert.ToInt32(HabitacionesTotalesTXT.Text);
+                int restantes = habTotales - habRegistradas;
+                if (restantes > 0) HabitacionesRestantesTXT.Text = restantes.ToString();
+                else HabitacionesRestantesTXT.Text = "0";
+            }
+            else HabitacionesRestantesTXT.Text = HabitacionesTotalesTXT.Text;
 
             var tablaAmenidad = enlace.consultarAmenidad();
             AmenidadesCB.Items.Clear();
-
             foreach (DataRow fila in tablaAmenidad.Rows)
             {
                 Amenidad amenidad = new Amenidad()
@@ -337,10 +548,8 @@ namespace AAVD
                 };
                 AmenidadesCB.Items.Add(amenidad);
             }
-
             var tablaCaracteristica = enlace.consultarCaracteristica();
             CaracteristicasCB.Items.Clear();
-
             foreach (DataRow fila in tablaCaracteristica.Rows)
             {
                 Caracteristica caracteristica = new Caracteristica()
@@ -350,10 +559,8 @@ namespace AAVD
                 };
                 CaracteristicasCB.Items.Add(caracteristica);
             }
-
             var tablaServicioAdicional = enlace.consultarServicioAdicional();
             ServicioAdicionalCB.Items.Clear();
-
             foreach (DataRow fila in tablaServicioAdicional.Rows)
             {
                 ServicioAdicional servicioAdicional = new ServicioAdicional()
@@ -363,10 +570,19 @@ namespace AAVD
                 };
                 ServicioAdicionalCB.Items.Add(servicioAdicional);
             }
-
+            var tablaTipoHabitacion = enlace.consultarTipoHabitacion();
+            listaHabitaciones.Items.Clear();
+            foreach (DataRow fila in tablaTipoHabitacion.Rows)
+            {
+                TipoHab tipoHab = new TipoHab()
+                {
+                    Id_TipoHab = Convert.ToInt32(fila["Id_TipoHab"]),
+                    nivelHabitacion = fila["nivelHabitacion"].ToString()
+                };
+                listaHabitaciones.Items.Add(tipoHab);
+            }
             var tablaUbicacion = new DataTable();
             tablaUbicacion = enlace.ConsultarUbicacion();
-
             var paises = tablaUbicacion.AsEnumerable()
                 .GroupBy(row => row.Field<string>("pais"))
                 .Select(group => new
@@ -375,7 +591,6 @@ namespace AAVD
                     Id_Ubicacion = group.First().Field<int>("Id_Ubicacion")
                 })
                 .ToList();
-
             var estados = tablaUbicacion.AsEnumerable()
                 .GroupBy(row => row.Field<string>("estado"))
                 .Select(group => new
@@ -384,7 +599,6 @@ namespace AAVD
                     Id_Ubicacion = group.First().Field<int>("Id_Ubicacion")
                 })
                 .ToList();
-
             var ciudades = tablaUbicacion.AsEnumerable()
                 .GroupBy(row => row.Field<string>("ciudad"))
                 .Select(group => new
@@ -393,77 +607,126 @@ namespace AAVD
                     Id_Ubicacion = group.First().Field<int>("Id_Ubicacion")
                 })
                 .ToList();
-
             PaisCB.DataSource = paises;
             PaisCB.DisplayMember = "pais";
             PaisCB.ValueMember = "Id_Ubicacion";
-
             EstadoCB.DataSource = estados;
             EstadoCB.DisplayMember = "estado";
             EstadoCB.ValueMember = "Id_Ubicacion";
-
             CiudadCB.DataSource = ciudades;
             CiudadCB.ValueMember = "Id_Ubicacion";
             CiudadCB.DisplayMember = "ciudad";
         }
+        private void HotelCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (HotelCB.SelectedValue != null && int.TryParse(HotelCB.SelectedValue.ToString(), out int seleccion))
+            {
+                var enlace = new EnlaceDB();
+                var tabla = enlace.consultarHotel();
 
-        private void BTN_RegistrarHotel_Click(object sender, EventArgs e)
+                // Buscar el hotel seleccionado por ID
+                DataRow[] filasHotel = tabla.Select("Id_Hotel = " + seleccion);
+
+                if (filasHotel.Length > 0)
+                {
+                    HabitacionesTotalesTXT.Text = filasHotel[0]["numHabitaciones"].ToString();
+                }
+                else
+                {
+                    HabitacionesTotalesTXT.Text = "0";
+                }
+
+                // Consultar cuántas habitaciones ya están asignadas
+                var tablaRestantes = enlace.consultarHabitacionesRestantes(seleccion);
+                var tablaHabitaciones = enlace.consultarHabitaciones(seleccion);
+
+                int habTotales = 0;
+                int.TryParse(HabitacionesTotalesTXT.Text, out habTotales);
+                int habRegistradas = 0;
+
+                if (tablaRestantes.Rows.Count > 0)
+                {
+                    int.TryParse(tablaRestantes.Rows[0]["Restantes"].ToString(), out habRegistradas);
+                }
+
+                TablaTHAsignadasDTG.DataSource = tablaHabitaciones;
+                int restantes = habTotales - habRegistradas;
+                HabitacionesRestantesTXT.Text = restantes > 0 ? restantes.ToString() : "0";
+            }
+        }
+        private void BTN_AsignarHabitacion_Click(object sender, EventArgs e)
         {
             var enlace = new EnlaceDB();
-            Hotel hotel = new Hotel();
-            ServicioAdicional servicio = new ServicioAdicional();
-            // Sacar el Id de la ubicacion, y si se repite guardar la que ya esta
-            var tablaUbicacion = new DataTable();
-            tablaUbicacion = enlace.ValidarUbicacionUnica(hotel.Pais, hotel.Estado, hotel.Ciudad);
-            hotel.Id_Ubicacion = tablaUbicacion.Rows.Count < 1 ? 0 : Convert.ToInt32(tablaUbicacion.Rows[0]["Id_Ubicacion"]); 
             var tabla = new DataTable();
-            tabla = enlace.consultarUsuarioLogeado(Login.IdUsuarioActual);
-            hotel.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
-            hotel.NombreHotel = NombreHotelTXT.Text;
-            hotel.ZonaTuristica = ZonaTuristicaTXT.Text;
-            hotel.NumPisos = Convert.ToInt32(NumeroPisosTXT.Text);
-            hotel.FechaOperacion = DateTime.Parse(FechaOperacionDTP.Text);
-            hotel.NumPiscinas = Convert.ToInt32(NumeroPiscinasTXT.Text);
-            hotel.NumHabitaciones = Convert.ToInt32(NumeroHabitacionesTXT.Text);
-            if((!PlayaCH.Checked && !NoPlayaCH.Checked) || (PlayaCH.Checked && NoPlayaCH.Checked) 
-                || (!siSalon.Checked && !noSalon.Checked) || (siSalon.Checked && noSalon.Checked))
+            Habitacion habitacion = new Habitacion();
+            if (!HabitacionesAsignadasTXT.Text.All(char.IsDigit) || string.IsNullOrEmpty(HabitacionesAsignadasTXT.Text))
             {
-                MessageBox.Show("Debe seleccionar una de las opciones disponibles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El número de habitaciones asignadas debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (PlayaCH.Checked) hotel.FrentePlaya = 1;
-            if (NoPlayaCH.Checked) hotel.FrentePlaya = 0;
-            if (siSalon.Checked) hotel.SalonEventos = 1;
-            if (noSalon.Checked) hotel.SalonEventos = 0;
-            int Id_Generado;
-           ;
-            if ((enlace.Insertar_Hotel(hotel, out Id_Generado)) == false)
+            habitacion.NumeroHabitacion = Convert.ToInt32(HabitacionesAsignadasTXT.Text);
+            if (habitacion.NumeroHabitacion < 0)
             {
-                MessageBox.Show("Error al registrar el hotel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El número de habitaciones asignadas no puede ser menor a 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            habitacion.Id_Hotel = Convert.ToInt32(HotelCB.SelectedValue);
+            if (!(listaHabitaciones.CheckedItems.Count == 1))
+            {
+                MessageBox.Show("Debe seleccionar un tipo de habitación.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var tipoSeleccionado = listaHabitaciones.CheckedItems[0] as TipoHab;
+            if ((tipoSeleccionado != null) == false)
+            {
+                MessageBox.Show("Error al obtener el tipo de habitación seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                foreach(var item in ServicioAdicionalCB.CheckedItems)
-                {
-                    if (item is ServicioAdicional servicioSeleccionado)
-                    {
-                        enlace.Insertar_Hotel_ServicioAdicional(servicioSeleccionado, Id_Generado);
-                    }
-                }
+                habitacion.Id_TipoHab = tipoSeleccionado.Id_TipoHab;
             }
-            MessageBox.Show("Se registro correctamente el hotel: " + hotel.NombreHotel, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            tabla = enlace.consultarPisosXHotel(habitacion.Id_Hotel);
+            if (tabla.Rows.Count > 0) 
+            {
+                habitacion.Piso = Convert.ToInt32(tabla.Rows[0]["numeroPisos"]);
+            }
+            int restantes = Convert.ToInt32(HabitacionesRestantesTXT.Text);
+            if (habitacion.NumeroHabitacion > restantes)
+            {
+                MessageBox.Show("Ya no quedan habitaciones para asignar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            bool resultado = enlace.SP_InsertarHabitaciones(habitacion);
+            if (!resultado)
+            {
+                MessageBox.Show("Error al registrar habitaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Habitacion registrada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CargarTablasTipoHab();
         }
 
-       
-
-        private void EliminarAmenidadBTN_Click(object sender, EventArgs e)
+        private void BorrarTH_Click(object sender, EventArgs e)
         {
-            
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar el tipo de habitacion seleccionado", "Eliminar tipo de habitacion", buttons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                var enlace = new EnlaceDB();
+                bool resultado = enlace.Borrar_TipoHab(Convert.ToInt32(TipoHabCB.SelectedValue));
+                if (!resultado)
+                {
+                    MessageBox.Show("Error al eliminar tipo de habitaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                MessageBox.Show("Eliminada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarTablasTipoHab();
+            }
         }
 
-        // ---------------------------------------------------------------------------------------------------------------------
 
+
+        // ---------------------------------------------------------------------------------------------------------------------
     }
 }

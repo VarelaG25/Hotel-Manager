@@ -115,14 +115,7 @@ namespace AAVD
 
             var tablaUbicacion = new DataTable();
             tablaUbicacion = enlace.ValidarUbicacionUnica(cliente.Pais, cliente.Estado, cliente.Ciudad);
-            if (tablaUbicacion.Rows.Count < 1)
-            {
-                cliente.Id_Ubicacion = 0;
-            }
-            else
-            {
-                cliente.Id_Ubicacion = Convert.ToInt32(tablaUbicacion.Rows[0]["Id_Ubicacion"]);
-            }
+            cliente.Id_Ubicacion = tablaUbicacion.Rows.Count < 1 ? 0 : Convert.ToInt32(tablaUbicacion.Rows[0]["Id_Ubicacion"]);
 
             bool insertarCliente = enlace.Insertar_Cliente(cliente);
             if (!insertarCliente)
