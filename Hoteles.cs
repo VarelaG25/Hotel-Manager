@@ -22,6 +22,7 @@ namespace AAVD
         public class TipoHab
         {
             public int Id_TipoHab { get; set; }
+            public int Id_Hotel { get; set; }
             public string nivelHabitacion { get; set; }
             public int numeroCamas { get; set; }
             public string tipoCama { get; set; }
@@ -144,6 +145,7 @@ namespace AAVD
             }
             tipoHab.tipoCama = TipoCamaTXT.Text;
             tipoHab.numeroPersonas = Convert.ToInt32(CantidadPersonasTXT.Text);
+            tipoHab.Id_Hotel = Convert.ToInt32(HotelTHCB.SelectedValue);
             if (CheckJardinTXT.Checked)
             {
                 tipoHab.frenteA = "Jardin";
@@ -268,6 +270,11 @@ namespace AAVD
             hotel.NumPisos = Convert.ToInt32(NumeroPisosTXT.Text);
             hotel.FechaOperacion = DateTime.Parse(FechaOperacionDTP.Text);
             hotel.FechaRegistro = DateTime.Parse(FechaRegistroDTP.Text);
+            if (string.IsNullOrEmpty(NumeroPiscinasTXT.Text))
+            {
+                MessageBox.Show("No puede haber campos vacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             hotel.NumPiscinas = Convert.ToInt32(NumeroPiscinasTXT.Text);
             hotel.NumHabitaciones = Convert.ToInt32(NumeroHabitacionesTXT.Text);
             hotel.Pais = PaisCB.Text;
@@ -408,7 +415,11 @@ namespace AAVD
             tablaHotel = enlace.consultarHotel();
             HotelCB.DisplayMember = "nombreHotel";
             HotelCB.ValueMember = "Id_Hotel";
+            int Id_Hotel = Convert.ToInt32(HotelCB.SelectedValue);
             HotelCB.DataSource = tablaHotel;
+            HotelTHCB.DisplayMember = "nombreHotel";
+            HotelTHCB.ValueMember = "Id_Hotel";
+            HotelTHCB.DataSource = tablaHotel;
             // Cargar tabla
             int Id = Convert.ToInt32(HotelCB.SelectedValue);
             var tablaHabitaciones = enlace.consultarHabitaciones(Id);
@@ -523,7 +534,7 @@ namespace AAVD
                 TablaHotelDTG.Columns["estatus"].DisplayIndex = 10;
 
             }
-            if (tablaHabitaciones.Rows.Count > 0 )
+            if (tablaHabitaciones.Rows.Count > 0)
             {
                 TablaTHAsignadasDTG.DataSource = tablaHabitaciones;
             }
@@ -570,7 +581,7 @@ namespace AAVD
                 };
                 ServicioAdicionalCB.Items.Add(servicioAdicional);
             }
-            var tablaTipoHabitacion = enlace.consultarTipoHabitacion();
+            var tablaTipoHabitacion = enlace.consultarTipoHabitacionId(Id_Hotel);
             listaHabitaciones.Items.Clear();
             foreach (DataRow fila in tablaTipoHabitacion.Rows)
             {
@@ -619,39 +630,32 @@ namespace AAVD
         }
         private void HotelCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (HotelCB.SelectedValue != null && int.TryParse(HotelCB.SelectedValue.ToString(), out int seleccion))
+            int seleccion = Convert.ToInt32(HotelCB.SelectedValue);
+            if (seleccion > 0)
             {
                 var enlace = new EnlaceDB();
-                var tabla = enlace.consultarHotel();
-
-                // Buscar el hotel seleccionado por ID
-                DataRow[] filasHotel = tabla.Select("Id_Hotel = " + seleccion);
-
-                if (filasHotel.Length > 0)
-                {
-                    HabitacionesTotalesTXT.Text = filasHotel[0]["numHabitaciones"].ToString();
-                }
-                else
-                {
-                    HabitacionesTotalesTXT.Text = "0";
-                }
-
-                // Consultar cuántas habitaciones ya están asignadas
-                var tablaRestantes = enlace.consultarHabitacionesRestantes(seleccion);
+                var tabla = new DataTable();
+                var tablaRestante = new DataTable();
+                tabla = enlace.consultarHotelXId(seleccion);
+                tablaRestante = enlace.consultarHabitacionesRestantes(seleccion);
+                HabitacionesTotalesTXT.Text = tabla.Rows[0]["numHabitaciones"].ToString();
+                int habTotales = Convert.ToInt32(HabitacionesTotalesTXT.Text);
+                int habRegistrada = Convert.ToInt32(tablaRestante.Rows[0]["Restantes"].ToString());
+                int habRestante = habTotales - habRegistrada;
+                HabitacionesRestantesTXT.Text = habRestante.ToString();
                 var tablaHabitaciones = enlace.consultarHabitaciones(seleccion);
-
-                int habTotales = 0;
-                int.TryParse(HabitacionesTotalesTXT.Text, out habTotales);
-                int habRegistradas = 0;
-
-                if (tablaRestantes.Rows.Count > 0)
-                {
-                    int.TryParse(tablaRestantes.Rows[0]["Restantes"].ToString(), out habRegistradas);
-                }
-
                 TablaTHAsignadasDTG.DataSource = tablaHabitaciones;
-                int restantes = habTotales - habRegistradas;
-                HabitacionesRestantesTXT.Text = restantes > 0 ? restantes.ToString() : "0";
+                var tablaTipoHabitacion = enlace.consultarTipoHabitacionId(seleccion);
+                listaHabitaciones.Items.Clear();
+                foreach (DataRow fila in tablaTipoHabitacion.Rows)
+                {
+                    TipoHab tipoHab = new TipoHab()
+                    {
+                        Id_TipoHab = Convert.ToInt32(fila["Id_TipoHab"]),
+                        nivelHabitacion = fila["nivelHabitacion"].ToString()
+                    };
+                    listaHabitaciones.Items.Add(tipoHab);
+                }
             }
         }
         private void BTN_AsignarHabitacion_Click(object sender, EventArgs e)
@@ -687,7 +691,7 @@ namespace AAVD
                 habitacion.Id_TipoHab = tipoSeleccionado.Id_TipoHab;
             }
             tabla = enlace.consultarPisosXHotel(habitacion.Id_Hotel);
-            if (tabla.Rows.Count > 0) 
+            if (tabla.Rows.Count > 0)
             {
                 habitacion.Piso = Convert.ToInt32(tabla.Rows[0]["numeroPisos"]);
             }
@@ -724,8 +728,6 @@ namespace AAVD
                 CargarTablasTipoHab();
             }
         }
-
-
 
         // ---------------------------------------------------------------------------------------------------------------------
     }

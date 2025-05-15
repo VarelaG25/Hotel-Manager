@@ -34,10 +34,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UsuarioActualTXT = new System.Windows.Forms.Label();
-            this.PersonasTXT = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.PrecioTXT = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.ReservarBTN = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -67,19 +63,24 @@
             this.HotelCB = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.ServicioAdicionalTXT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.AmenidadTXT = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.MetPagoCB = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
+            this.PersonasTXT = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.FechaSalida = new System.Windows.Forms.DateTimePicker();
             this.FechaLlegada = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.TipoHabReservaCB = new System.Windows.Forms.ComboBox();
+            this.PrecioTXT = new System.Windows.Forms.TextBox();
             this.RestanteTXT = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.ComprobarCB = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
             this.NumPersonas = new System.Windows.Forms.TextBox();
@@ -90,55 +91,45 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TablaCheckOutDTG = new System.Windows.Forms.DataGridView();
+            this.TablaCheckInDTG = new System.Windows.Forms.DataGridView();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.MetodoPagoTXT = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.PrecioRestanteTXT = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.PrecioTotal = new System.Windows.Forms.TextBox();
+            this.CodigoReserva = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.FechaSalidaTXT = new System.Windows.Forms.TextBox();
+            this.FechaLlegadaTXT = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.CancelarBTN = new System.Windows.Forms.Button();
+            this.SalidaBTN = new System.Windows.Forms.Button();
+            this.ConfirmarBTN = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TablaReservacionesDTG = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.RFCCombo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ApellidosCB = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.CorreoCombo = new System.Windows.Forms.ComboBox();
             this.MenuContenedor = new System.Windows.Forms.Panel();
-            this.ServicioAdicionalTXT = new System.Windows.Forms.TextBox();
+            this.FechaRegistroTXT = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -148,10 +139,12 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCheckOutDTG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCheckInDTG)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox40.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaReservacionesDTG)).BeginInit();
             this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,52 +226,6 @@
             this.UsuarioActualTXT.TabIndex = 13;
             this.UsuarioActualTXT.Text = "User_123";
             // 
-            // PersonasTXT
-            // 
-            this.PersonasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.PersonasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PersonasTXT.Location = new System.Drawing.Point(279, 278);
-            this.PersonasTXT.Margin = new System.Windows.Forms.Padding(2);
-            this.PersonasTXT.Name = "PersonasTXT";
-            this.PersonasTXT.ReadOnly = true;
-            this.PersonasTXT.Size = new System.Drawing.Size(237, 27);
-            this.PersonasTXT.TabIndex = 22;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label34.Location = new System.Drawing.Point(274, 251);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(182, 25);
-            this.label34.TabIndex = 80;
-            this.label34.Text = "Personas permitidas";
-            // 
-            // PrecioTXT
-            // 
-            this.PrecioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.PrecioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PrecioTXT.Location = new System.Drawing.Point(12, 278);
-            this.PrecioTXT.Margin = new System.Windows.Forms.Padding(2);
-            this.PrecioTXT.Name = "PrecioTXT";
-            this.PrecioTXT.ReadOnly = true;
-            this.PrecioTXT.Size = new System.Drawing.Size(241, 27);
-            this.PrecioTXT.TabIndex = 21;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label33.Location = new System.Drawing.Point(7, 251);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(156, 25);
-            this.label33.TabIndex = 79;
-            this.label33.Text = "Precio por noche";
-            // 
             // ReservarBTN
             // 
             this.ReservarBTN.BackColor = System.Drawing.Color.SteelBlue;
@@ -288,9 +235,10 @@
             this.ReservarBTN.Margin = new System.Windows.Forms.Padding(2);
             this.ReservarBTN.Name = "ReservarBTN";
             this.ReservarBTN.Size = new System.Drawing.Size(237, 35);
-            this.ReservarBTN.TabIndex = 15;
+            this.ReservarBTN.TabIndex = 25;
             this.ReservarBTN.Text = "Reservar";
             this.ReservarBTN.UseVisualStyleBackColor = false;
+            this.ReservarBTN.Click += new System.EventHandler(this.ReservarBTN_Click);
             // 
             // groupBox5
             // 
@@ -307,7 +255,7 @@
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(252, 252);
-            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ubicacion";
             // 
@@ -332,7 +280,8 @@
             this.PaisTXT.Name = "PaisTXT";
             this.PaisTXT.ReadOnly = true;
             this.PaisTXT.Size = new System.Drawing.Size(220, 27);
-            this.PaisTXT.TabIndex = 9;
+            this.PaisTXT.TabIndex = 10;
+            this.PaisTXT.TabStop = false;
             // 
             // label24
             // 
@@ -356,6 +305,7 @@
             this.EstadoTXT.ReadOnly = true;
             this.EstadoTXT.Size = new System.Drawing.Size(220, 27);
             this.EstadoTXT.TabIndex = 10;
+            this.EstadoTXT.TabStop = false;
             // 
             // CiudadTXT
             // 
@@ -367,6 +317,7 @@
             this.CiudadTXT.ReadOnly = true;
             this.CiudadTXT.Size = new System.Drawing.Size(220, 27);
             this.CiudadTXT.TabIndex = 11;
+            this.CiudadTXT.TabStop = false;
             // 
             // label25
             // 
@@ -526,7 +477,7 @@
             this.FechaActualRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.FechaActualRegistro.Name = "FechaActualRegistro";
             this.FechaActualRegistro.Size = new System.Drawing.Size(136, 31);
-            this.FechaActualRegistro.TabIndex = 12;
+            this.FechaActualRegistro.TabIndex = 26;
             this.FechaActualRegistro.TabStop = false;
             // 
             // label2
@@ -576,7 +527,8 @@
             this.CaracteristicaTXT.ReadOnly = true;
             this.CaracteristicaTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CaracteristicaTXT.Size = new System.Drawing.Size(252, 110);
-            this.CaracteristicaTXT.TabIndex = 83;
+            this.CaracteristicaTXT.TabIndex = 13;
+            this.CaracteristicaTXT.TabStop = false;
             // 
             // label1
             // 
@@ -600,6 +552,7 @@
             this.PrecioXNocheTXT.ReadOnly = true;
             this.PrecioXNocheTXT.Size = new System.Drawing.Size(252, 27);
             this.PrecioXNocheTXT.TabIndex = 12;
+            this.PrecioXNocheTXT.TabStop = false;
             // 
             // TipoHabCB
             // 
@@ -613,7 +566,8 @@
             this.TipoHabCB.Margin = new System.Windows.Forms.Padding(2);
             this.TipoHabCB.Name = "TipoHabCB";
             this.TipoHabCB.Size = new System.Drawing.Size(253, 36);
-            this.TipoHabCB.TabIndex = 6;
+            this.TipoHabCB.TabIndex = 7;
+            this.TipoHabCB.SelectedIndexChanged += new System.EventHandler(this.TipoHabCB_SelectedIndexChanged);
             // 
             // HotelCB
             // 
@@ -628,6 +582,7 @@
             this.HotelCB.Name = "HotelCB";
             this.HotelCB.Size = new System.Drawing.Size(253, 36);
             this.HotelCB.TabIndex = 5;
+            this.HotelCB.SelectedIndexChanged += new System.EventHandler(this.HotelCB_SelectedIndexChanged);
             // 
             // label27
             // 
@@ -653,6 +608,20 @@
             this.label23.TabIndex = 72;
             this.label23.Text = "Servicios adicionales";
             // 
+            // ServicioAdicionalTXT
+            // 
+            this.ServicioAdicionalTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ServicioAdicionalTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ServicioAdicionalTXT.Location = new System.Drawing.Point(307, 192);
+            this.ServicioAdicionalTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.ServicioAdicionalTXT.Multiline = true;
+            this.ServicioAdicionalTXT.Name = "ServicioAdicionalTXT";
+            this.ServicioAdicionalTXT.ReadOnly = true;
+            this.ServicioAdicionalTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ServicioAdicionalTXT.Size = new System.Drawing.Size(252, 106);
+            this.ServicioAdicionalTXT.TabIndex = 6;
+            this.ServicioAdicionalTXT.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -676,7 +645,8 @@
             this.AmenidadTXT.ReadOnly = true;
             this.AmenidadTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.AmenidadTXT.Size = new System.Drawing.Size(252, 110);
-            this.AmenidadTXT.TabIndex = 13;
+            this.AmenidadTXT.TabIndex = 8;
+            this.AmenidadTXT.TabStop = false;
             // 
             // label28
             // 
@@ -733,7 +703,7 @@
             this.MetPagoCB.Margin = new System.Windows.Forms.Padding(2);
             this.MetPagoCB.Name = "MetPagoCB";
             this.MetPagoCB.Size = new System.Drawing.Size(238, 36);
-            this.MetPagoCB.TabIndex = 14;
+            this.MetPagoCB.TabIndex = 17;
             // 
             // label45
             // 
@@ -746,6 +716,18 @@
             this.label45.Size = new System.Drawing.Size(153, 25);
             this.label45.TabIndex = 76;
             this.label45.Text = "Metodo de pago";
+            // 
+            // PersonasTXT
+            // 
+            this.PersonasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PersonasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PersonasTXT.Location = new System.Drawing.Point(279, 278);
+            this.PersonasTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PersonasTXT.Name = "PersonasTXT";
+            this.PersonasTXT.ReadOnly = true;
+            this.PersonasTXT.Size = new System.Drawing.Size(237, 27);
+            this.PersonasTXT.TabIndex = 20;
+            this.PersonasTXT.TabStop = false;
             // 
             // groupBox3
             // 
@@ -760,7 +742,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(509, 98);
-            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fechas";
             // 
@@ -772,7 +754,8 @@
             this.FechaSalida.Margin = new System.Windows.Forms.Padding(2);
             this.FechaSalida.Name = "FechaSalida";
             this.FechaSalida.Size = new System.Drawing.Size(237, 31);
-            this.FechaSalida.TabIndex = 8;
+            this.FechaSalida.TabIndex = 15;
+            this.FechaSalida.ValueChanged += new System.EventHandler(this.FechaSalida_ValueChanged);
             // 
             // FechaLlegada
             // 
@@ -782,7 +765,7 @@
             this.FechaLlegada.Margin = new System.Windows.Forms.Padding(2);
             this.FechaLlegada.Name = "FechaLlegada";
             this.FechaLlegada.Size = new System.Drawing.Size(237, 31);
-            this.FechaLlegada.TabIndex = 7;
+            this.FechaLlegada.TabIndex = 14;
             // 
             // label9
             // 
@@ -809,6 +792,18 @@
             this.label29.TabIndex = 76;
             this.label29.Text = "Salida";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label34.Location = new System.Drawing.Point(274, 251);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(182, 25);
+            this.label34.TabIndex = 80;
+            this.label34.Text = "Personas permitidas";
+            // 
             // TipoHabReservaCB
             // 
             this.TipoHabReservaCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
@@ -818,7 +813,20 @@
             this.TipoHabReservaCB.Margin = new System.Windows.Forms.Padding(2);
             this.TipoHabReservaCB.Name = "TipoHabReservaCB";
             this.TipoHabReservaCB.Size = new System.Drawing.Size(241, 36);
-            this.TipoHabReservaCB.TabIndex = 9;
+            this.TipoHabReservaCB.TabIndex = 16;
+            this.TipoHabReservaCB.SelectedIndexChanged += new System.EventHandler(this.TipoHabReservaCB_SelectedIndexChanged);
+            // 
+            // PrecioTXT
+            // 
+            this.PrecioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrecioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioTXT.Location = new System.Drawing.Point(12, 278);
+            this.PrecioTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrecioTXT.Name = "PrecioTXT";
+            this.PrecioTXT.ReadOnly = true;
+            this.PrecioTXT.Size = new System.Drawing.Size(241, 27);
+            this.PrecioTXT.TabIndex = 19;
+            this.PrecioTXT.TabStop = false;
             // 
             // RestanteTXT
             // 
@@ -827,8 +835,22 @@
             this.RestanteTXT.Location = new System.Drawing.Point(279, 390);
             this.RestanteTXT.Margin = new System.Windows.Forms.Padding(2);
             this.RestanteTXT.Name = "RestanteTXT";
+            this.RestanteTXT.ReadOnly = true;
             this.RestanteTXT.Size = new System.Drawing.Size(237, 27);
-            this.RestanteTXT.TabIndex = 26;
+            this.RestanteTXT.TabIndex = 24;
+            this.RestanteTXT.TabStop = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label33.Location = new System.Drawing.Point(7, 251);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(156, 25);
+            this.label33.TabIndex = 79;
+            this.label33.Text = "Precio por noche";
             // 
             // ComprobarCB
             // 
@@ -839,9 +861,10 @@
             this.ComprobarCB.Margin = new System.Windows.Forms.Padding(2);
             this.ComprobarCB.Name = "ComprobarCB";
             this.ComprobarCB.Size = new System.Drawing.Size(504, 38);
-            this.ComprobarCB.TabIndex = 11;
+            this.ComprobarCB.TabIndex = 18;
             this.ComprobarCB.Text = "Comprobar disponibilidad";
             this.ComprobarCB.UseVisualStyleBackColor = false;
+            this.ComprobarCB.Click += new System.EventHandler(this.ComprobarCB_Click);
             // 
             // label38
             // 
@@ -857,23 +880,24 @@
             // 
             // NumPersonas
             // 
-            this.NumPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumPersonas.BackColor = System.Drawing.Color.SkyBlue;
             this.NumPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NumPersonas.Location = new System.Drawing.Point(279, 334);
             this.NumPersonas.Margin = new System.Windows.Forms.Padding(2);
             this.NumPersonas.Name = "NumPersonas";
             this.NumPersonas.Size = new System.Drawing.Size(237, 27);
-            this.NumPersonas.TabIndex = 12;
+            this.NumPersonas.TabIndex = 22;
             // 
             // AnticipoTXT
             // 
-            this.AnticipoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.AnticipoTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.AnticipoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AnticipoTXT.Location = new System.Drawing.Point(12, 390);
             this.AnticipoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.AnticipoTXT.Name = "AnticipoTXT";
             this.AnticipoTXT.Size = new System.Drawing.Size(241, 27);
-            this.AnticipoTXT.TabIndex = 13;
+            this.AnticipoTXT.TabIndex = 23;
+            this.AnticipoTXT.TextChanged += new System.EventHandler(this.AnticipoTXT_TextChanged);
             // 
             // label30
             // 
@@ -908,7 +932,8 @@
             this.TotalTXT.Name = "TotalTXT";
             this.TotalTXT.ReadOnly = true;
             this.TotalTXT.Size = new System.Drawing.Size(241, 27);
-            this.TotalTXT.TabIndex = 23;
+            this.TotalTXT.TabIndex = 21;
+            this.TotalTXT.TabStop = false;
             // 
             // label35
             // 
@@ -937,27 +962,20 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.label44);
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Controls.Add(this.label41);
-            this.tabPage2.Controls.Add(this.comboBox10);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox17);
-            this.tabPage2.Controls.Add(this.label40);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.label31);
             this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox16);
-            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.TablaCheckOutDTG);
+            this.tabPage2.Controls.Add(this.TablaCheckInDTG);
+            this.tabPage2.Controls.Add(this.groupBox7);
+            this.tabPage2.Controls.Add(this.CodigoReserva);
+            this.tabPage2.Controls.Add(this.label44);
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.groupBox40);
-            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.ConfirmarBTN);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dateTimePicker6);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.TablaReservacionesDTG);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.groupBox11);
             this.tabPage2.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -969,15 +987,150 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Confirmacion y cancelacion";
             // 
-            // textBox12
+            // TablaCheckOutDTG
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Location = new System.Drawing.Point(20, 93);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(293, 24);
-            this.textBox12.TabIndex = 1;
+            this.TablaCheckOutDTG.AllowUserToAddRows = false;
+            this.TablaCheckOutDTG.AllowUserToDeleteRows = false;
+            this.TablaCheckOutDTG.AllowUserToResizeColumns = false;
+            this.TablaCheckOutDTG.AllowUserToResizeRows = false;
+            this.TablaCheckOutDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaCheckOutDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaCheckOutDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaCheckOutDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaCheckOutDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaCheckOutDTG.Location = new System.Drawing.Point(1040, 318);
+            this.TablaCheckOutDTG.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaCheckOutDTG.Name = "TablaCheckOutDTG";
+            this.TablaCheckOutDTG.ReadOnly = true;
+            this.TablaCheckOutDTG.RowHeadersWidth = 51;
+            this.TablaCheckOutDTG.RowTemplate.Height = 24;
+            this.TablaCheckOutDTG.Size = new System.Drawing.Size(356, 276);
+            this.TablaCheckOutDTG.TabIndex = 84;
+            this.TablaCheckOutDTG.TabStop = false;
+            // 
+            // TablaCheckInDTG
+            // 
+            this.TablaCheckInDTG.AllowUserToAddRows = false;
+            this.TablaCheckInDTG.AllowUserToDeleteRows = false;
+            this.TablaCheckInDTG.AllowUserToResizeColumns = false;
+            this.TablaCheckInDTG.AllowUserToResizeRows = false;
+            this.TablaCheckInDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaCheckInDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaCheckInDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaCheckInDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaCheckInDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaCheckInDTG.Location = new System.Drawing.Point(665, 318);
+            this.TablaCheckInDTG.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaCheckInDTG.Name = "TablaCheckInDTG";
+            this.TablaCheckInDTG.ReadOnly = true;
+            this.TablaCheckInDTG.RowHeadersWidth = 51;
+            this.TablaCheckInDTG.RowTemplate.Height = 24;
+            this.TablaCheckInDTG.Size = new System.Drawing.Size(356, 276);
+            this.TablaCheckInDTG.TabIndex = 83;
+            this.TablaCheckInDTG.TabStop = false;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.MetodoPagoTXT);
+            this.groupBox7.Controls.Add(this.label6);
+            this.groupBox7.Controls.Add(this.PrecioRestanteTXT);
+            this.groupBox7.Controls.Add(this.label32);
+            this.groupBox7.Controls.Add(this.label46);
+            this.groupBox7.Controls.Add(this.PrecioTotal);
+            this.groupBox7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox7.Location = new System.Drawing.Point(1040, 67);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Size = new System.Drawing.Size(356, 222);
+            this.groupBox7.TabIndex = 82;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Pago";
+            // 
+            // MetodoPagoTXT
+            // 
+            this.MetodoPagoTXT.BackColor = System.Drawing.Color.SkyBlue;
+            this.MetodoPagoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MetodoPagoTXT.Location = new System.Drawing.Point(12, 182);
+            this.MetodoPagoTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.MetodoPagoTXT.Name = "MetodoPagoTXT";
+            this.MetodoPagoTXT.ReadOnly = true;
+            this.MetodoPagoTXT.Size = new System.Drawing.Size(330, 27);
+            this.MetodoPagoTXT.TabIndex = 79;
+            this.MetodoPagoTXT.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label6.Location = new System.Drawing.Point(4, 153);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 25);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "Metodo de pago";
+            // 
+            // PrecioRestanteTXT
+            // 
+            this.PrecioRestanteTXT.BackColor = System.Drawing.Color.SkyBlue;
+            this.PrecioRestanteTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioRestanteTXT.Location = new System.Drawing.Point(12, 120);
+            this.PrecioRestanteTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrecioRestanteTXT.Name = "PrecioRestanteTXT";
+            this.PrecioRestanteTXT.ReadOnly = true;
+            this.PrecioRestanteTXT.Size = new System.Drawing.Size(330, 27);
+            this.PrecioRestanteTXT.TabIndex = 77;
+            this.PrecioRestanteTXT.TabStop = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label32.Location = new System.Drawing.Point(7, 28);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(54, 25);
+            this.label32.TabIndex = 74;
+            this.label32.Text = "Total";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label46.Location = new System.Drawing.Point(7, 93);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(87, 25);
+            this.label46.TabIndex = 76;
+            this.label46.Text = "Restante";
+            // 
+            // PrecioTotal
+            // 
+            this.PrecioTotal.BackColor = System.Drawing.Color.SkyBlue;
+            this.PrecioTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioTotal.Location = new System.Drawing.Point(12, 55);
+            this.PrecioTotal.Margin = new System.Windows.Forms.Padding(2);
+            this.PrecioTotal.Name = "PrecioTotal";
+            this.PrecioTotal.ReadOnly = true;
+            this.PrecioTotal.Size = new System.Drawing.Size(330, 27);
+            this.PrecioTotal.TabIndex = 15;
+            this.PrecioTotal.TabStop = false;
+            // 
+            // CodigoReserva
+            // 
+            this.CodigoReserva.BackColor = System.Drawing.Color.SkyBlue;
+            this.CodigoReserva.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CodigoReserva.Location = new System.Drawing.Point(20, 93);
+            this.CodigoReserva.Margin = new System.Windows.Forms.Padding(2);
+            this.CodigoReserva.Name = "CodigoReserva";
+            this.CodigoReserva.ReadOnly = true;
+            this.CodigoReserva.Size = new System.Drawing.Size(293, 24);
+            this.CodigoReserva.TabIndex = 1;
+            this.CodigoReserva.TabStop = false;
             // 
             // label44
             // 
@@ -991,182 +1144,48 @@
             this.label44.TabIndex = 81;
             this.label44.Text = "Código de reservación";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label31);
-            this.groupBox6.Controls.Add(this.textBox13);
-            this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Controls.Add(this.textBox14);
-            this.groupBox6.Controls.Add(this.label42);
-            this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox6.Location = new System.Drawing.Point(1070, 333);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(325, 206);
-            this.groupBox6.TabIndex = 18;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Información";
-            // 
-            // label31
-            // 
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label31.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label31.Location = new System.Drawing.Point(14, 171);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(284, 31);
-            this.label31.TabIndex = 55;
-            this.label31.Text = "*En caso de confirmar se genera aqui el numero de habitacion del cliente.";
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(16, 131);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(292, 27);
-            this.textBox13.TabIndex = 20;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label43.Location = new System.Drawing.Point(13, 104);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(174, 25);
-            this.label43.TabIndex = 82;
-            this.label43.Text = "Núm de habitación";
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Location = new System.Drawing.Point(16, 59);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(292, 27);
-            this.textBox14.TabIndex = 19;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label42.Location = new System.Drawing.Point(13, 32);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(171, 25);
-            this.label42.TabIndex = 81;
-            this.label42.Text = "Tipo de habitación";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label41.Location = new System.Drawing.Point(1066, 79);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(189, 25);
-            this.label41.TabIndex = 80;
-            this.label41.Text = "Tipo de habitaciones";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(683, 287);
-            this.comboBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(357, 33);
-            this.comboBox10.TabIndex = 12;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(1070, 112);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(325, 92);
-            this.textBox9.TabIndex = 16;
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Location = new System.Drawing.Point(683, 474);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(356, 24);
-            this.textBox17.TabIndex = 14;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label40.Location = new System.Drawing.Point(680, 447);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(160, 25);
-            this.label40.TabIndex = 79;
-            this.label40.Text = "Núm de personas";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label15.Location = new System.Drawing.Point(681, 258);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 25);
-            this.label15.TabIndex = 64;
-            this.label15.Text = "Hotel";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
-            this.groupBox1.Controls.Add(this.dateTimePicker5);
+            this.groupBox1.Controls.Add(this.FechaRegistroTXT);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.FechaSalidaTXT);
+            this.groupBox1.Controls.Add(this.FechaLlegadaTXT);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label39);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(683, 64);
+            this.groupBox1.Location = new System.Drawing.Point(665, 64);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(356, 184);
+            this.groupBox1.Size = new System.Drawing.Size(356, 225);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Fechas";
+            this.groupBox1.Text = "Fecha";
             // 
-            // dateTimePicker3
+            // FechaSalidaTXT
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(10, 127);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(251, 31);
-            this.dateTimePicker3.TabIndex = 11;
+            this.FechaSalidaTXT.BackColor = System.Drawing.Color.SkyBlue;
+            this.FechaSalidaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaSalidaTXT.Location = new System.Drawing.Point(12, 123);
+            this.FechaSalidaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaSalidaTXT.Name = "FechaSalidaTXT";
+            this.FechaSalidaTXT.ReadOnly = true;
+            this.FechaSalidaTXT.Size = new System.Drawing.Size(330, 27);
+            this.FechaSalidaTXT.TabIndex = 81;
+            this.FechaSalidaTXT.TabStop = false;
             // 
-            // dateTimePicker5
+            // FechaLlegadaTXT
             // 
-            this.dateTimePicker5.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker5.Location = new System.Drawing.Point(10, 55);
-            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(251, 31);
-            this.dateTimePicker5.TabIndex = 10;
+            this.FechaLlegadaTXT.BackColor = System.Drawing.Color.SkyBlue;
+            this.FechaLlegadaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaLlegadaTXT.Location = new System.Drawing.Point(12, 55);
+            this.FechaLlegadaTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaLlegadaTXT.Name = "FechaLlegadaTXT";
+            this.FechaLlegadaTXT.ReadOnly = true;
+            this.FechaLlegadaTXT.Size = new System.Drawing.Size(330, 27);
+            this.FechaLlegadaTXT.TabIndex = 80;
+            this.FechaLlegadaTXT.TabStop = false;
             // 
             // label17
             // 
@@ -1185,93 +1204,27 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label39.Location = new System.Drawing.Point(7, 100);
+            this.label39.Location = new System.Drawing.Point(7, 96);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(63, 25);
             this.label39.TabIndex = 76;
             this.label39.Text = "Salida";
             // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Location = new System.Drawing.Point(683, 557);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(356, 24);
-            this.textBox11.TabIndex = 15;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label16.Location = new System.Drawing.Point(680, 520);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 25);
-            this.label16.TabIndex = 66;
-            this.label16.Text = "Precio total";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(1066, 256);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 25);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "Cantidad de personas";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(1070, 287);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(325, 24);
-            this.textBox10.TabIndex = 17;
-            // 
-            // textBox16
-            // 
-            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Location = new System.Drawing.Point(683, 360);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(356, 69);
-            this.textBox16.TabIndex = 13;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label14.Location = new System.Drawing.Point(680, 333);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 25);
-            this.label14.TabIndex = 63;
-            this.label14.Text = "Domicilio";
-            // 
             // groupBox40
             // 
+            this.groupBox40.BackColor = System.Drawing.Color.Transparent;
             this.groupBox40.Controls.Add(this.label10);
             this.groupBox40.Controls.Add(this.label8);
-            this.groupBox40.Controls.Add(this.button2);
-            this.groupBox40.Controls.Add(this.button5);
+            this.groupBox40.Controls.Add(this.CancelarBTN);
+            this.groupBox40.Controls.Add(this.SalidaBTN);
             this.groupBox40.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox40.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox40.Location = new System.Drawing.Point(20, 181);
+            this.groupBox40.Location = new System.Drawing.Point(20, 173);
             this.groupBox40.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox40.Size = new System.Drawing.Size(293, 108);
+            this.groupBox40.Size = new System.Drawing.Size(293, 116);
             this.groupBox40.TabIndex = 55;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "Zona de riesgo";
@@ -1283,7 +1236,7 @@
             this.label10.Location = new System.Drawing.Point(147, 73);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 28);
+            this.label10.Size = new System.Drawing.Size(122, 41);
             this.label10.TabIndex = 60;
             this.label10.Text = "*En caso de que el cliente finalice su estancia.";
             // 
@@ -1294,50 +1247,50 @@
             this.label8.Location = new System.Drawing.Point(8, 76);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 20);
+            this.label8.Size = new System.Drawing.Size(133, 34);
             this.label8.TabIndex = 56;
-            this.label8.Text = "*En caso de que el cliente cancele.";
+            this.label8.Text = "*En caso de que el \r\ncliente cancele.";
             // 
-            // button2
+            // CancelarBTN
             // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(10, 35);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancelar reserva";
-            this.button2.UseVisualStyleBackColor = false;
+            this.CancelarBTN.BackColor = System.Drawing.Color.Crimson;
+            this.CancelarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CancelarBTN.Location = new System.Drawing.Point(10, 35);
+            this.CancelarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelarBTN.Name = "CancelarBTN";
+            this.CancelarBTN.Size = new System.Drawing.Size(130, 36);
+            this.CancelarBTN.TabIndex = 2;
+            this.CancelarBTN.Text = "Cancelar reserva";
+            this.CancelarBTN.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // SalidaBTN
             // 
-            this.button5.BackColor = System.Drawing.Color.Crimson;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(149, 35);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Confirmar salida";
-            this.button5.UseVisualStyleBackColor = false;
+            this.SalidaBTN.BackColor = System.Drawing.Color.Crimson;
+            this.SalidaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalidaBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalidaBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SalidaBTN.Location = new System.Drawing.Point(149, 35);
+            this.SalidaBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.SalidaBTN.Name = "SalidaBTN";
+            this.SalidaBTN.Size = new System.Drawing.Size(130, 36);
+            this.SalidaBTN.TabIndex = 3;
+            this.SalidaBTN.Text = "Salida";
+            this.SalidaBTN.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // ConfirmarBTN
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(20, 133);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(293, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Confirmar asistencia";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ConfirmarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ConfirmarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ConfirmarBTN.Location = new System.Drawing.Point(20, 133);
+            this.ConfirmarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirmarBTN.Name = "ConfirmarBTN";
+            this.ConfirmarBTN.Size = new System.Drawing.Size(293, 36);
+            this.ConfirmarBTN.TabIndex = 1;
+            this.ConfirmarBTN.Text = "Confirmar asistencia";
+            this.ConfirmarBTN.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -1361,57 +1314,26 @@
             this.dateTimePicker6.TabIndex = 54;
             this.dateTimePicker6.TabStop = false;
             // 
-            // dataGridView1
+            // TablaReservacionesDTG
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 304);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(627, 290);
-            this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.TabStop = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "RFC";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Primer apellido";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Segundo apellido";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.TablaReservacionesDTG.AllowUserToAddRows = false;
+            this.TablaReservacionesDTG.AllowUserToDeleteRows = false;
+            this.TablaReservacionesDTG.AllowUserToResizeColumns = false;
+            this.TablaReservacionesDTG.AllowUserToResizeRows = false;
+            this.TablaReservacionesDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TablaReservacionesDTG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaReservacionesDTG.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.TablaReservacionesDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaReservacionesDTG.GridColor = System.Drawing.Color.MidnightBlue;
+            this.TablaReservacionesDTG.Location = new System.Drawing.Point(20, 318);
+            this.TablaReservacionesDTG.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaReservacionesDTG.Name = "TablaReservacionesDTG";
+            this.TablaReservacionesDTG.ReadOnly = true;
+            this.TablaReservacionesDTG.RowHeadersWidth = 51;
+            this.TablaReservacionesDTG.RowTemplate.Height = 24;
+            this.TablaReservacionesDTG.Size = new System.Drawing.Size(628, 276);
+            this.TablaReservacionesDTG.TabIndex = 29;
+            this.TablaReservacionesDTG.TabStop = false;
             // 
             // label7
             // 
@@ -1427,12 +1349,12 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.comboBox3);
+            this.groupBox11.Controls.Add(this.RFCCombo);
             this.groupBox11.Controls.Add(this.label12);
-            this.groupBox11.Controls.Add(this.comboBox1);
+            this.groupBox11.Controls.Add(this.ApellidosCB);
             this.groupBox11.Controls.Add(this.label11);
             this.groupBox11.Controls.Add(this.label13);
-            this.groupBox11.Controls.Add(this.comboBox9);
+            this.groupBox11.Controls.Add(this.CorreoCombo);
             this.groupBox11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox11.Location = new System.Drawing.Point(338, 64);
@@ -1440,20 +1362,21 @@
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox11.Size = new System.Drawing.Size(308, 225);
-            this.groupBox11.TabIndex = 5;
+            this.groupBox11.TabIndex = 4;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Información personal";
             // 
-            // comboBox3
+            // RFCCombo
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(17, 118);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(271, 31);
-            this.comboBox3.TabIndex = 7;
+            this.RFCCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.RFCCombo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.RFCCombo.FormattingEnabled = true;
+            this.RFCCombo.Location = new System.Drawing.Point(17, 118);
+            this.RFCCombo.Margin = new System.Windows.Forms.Padding(2);
+            this.RFCCombo.Name = "RFCCombo";
+            this.RFCCombo.Size = new System.Drawing.Size(271, 31);
+            this.RFCCombo.TabIndex = 6;
+            this.RFCCombo.SelectedIndexChanged += new System.EventHandler(this.RFCCombo_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -1467,16 +1390,16 @@
             this.label12.TabIndex = 59;
             this.label12.Text = "Apellidos";
             // 
-            // comboBox1
+            // ApellidosCB
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 56);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(271, 31);
-            this.comboBox1.TabIndex = 6;
+            this.ApellidosCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ApellidosCB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.ApellidosCB.FormattingEnabled = true;
+            this.ApellidosCB.Location = new System.Drawing.Point(17, 56);
+            this.ApellidosCB.Margin = new System.Windows.Forms.Padding(2);
+            this.ApellidosCB.Name = "ApellidosCB";
+            this.ApellidosCB.Size = new System.Drawing.Size(271, 31);
+            this.ApellidosCB.TabIndex = 5;
             // 
             // label11
             // 
@@ -1502,16 +1425,16 @@
             this.label13.TabIndex = 62;
             this.label13.Text = "Correo electrónico";
             // 
-            // comboBox9
+            // CorreoCombo
             // 
-            this.comboBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox9.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(17, 181);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(271, 31);
-            this.comboBox9.TabIndex = 8;
+            this.CorreoCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CorreoCombo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.CorreoCombo.FormattingEnabled = true;
+            this.CorreoCombo.Location = new System.Drawing.Point(17, 181);
+            this.CorreoCombo.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoCombo.Name = "CorreoCombo";
+            this.CorreoCombo.Size = new System.Drawing.Size(271, 31);
+            this.CorreoCombo.TabIndex = 7;
             // 
             // MenuContenedor
             // 
@@ -1522,18 +1445,65 @@
             this.MenuContenedor.Size = new System.Drawing.Size(1443, 67);
             this.MenuContenedor.TabIndex = 28;
             // 
-            // ServicioAdicionalTXT
+            // FechaRegistroTXT
             // 
-            this.ServicioAdicionalTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.ServicioAdicionalTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ServicioAdicionalTXT.Location = new System.Drawing.Point(307, 192);
-            this.ServicioAdicionalTXT.Margin = new System.Windows.Forms.Padding(2);
-            this.ServicioAdicionalTXT.Multiline = true;
-            this.ServicioAdicionalTXT.Name = "ServicioAdicionalTXT";
-            this.ServicioAdicionalTXT.ReadOnly = true;
-            this.ServicioAdicionalTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ServicioAdicionalTXT.Size = new System.Drawing.Size(252, 106);
-            this.ServicioAdicionalTXT.TabIndex = 6;
+            this.FechaRegistroTXT.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.FechaRegistroTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaRegistroTXT.Location = new System.Drawing.Point(12, 185);
+            this.FechaRegistroTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaRegistroTXT.Name = "FechaRegistroTXT";
+            this.FechaRegistroTXT.ReadOnly = true;
+            this.FechaRegistroTXT.Size = new System.Drawing.Size(330, 27);
+            this.FechaRegistroTXT.TabIndex = 83;
+            this.FechaRegistroTXT.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label14.Location = new System.Drawing.Point(7, 156);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(191, 25);
+            this.label14.TabIndex = 82;
+            this.label14.Text = "Fecha de reservacion";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label15.Location = new System.Drawing.Point(16, 291);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 25);
+            this.label15.TabIndex = 85;
+            this.label15.Text = "Clientes";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label16.Location = new System.Drawing.Point(660, 291);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(314, 25);
+            this.label16.TabIndex = 86;
+            this.label16.Text = "Clientes que confirmaron asistencia";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label31.Location = new System.Drawing.Point(1035, 291);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(304, 25);
+            this.label31.TabIndex = 87;
+            this.label31.Text = "Clientes que confirmaron su salida";
             // 
             // Reservaciones
             // 
@@ -1566,12 +1536,14 @@
             this.groupBox3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCheckOutDTG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCheckInDTG)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox40.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaReservacionesDTG)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
@@ -1604,45 +1576,26 @@
         private System.Windows.Forms.TextBox TotalTXT;
         private System.Windows.Forms.TextBox RestanteTXT;
         private System.Windows.Forms.TextBox AnticipoTXT;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox ApellidosCB;
+        private System.Windows.Forms.DataGridView TablaReservacionesDTG;
+        private System.Windows.Forms.ComboBox RFCCombo;
+        private System.Windows.Forms.ComboBox CorreoCombo;
+        private System.Windows.Forms.Button ConfirmarBTN;
+        private System.Windows.Forms.Button CancelarBTN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox PrecioTotal;
+        private System.Windows.Forms.TextBox CodigoReserva;
         private System.Windows.Forms.GroupBox groupBox40;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button SalidaBTN;
         private System.Windows.Forms.Panel MenuContenedor;
         private System.Windows.Forms.Label UsuarioActualTXT;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Label label20;
@@ -1676,11 +1629,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.ComboBox MetPagoCB;
         private System.Windows.Forms.Label label45;
@@ -1689,5 +1637,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox TipoHabCB;
         private System.Windows.Forms.TextBox ServicioAdicionalTXT;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox PrecioRestanteTXT;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.DataGridView TablaCheckOutDTG;
+        private System.Windows.Forms.DataGridView TablaCheckInDTG;
+        private System.Windows.Forms.TextBox MetodoPagoTXT;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox FechaSalidaTXT;
+        private System.Windows.Forms.TextBox FechaLlegadaTXT;
+        private System.Windows.Forms.TextBox FechaRegistroTXT;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }

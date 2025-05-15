@@ -39,6 +39,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.FechaActualDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.HotelTHCB = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.EliminarAmenidadBTN = new System.Windows.Forms.Button();
             this.EliminarCaracteristicaBTN = new System.Windows.Forms.Button();
@@ -297,6 +299,8 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.HotelTHCB);
+            this.groupBox9.Controls.Add(this.label1);
             this.groupBox9.Controls.Add(this.label47);
             this.groupBox9.Controls.Add(this.EliminarAmenidadBTN);
             this.groupBox9.Controls.Add(this.EliminarCaracteristicaBTN);
@@ -335,6 +339,28 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Informacion del tipo de habitacion";
             // 
+            // HotelTHCB
+            // 
+            this.HotelTHCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HotelTHCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.HotelTHCB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.HotelTHCB.FormattingEnabled = true;
+            this.HotelTHCB.Location = new System.Drawing.Point(14, 637);
+            this.HotelTHCB.Name = "HotelTHCB";
+            this.HotelTHCB.Size = new System.Drawing.Size(347, 25);
+            this.HotelTHCB.TabIndex = 74;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(9, 609);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 25);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Seleccionar el Hotel";
+            // 
             // label47
             // 
             this.label47.AutoSize = true;
@@ -352,7 +378,7 @@
             this.EliminarAmenidadBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarAmenidadBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarAmenidadBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.EliminarAmenidadBTN.Location = new System.Drawing.Point(732, 140);
+            this.EliminarAmenidadBTN.Location = new System.Drawing.Point(730, 141);
             this.EliminarAmenidadBTN.Name = "EliminarAmenidadBTN";
             this.EliminarAmenidadBTN.Size = new System.Drawing.Size(251, 41);
             this.EliminarAmenidadBTN.TabIndex = 72;
@@ -366,7 +392,7 @@
             this.EliminarCaracteristicaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarCaracteristicaBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarCaracteristicaBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.EliminarCaracteristicaBTN.Location = new System.Drawing.Point(732, 416);
+            this.EliminarCaracteristicaBTN.Location = new System.Drawing.Point(730, 417);
             this.EliminarCaracteristicaBTN.Name = "EliminarCaracteristicaBTN";
             this.EliminarCaracteristicaBTN.Size = new System.Drawing.Size(251, 41);
             this.EliminarCaracteristicaBTN.TabIndex = 71;
@@ -377,7 +403,7 @@
             // 
             this.CampoCaracteristicasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CampoCaracteristicasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CampoCaracteristicasTXT.Location = new System.Drawing.Point(732, 340);
+            this.CampoCaracteristicasTXT.Location = new System.Drawing.Point(730, 341);
             this.CampoCaracteristicasTXT.MaxLength = 50;
             this.CampoCaracteristicasTXT.Name = "CampoCaracteristicasTXT";
             this.CampoCaracteristicasTXT.Size = new System.Drawing.Size(251, 27);
@@ -387,7 +413,7 @@
             // 
             this.CampoAmenidadTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CampoAmenidadTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CampoAmenidadTXT.Location = new System.Drawing.Point(732, 64);
+            this.CampoAmenidadTXT.Location = new System.Drawing.Point(730, 65);
             this.CampoAmenidadTXT.MaxLength = 50;
             this.CampoAmenidadTXT.Name = "CampoAmenidadTXT";
             this.CampoAmenidadTXT.Size = new System.Drawing.Size(251, 27);
@@ -399,7 +425,7 @@
             this.AgregarCaracteristicaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AgregarCaracteristicaBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgregarCaracteristicaBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AgregarCaracteristicaBTN.Location = new System.Drawing.Point(732, 373);
+            this.AgregarCaracteristicaBTN.Location = new System.Drawing.Point(730, 374);
             this.AgregarCaracteristicaBTN.Name = "AgregarCaracteristicaBTN";
             this.AgregarCaracteristicaBTN.Size = new System.Drawing.Size(251, 41);
             this.AgregarCaracteristicaBTN.TabIndex = 68;
@@ -413,7 +439,7 @@
             this.AgregarAmenidadBTN7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AgregarAmenidadBTN7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgregarAmenidadBTN7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AgregarAmenidadBTN7.Location = new System.Drawing.Point(732, 97);
+            this.AgregarAmenidadBTN7.Location = new System.Drawing.Point(730, 98);
             this.AgregarAmenidadBTN7.Name = "AgregarAmenidadBTN7";
             this.AgregarAmenidadBTN7.Size = new System.Drawing.Size(251, 41);
             this.AgregarAmenidadBTN7.TabIndex = 67;
@@ -426,7 +452,7 @@
             this.CaracteristicasCB.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.CaracteristicasCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CaracteristicasCB.FormattingEnabled = true;
-            this.CaracteristicasCB.Location = new System.Drawing.Point(377, 340);
+            this.CaracteristicasCB.Location = new System.Drawing.Point(375, 341);
             this.CaracteristicasCB.Name = "CaracteristicasCB";
             this.CaracteristicasCB.Size = new System.Drawing.Size(346, 114);
             this.CaracteristicasCB.TabIndex = 66;
@@ -437,7 +463,7 @@
             this.AmenidadesCB.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.AmenidadesCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.AmenidadesCB.FormattingEnabled = true;
-            this.AmenidadesCB.Location = new System.Drawing.Point(378, 64);
+            this.AmenidadesCB.Location = new System.Drawing.Point(376, 65);
             this.AmenidadesCB.Name = "AmenidadesCB";
             this.AmenidadesCB.Size = new System.Drawing.Size(346, 114);
             this.AmenidadesCB.TabIndex = 65;
@@ -448,7 +474,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label31.Location = new System.Drawing.Point(733, 466);
+            this.label31.Location = new System.Drawing.Point(731, 467);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(0, 12);
             this.label31.TabIndex = 64;
@@ -458,7 +484,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label29.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label29.Location = new System.Drawing.Point(734, 190);
+            this.label29.Location = new System.Drawing.Point(732, 191);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(0, 12);
             this.label29.TabIndex = 63;
@@ -520,7 +546,7 @@
             // 
             this.CaracteristicasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CaracteristicasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CaracteristicasTXT.Location = new System.Drawing.Point(377, 460);
+            this.CaracteristicasTXT.Location = new System.Drawing.Point(375, 461);
             this.CaracteristicasTXT.Multiline = true;
             this.CaracteristicasTXT.Name = "CaracteristicasTXT";
             this.CaracteristicasTXT.ReadOnly = true;
@@ -577,7 +603,7 @@
             // 
             this.AmenidadesTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.AmenidadesTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AmenidadesTXT.Location = new System.Drawing.Point(377, 184);
+            this.AmenidadesTXT.Location = new System.Drawing.Point(375, 185);
             this.AmenidadesTXT.Multiline = true;
             this.AmenidadesTXT.Name = "AmenidadesTXT";
             this.AmenidadesTXT.ReadOnly = true;
@@ -599,7 +625,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label27.Location = new System.Drawing.Point(372, 30);
+            this.label27.Location = new System.Drawing.Point(370, 31);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(117, 25);
             this.label27.TabIndex = 59;
@@ -688,7 +714,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label17.Location = new System.Drawing.Point(372, 309);
+            this.label17.Location = new System.Drawing.Point(370, 310);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(150, 28);
             this.label17.TabIndex = 40;
@@ -1991,5 +2017,7 @@
         private System.Windows.Forms.ComboBox PaisCB;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.CheckedListBox listaHabitaciones;
+        private System.Windows.Forms.ComboBox HotelTHCB;
+        private System.Windows.Forms.Label label1;
     }
 }
