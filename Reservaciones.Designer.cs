@@ -34,7 +34,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.UsuarioActualTXT = new System.Windows.Forms.Label();
-            this.ReservarBTN = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
             this.PaisTXT = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.FechaActualRegistro = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ServicioAdicionalCB = new System.Windows.Forms.CheckedListBox();
             this.CaracteristicaTXT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PrecioXNocheTXT = new System.Windows.Forms.TextBox();
@@ -63,11 +63,13 @@
             this.HotelCB = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.ServicioAdicionalTXT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.AmenidadTXT = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.PrecioServiciosTXT = new System.Windows.Forms.TextBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.ReservarBTN = new System.Windows.Forms.Button();
             this.MetPagoCB = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
             this.PersonasTXT = new System.Windows.Forms.TextBox();
@@ -91,6 +93,9 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.TablaCheckOutDTG = new System.Windows.Forms.DataGridView();
             this.TablaCheckInDTG = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -103,6 +108,8 @@
             this.CodigoReserva = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.FechaRegistroTXT = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.FechaSalidaTXT = new System.Windows.Forms.TextBox();
             this.FechaLlegadaTXT = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -114,7 +121,7 @@
             this.SalidaBTN = new System.Windows.Forms.Button();
             this.ConfirmarBTN = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.FechaConfirmacionDTG = new System.Windows.Forms.DateTimePicker();
             this.TablaReservacionesDTG = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -125,11 +132,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CorreoCombo = new System.Windows.Forms.ComboBox();
             this.MenuContenedor = new System.Windows.Forms.Panel();
-            this.FechaRegistroTXT = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -182,7 +184,6 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.UsuarioActualTXT);
-            this.tabPage1.Controls.Add(this.ReservarBTN);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.TablaClientesDTG);
@@ -225,20 +226,6 @@
             this.UsuarioActualTXT.Size = new System.Drawing.Size(90, 28);
             this.UsuarioActualTXT.TabIndex = 13;
             this.UsuarioActualTXT.Text = "User_123";
-            // 
-            // ReservarBTN
-            // 
-            this.ReservarBTN.BackColor = System.Drawing.Color.SteelBlue;
-            this.ReservarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReservarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ReservarBTN.Location = new System.Drawing.Point(1020, 533);
-            this.ReservarBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.ReservarBTN.Name = "ReservarBTN";
-            this.ReservarBTN.Size = new System.Drawing.Size(237, 35);
-            this.ReservarBTN.TabIndex = 25;
-            this.ReservarBTN.Text = "Reservar";
-            this.ReservarBTN.UseVisualStyleBackColor = false;
-            this.ReservarBTN.Click += new System.EventHandler(this.ReservarBTN_Click);
             // 
             // groupBox5
             // 
@@ -494,6 +481,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.ServicioAdicionalCB);
             this.groupBox2.Controls.Add(this.CaracteristicaTXT);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.PrecioXNocheTXT);
@@ -501,7 +489,6 @@
             this.groupBox2.Controls.Add(this.HotelCB);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.ServicioAdicionalTXT);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.AmenidadTXT);
             this.groupBox2.Controls.Add(this.label28);
@@ -515,6 +502,18 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información personal";
+            // 
+            // ServicioAdicionalCB
+            // 
+            this.ServicioAdicionalCB.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.ServicioAdicionalCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ServicioAdicionalCB.FormattingEnabled = true;
+            this.ServicioAdicionalCB.Location = new System.Drawing.Point(307, 193);
+            this.ServicioAdicionalCB.Name = "ServicioAdicionalCB";
+            this.ServicioAdicionalCB.Size = new System.Drawing.Size(254, 92);
+            this.ServicioAdicionalCB.TabIndex = 85;
+            this.ServicioAdicionalCB.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ServicioAdicionalCB_ItemCheck);
+            this.ServicioAdicionalCB.SelectedIndexChanged += new System.EventHandler(this.ServicioAdicionalCB_SelectedIndexChanged);
             // 
             // CaracteristicaTXT
             // 
@@ -546,7 +545,7 @@
             // 
             this.PrecioXNocheTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.PrecioXNocheTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PrecioXNocheTXT.Location = new System.Drawing.Point(583, 344);
+            this.PrecioXNocheTXT.Location = new System.Drawing.Point(583, 334);
             this.PrecioXNocheTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrecioXNocheTXT.Name = "PrecioXNocheTXT";
             this.PrecioXNocheTXT.ReadOnly = true;
@@ -562,7 +561,7 @@
             this.TipoHabCB.Items.AddRange(new object[] {
             "Soltero",
             "Casado"});
-            this.TipoHabCB.Location = new System.Drawing.Point(307, 338);
+            this.TipoHabCB.Location = new System.Drawing.Point(307, 328);
             this.TipoHabCB.Margin = new System.Windows.Forms.Padding(2);
             this.TipoHabCB.Name = "TipoHabCB";
             this.TipoHabCB.Size = new System.Drawing.Size(253, 36);
@@ -589,7 +588,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label27.Location = new System.Drawing.Point(578, 309);
+            this.label27.Location = new System.Drawing.Point(578, 299);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(156, 25);
@@ -608,26 +607,12 @@
             this.label23.TabIndex = 72;
             this.label23.Text = "Servicios adicionales";
             // 
-            // ServicioAdicionalTXT
-            // 
-            this.ServicioAdicionalTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.ServicioAdicionalTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ServicioAdicionalTXT.Location = new System.Drawing.Point(307, 192);
-            this.ServicioAdicionalTXT.Margin = new System.Windows.Forms.Padding(2);
-            this.ServicioAdicionalTXT.Multiline = true;
-            this.ServicioAdicionalTXT.Name = "ServicioAdicionalTXT";
-            this.ServicioAdicionalTXT.ReadOnly = true;
-            this.ServicioAdicionalTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ServicioAdicionalTXT.Size = new System.Drawing.Size(252, 106);
-            this.ServicioAdicionalTXT.TabIndex = 6;
-            this.ServicioAdicionalTXT.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(302, 309);
+            this.label5.Location = new System.Drawing.Point(302, 299);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(197, 25);
@@ -662,6 +647,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.PrecioServiciosTXT);
+            this.groupBox4.Controls.Add(this.label107);
+            this.groupBox4.Controls.Add(this.ReservarBTN);
             this.groupBox4.Controls.Add(this.MetPagoCB);
             this.groupBox4.Controls.Add(this.label45);
             this.groupBox4.Controls.Add(this.PersonasTXT);
@@ -686,10 +674,48 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(532, 436);
+            this.groupBox4.Size = new System.Drawing.Size(532, 491);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Reservación";
+            // 
+            // PrecioServiciosTXT
+            // 
+            this.PrecioServiciosTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrecioServiciosTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioServiciosTXT.Location = new System.Drawing.Point(12, 336);
+            this.PrecioServiciosTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.PrecioServiciosTXT.Name = "PrecioServiciosTXT";
+            this.PrecioServiciosTXT.ReadOnly = true;
+            this.PrecioServiciosTXT.Size = new System.Drawing.Size(241, 27);
+            this.PrecioServiciosTXT.TabIndex = 85;
+            this.PrecioServiciosTXT.TabStop = false;
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label107.Location = new System.Drawing.Point(7, 309);
+            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(178, 25);
+            this.label107.TabIndex = 86;
+            this.label107.Text = "Precio por servicios";
+            // 
+            // ReservarBTN
+            // 
+            this.ReservarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ReservarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReservarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ReservarBTN.Location = new System.Drawing.Point(278, 421);
+            this.ReservarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.ReservarBTN.Name = "ReservarBTN";
+            this.ReservarBTN.Size = new System.Drawing.Size(238, 52);
+            this.ReservarBTN.TabIndex = 25;
+            this.ReservarBTN.Text = "Reservar";
+            this.ReservarBTN.UseVisualStyleBackColor = false;
+            this.ReservarBTN.Click += new System.EventHandler(this.ReservarBTN_Click);
             // 
             // MetPagoCB
             // 
@@ -766,6 +792,7 @@
             this.FechaLlegada.Name = "FechaLlegada";
             this.FechaLlegada.Size = new System.Drawing.Size(237, 31);
             this.FechaLlegada.TabIndex = 14;
+            this.FechaLlegada.ValueChanged += new System.EventHandler(this.FechaLlegada_ValueChanged);
             // 
             // label9
             // 
@@ -892,7 +919,7 @@
             // 
             this.AnticipoTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.AnticipoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AnticipoTXT.Location = new System.Drawing.Point(12, 390);
+            this.AnticipoTXT.Location = new System.Drawing.Point(12, 446);
             this.AnticipoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.AnticipoTXT.Name = "AnticipoTXT";
             this.AnticipoTXT.Size = new System.Drawing.Size(241, 27);
@@ -916,7 +943,7 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label37.Location = new System.Drawing.Point(7, 363);
+            this.label37.Location = new System.Drawing.Point(7, 419);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(84, 25);
@@ -927,7 +954,7 @@
             // 
             this.TotalTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TotalTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TotalTXT.Location = new System.Drawing.Point(12, 334);
+            this.TotalTXT.Location = new System.Drawing.Point(12, 390);
             this.TotalTXT.Margin = new System.Windows.Forms.Padding(2);
             this.TotalTXT.Name = "TotalTXT";
             this.TotalTXT.ReadOnly = true;
@@ -940,7 +967,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label35.Location = new System.Drawing.Point(7, 307);
+            this.label35.Location = new System.Drawing.Point(7, 363);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(54, 25);
@@ -974,7 +1001,7 @@
             this.tabPage2.Controls.Add(this.groupBox40);
             this.tabPage2.Controls.Add(this.ConfirmarBTN);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.dateTimePicker6);
+            this.tabPage2.Controls.Add(this.FechaConfirmacionDTG);
             this.tabPage2.Controls.Add(this.TablaReservacionesDTG);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.groupBox11);
@@ -986,6 +1013,42 @@
             this.tabPage2.Size = new System.Drawing.Size(1409, 606);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Confirmacion y cancelacion";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label31.Location = new System.Drawing.Point(1035, 291);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(304, 25);
+            this.label31.TabIndex = 87;
+            this.label31.Text = "Clientes que confirmaron su salida";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label16.Location = new System.Drawing.Point(660, 291);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(314, 25);
+            this.label16.TabIndex = 86;
+            this.label16.Text = "Clientes que confirmaron asistencia";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label15.Location = new System.Drawing.Point(16, 291);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 25);
+            this.label15.TabIndex = 85;
+            this.label15.Text = "Clientes";
             // 
             // TablaCheckOutDTG
             // 
@@ -1163,6 +1226,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fecha";
             // 
+            // FechaRegistroTXT
+            // 
+            this.FechaRegistroTXT.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.FechaRegistroTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaRegistroTXT.Location = new System.Drawing.Point(12, 185);
+            this.FechaRegistroTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaRegistroTXT.Name = "FechaRegistroTXT";
+            this.FechaRegistroTXT.ReadOnly = true;
+            this.FechaRegistroTXT.Size = new System.Drawing.Size(330, 27);
+            this.FechaRegistroTXT.TabIndex = 83;
+            this.FechaRegistroTXT.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label14.Location = new System.Drawing.Point(7, 156);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(191, 25);
+            this.label14.TabIndex = 82;
+            this.label14.Text = "Fecha de reservacion";
+            // 
             // FechaSalidaTXT
             // 
             this.FechaSalidaTXT.BackColor = System.Drawing.Color.SkyBlue;
@@ -1264,6 +1351,7 @@
             this.CancelarBTN.TabIndex = 2;
             this.CancelarBTN.Text = "Cancelar reserva";
             this.CancelarBTN.UseVisualStyleBackColor = false;
+            this.CancelarBTN.Click += new System.EventHandler(this.CancelarBTN_Click);
             // 
             // SalidaBTN
             // 
@@ -1278,6 +1366,7 @@
             this.SalidaBTN.TabIndex = 3;
             this.SalidaBTN.Text = "Salida";
             this.SalidaBTN.UseVisualStyleBackColor = false;
+            this.SalidaBTN.Click += new System.EventHandler(this.SalidaBTN_Click);
             // 
             // ConfirmarBTN
             // 
@@ -1291,6 +1380,7 @@
             this.ConfirmarBTN.TabIndex = 1;
             this.ConfirmarBTN.Text = "Confirmar asistencia";
             this.ConfirmarBTN.UseVisualStyleBackColor = false;
+            this.ConfirmarBTN.Click += new System.EventHandler(this.ConfirmarBTN_Click);
             // 
             // label3
             // 
@@ -1304,15 +1394,15 @@
             this.label3.TabIndex = 55;
             this.label3.Text = "Fecha actual de registro";
             // 
-            // dateTimePicker6
+            // FechaConfirmacionDTG
             // 
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker6.Location = new System.Drawing.Point(1282, 32);
-            this.dateTimePicker6.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(114, 31);
-            this.dateTimePicker6.TabIndex = 54;
-            this.dateTimePicker6.TabStop = false;
+            this.FechaConfirmacionDTG.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaConfirmacionDTG.Location = new System.Drawing.Point(1282, 32);
+            this.FechaConfirmacionDTG.Margin = new System.Windows.Forms.Padding(2);
+            this.FechaConfirmacionDTG.Name = "FechaConfirmacionDTG";
+            this.FechaConfirmacionDTG.Size = new System.Drawing.Size(114, 31);
+            this.FechaConfirmacionDTG.TabIndex = 54;
+            this.FechaConfirmacionDTG.TabStop = false;
             // 
             // TablaReservacionesDTG
             // 
@@ -1445,66 +1535,6 @@
             this.MenuContenedor.Size = new System.Drawing.Size(1443, 67);
             this.MenuContenedor.TabIndex = 28;
             // 
-            // FechaRegistroTXT
-            // 
-            this.FechaRegistroTXT.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.FechaRegistroTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FechaRegistroTXT.Location = new System.Drawing.Point(12, 185);
-            this.FechaRegistroTXT.Margin = new System.Windows.Forms.Padding(2);
-            this.FechaRegistroTXT.Name = "FechaRegistroTXT";
-            this.FechaRegistroTXT.ReadOnly = true;
-            this.FechaRegistroTXT.Size = new System.Drawing.Size(330, 27);
-            this.FechaRegistroTXT.TabIndex = 83;
-            this.FechaRegistroTXT.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label14.Location = new System.Drawing.Point(7, 156);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(191, 25);
-            this.label14.TabIndex = 82;
-            this.label14.Text = "Fecha de reservacion";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label15.Location = new System.Drawing.Point(16, 291);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 25);
-            this.label15.TabIndex = 85;
-            this.label15.Text = "Clientes";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label16.Location = new System.Drawing.Point(660, 291);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(314, 25);
-            this.label16.TabIndex = 86;
-            this.label16.Text = "Clientes que confirmaron asistencia";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label31.Location = new System.Drawing.Point(1035, 291);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(304, 25);
-            this.label31.TabIndex = 87;
-            this.label31.Text = "Clientes que confirmaron su salida";
-            // 
             // Reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1583,7 +1613,7 @@
         private System.Windows.Forms.Button ConfirmarBTN;
         private System.Windows.Forms.Button CancelarBTN;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
+        private System.Windows.Forms.DateTimePicker FechaConfirmacionDTG;
         private System.Windows.Forms.TextBox PrecioTotal;
         private System.Windows.Forms.TextBox CodigoReserva;
         private System.Windows.Forms.GroupBox groupBox40;
@@ -1636,7 +1666,6 @@
         private System.Windows.Forms.TextBox CaracteristicaTXT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox TipoHabCB;
-        private System.Windows.Forms.TextBox ServicioAdicionalTXT;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox PrecioRestanteTXT;
         private System.Windows.Forms.Label label32;
@@ -1652,5 +1681,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox PrecioServiciosTXT;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.CheckedListBox ServicioAdicionalCB;
     }
 }

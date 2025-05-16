@@ -169,10 +169,10 @@
             // 
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(51, 180);
+            this.label9.Location = new System.Drawing.Point(54, 180);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 185);
+            this.label9.Size = new System.Drawing.Size(119, 185);
             this.label9.TabIndex = 16;
             this.label9.Text = "¡Alto!\r\nRevisa que los datos ingresados esten correctos.\r\n";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -181,7 +181,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.MidnightBlue;
             this.pictureBox4.Image = global::AAVD.Properties.Resources.logo_blanco;
-            this.pictureBox4.Location = new System.Drawing.Point(61, 46);
+            this.pictureBox4.Location = new System.Drawing.Point(54, 46);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(118, 108);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -86,6 +86,7 @@ namespace AAVD
         {
             public int Id_ServicioAdicional { get; set; }
             public string nombreServicio { get; set; }
+            public double costo { get; set; }
 
             public override string ToString()
             {
@@ -237,7 +238,13 @@ namespace AAVD
         {
             var enlace = new EnlaceDB();
             ServicioAdicional servicioAdicional = new ServicioAdicional();
+            if (string.IsNullOrEmpty(ServicioTXT.Text) || string.IsNullOrEmpty(CostoServicioTXT.Text) || !CostoServicioTXT.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Error al registrar el servicio adicional, no debe de estar vacios los campos o el precio debe de contener solo digitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             servicioAdicional.nombreServicio = ServicioTXT.Text;
+            servicioAdicional.costo = Convert.ToInt32(CostoServicioTXT.Text);
             bool resultado = enlace.Insertar_ServicioAdicional(servicioAdicional);
             if (!resultado)
             {
@@ -248,6 +255,7 @@ namespace AAVD
             {
                 MessageBox.Show("Servicio Adicional registrado correctamente: " + servicioAdicional.nombreServicio, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ServicioTXT.Clear();
+                CostoServicioTXT.Clear();
             }
             CargarTablasTipoHab();
 
@@ -262,7 +270,7 @@ namespace AAVD
             hotel.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
             hotel.NombreHotel = NombreHotelTXT.Text;
             hotel.ZonaTuristica = ZonaTuristicaTXT.Text;
-            if (!NumeroPisosTXT.Text.All(char.IsDigit) || !NumeroPiscinasTXT.Text.All(char.IsDigit) || !NumeroHabitacionesTXT.Text.All(char.IsDigit))
+            if (!NumeroPisosTXT.Text.All(char.IsDigit) || !NumeroPiscinasTXT.Text.All(char.IsDigit) || !NumeroHabitacionesTXT.Text.All(char.IsDigit) ||!CostoServicioTXT.Text.All(char.IsDigit))
             {
                 MessageBox.Show("El número de pisos, piscinas o habitaciones deben contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -398,6 +406,106 @@ namespace AAVD
             }));
         }
         // --------------------------------------------------- Carga de datos -------------------------------------------------
+        
+        private void HotelCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int seleccion = Convert.ToInt32(HotelCB.SelectedValue);
+            if (seleccion > 0)
+            {
+                var enlace = new EnlaceDB();
+                var tabla = new DataTable();
+                var tablaRestante = new DataTable();
+                tabla = enlace.consultarHotelXId(seleccion);
+                tablaRestante = enlace.consultarHabitacionesRestantes(seleccion);
+                HabitacionesTotalesTXT.Text = tabla.Rows[0]["numHabitaciones"].ToString();
+                int habTotales = Convert.ToInt32(HabitacionesTotalesTXT.Text);
+                int habRegistrada = Convert.ToInt32(tablaRestante.Rows[0]["Restantes"].ToString());
+                int habRestante = habTotales - habRegistrada;
+                HabitacionesRestantesTXT.Text = habRestante.ToString();
+                var tablaHabitaciones = enlace.consultarHabitaciones(seleccion);
+                TablaTHAsignadasDTG.DataSource = tablaHabitaciones;
+                var tablaTipoHabitacion = enlace.consultarTipoHabitacionId(seleccion);
+                listaHabitaciones.Items.Clear();
+                foreach (DataRow fila in tablaTipoHabitacion.Rows)
+                {
+                    TipoHab tipoHab = new TipoHab()
+                    {
+                        Id_TipoHab = Convert.ToInt32(fila["Id_TipoHab"]),
+                        nivelHabitacion = fila["nivelHabitacion"].ToString()
+                    };
+                    listaHabitaciones.Items.Add(tipoHab);
+                }
+            }
+        }
+        private void BTN_AsignarHabitacion_Click(object sender, EventArgs e)
+        {
+            var enlace = new EnlaceDB();
+            var tabla = new DataTable();
+            Habitacion habitacion = new Habitacion();
+            if (!HabitacionesAsignadasTXT.Text.All(char.IsDigit) || string.IsNullOrEmpty(HabitacionesAsignadasTXT.Text))
+            {
+                MessageBox.Show("El número de habitaciones asignadas debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            habitacion.NumeroHabitacion = Convert.ToInt32(HabitacionesAsignadasTXT.Text);
+            if (habitacion.NumeroHabitacion < 0)
+            {
+                MessageBox.Show("El número de habitaciones asignadas no puede ser menor a 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            habitacion.Id_Hotel = Convert.ToInt32(HotelCB.SelectedValue);
+            if (!(listaHabitaciones.CheckedItems.Count == 1))
+            {
+                MessageBox.Show("Debe seleccionar un tipo de habitación.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var tipoSeleccionado = listaHabitaciones.CheckedItems[0] as TipoHab;
+            if ((tipoSeleccionado != null) == false)
+            {
+                MessageBox.Show("Error al obtener el tipo de habitación seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                habitacion.Id_TipoHab = tipoSeleccionado.Id_TipoHab;
+            }
+            tabla = enlace.consultarPisosXHotel(habitacion.Id_Hotel);
+            if (tabla.Rows.Count > 0)
+            {
+                habitacion.Piso = Convert.ToInt32(tabla.Rows[0]["numeroPisos"]);
+            }
+            int restantes = Convert.ToInt32(HabitacionesRestantesTXT.Text);
+            if (habitacion.NumeroHabitacion > restantes)
+            {
+                MessageBox.Show("Ya no quedan habitaciones para asignar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            bool resultado = enlace.SP_InsertarHabitaciones(habitacion);
+            if (!resultado)
+            {
+                MessageBox.Show("Error al registrar habitaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Habitacion registrada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CargarTablasTipoHab();
+        }
+        private void BorrarTH_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar el tipo de habitacion seleccionado", "Eliminar tipo de habitacion", buttons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                var enlace = new EnlaceDB();
+                bool resultado = enlace.Borrar_TipoHab(Convert.ToInt32(TipoHabCB.SelectedValue));
+                if (!resultado)
+                {
+                    MessageBox.Show("Error al eliminar tipo de habitaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                MessageBox.Show("Eliminada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarTablasTipoHab();
+            }
+        }
         private void CargarTablasTipoHab()
         {
 
@@ -540,8 +648,12 @@ namespace AAVD
             }
             if (tablaRestantes.Rows.Count > 0)
             {
-                int habRegistradas = Convert.ToInt32(tablaRestantes.Rows[0]["Restantes"].ToString());
-                int habTotales = Convert.ToInt32(HabitacionesTotalesTXT.Text);
+                // Validar primero el valor en la tabla
+                int habRegistradas = 0;
+                if (!int.TryParse(tablaRestantes.Rows[0]["Restantes"]?.ToString(), out habRegistradas)) habRegistradas = 0;
+                // Validar el textbox
+                int habTotales = 0;
+                if (!int.TryParse(HabitacionesTotalesTXT.Text, out habTotales)) habTotales = 0;
                 int restantes = habTotales - habRegistradas;
                 if (restantes > 0) HabitacionesRestantesTXT.Text = restantes.ToString();
                 else HabitacionesRestantesTXT.Text = "0";
@@ -628,107 +740,6 @@ namespace AAVD
             CiudadCB.ValueMember = "Id_Ubicacion";
             CiudadCB.DisplayMember = "ciudad";
         }
-        private void HotelCB_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int seleccion = Convert.ToInt32(HotelCB.SelectedValue);
-            if (seleccion > 0)
-            {
-                var enlace = new EnlaceDB();
-                var tabla = new DataTable();
-                var tablaRestante = new DataTable();
-                tabla = enlace.consultarHotelXId(seleccion);
-                tablaRestante = enlace.consultarHabitacionesRestantes(seleccion);
-                HabitacionesTotalesTXT.Text = tabla.Rows[0]["numHabitaciones"].ToString();
-                int habTotales = Convert.ToInt32(HabitacionesTotalesTXT.Text);
-                int habRegistrada = Convert.ToInt32(tablaRestante.Rows[0]["Restantes"].ToString());
-                int habRestante = habTotales - habRegistrada;
-                HabitacionesRestantesTXT.Text = habRestante.ToString();
-                var tablaHabitaciones = enlace.consultarHabitaciones(seleccion);
-                TablaTHAsignadasDTG.DataSource = tablaHabitaciones;
-                var tablaTipoHabitacion = enlace.consultarTipoHabitacionId(seleccion);
-                listaHabitaciones.Items.Clear();
-                foreach (DataRow fila in tablaTipoHabitacion.Rows)
-                {
-                    TipoHab tipoHab = new TipoHab()
-                    {
-                        Id_TipoHab = Convert.ToInt32(fila["Id_TipoHab"]),
-                        nivelHabitacion = fila["nivelHabitacion"].ToString()
-                    };
-                    listaHabitaciones.Items.Add(tipoHab);
-                }
-            }
-        }
-        private void BTN_AsignarHabitacion_Click(object sender, EventArgs e)
-        {
-            var enlace = new EnlaceDB();
-            var tabla = new DataTable();
-            Habitacion habitacion = new Habitacion();
-            if (!HabitacionesAsignadasTXT.Text.All(char.IsDigit) || string.IsNullOrEmpty(HabitacionesAsignadasTXT.Text))
-            {
-                MessageBox.Show("El número de habitaciones asignadas debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            habitacion.NumeroHabitacion = Convert.ToInt32(HabitacionesAsignadasTXT.Text);
-            if (habitacion.NumeroHabitacion < 0)
-            {
-                MessageBox.Show("El número de habitaciones asignadas no puede ser menor a 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            habitacion.Id_Hotel = Convert.ToInt32(HotelCB.SelectedValue);
-            if (!(listaHabitaciones.CheckedItems.Count == 1))
-            {
-                MessageBox.Show("Debe seleccionar un tipo de habitación.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            var tipoSeleccionado = listaHabitaciones.CheckedItems[0] as TipoHab;
-            if ((tipoSeleccionado != null) == false)
-            {
-                MessageBox.Show("Error al obtener el tipo de habitación seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                habitacion.Id_TipoHab = tipoSeleccionado.Id_TipoHab;
-            }
-            tabla = enlace.consultarPisosXHotel(habitacion.Id_Hotel);
-            if (tabla.Rows.Count > 0)
-            {
-                habitacion.Piso = Convert.ToInt32(tabla.Rows[0]["numeroPisos"]);
-            }
-            int restantes = Convert.ToInt32(HabitacionesRestantesTXT.Text);
-            if (habitacion.NumeroHabitacion > restantes)
-            {
-                MessageBox.Show("Ya no quedan habitaciones para asignar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            bool resultado = enlace.SP_InsertarHabitaciones(habitacion);
-            if (!resultado)
-            {
-                MessageBox.Show("Error al registrar habitaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            MessageBox.Show("Habitacion registrada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CargarTablasTipoHab();
-        }
-
-        private void BorrarTH_Click(object sender, EventArgs e)
-        {
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar el tipo de habitacion seleccionado", "Eliminar tipo de habitacion", buttons, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                var enlace = new EnlaceDB();
-                bool resultado = enlace.Borrar_TipoHab(Convert.ToInt32(TipoHabCB.SelectedValue));
-                if (!resultado)
-                {
-                    MessageBox.Show("Error al eliminar tipo de habitaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                MessageBox.Show("Eliminada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarTablasTipoHab();
-            }
-        }
-
         // ---------------------------------------------------------------------------------------------------------------------
     }
 }

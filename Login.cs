@@ -15,6 +15,7 @@ namespace AAVD
     public partial class Login : Form
     {
         public static int IdUsuarioActual { get; set; }
+        public static int tipoUsuario { get; set; }
         public Login()
         {
             InitializeComponent();
@@ -56,10 +57,12 @@ namespace AAVD
             else
             {
                 int IdUsuario = Convert.ToInt32(tabla.Rows[0]["Id_Credenciales"]);
+                int admin = Convert.ToInt32(tabla.Rows[0]["Id_Admin"]);
                 Login.IdUsuarioActual = IdUsuario;
+                Login.tipoUsuario = admin;
 
                 this.DialogResult = DialogResult.OK;
-                this.Close();
+                this.Hide();
             }
         }
     }

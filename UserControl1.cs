@@ -17,7 +17,8 @@ namespace AAVD
             InitializeComponent();
         }
 
-        private void CerrarVentanaActual() {
+        private void CerrarVentanaActual()
+        {
             Form ventanaActual = this.FindForm();
             ventanaActual.Hide();
         }
@@ -31,24 +32,38 @@ namespace AAVD
 
         private void BTN_REP_Click(object sender, EventArgs e)
         {
-            var NuevoForm = new Reportes();
-            NuevoForm.Show();
-            CerrarVentanaActual();
+            if (Login.tipoUsuario == 1)
+            {
+                var NuevoForm = new Reportes();
+                NuevoForm.Show();
+                CerrarVentanaActual();
+            }
+            else
+                MessageBox.Show("No tiene permisos para acceder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BTN_USUARIO_Click(object sender, EventArgs e)
         {
-            var NuevoForm = new Usuario();
-            NuevoForm.Show();
-            CerrarVentanaActual();
-
+            if (Login.tipoUsuario == 1)
+            {
+                var NuevoForm = new Usuario();
+                NuevoForm.Show();
+                CerrarVentanaActual();
+            }
+            else
+                MessageBox.Show("No tiene permisos para acceder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BTN_HOTEL_Click(object sender, EventArgs e)
         {
-            var NuevoForm = new Hoteles();
-            NuevoForm.Show();
-            CerrarVentanaActual();
+            if (Login.tipoUsuario == 1)
+            {
+                var NuevoForm = new Hoteles();
+                NuevoForm.Show();
+                CerrarVentanaActual();
+            }
+            else
+                MessageBox.Show("No tiene permisos para acceder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BTN_RESER_Click(object sender, EventArgs e)
@@ -68,6 +83,11 @@ namespace AAVD
             var NuevoForm = new Factura();
             NuevoForm.Show();
             CerrarVentanaActual();
+        }
+
+        private void BTN_SALIR_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

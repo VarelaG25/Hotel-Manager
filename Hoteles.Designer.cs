@@ -162,6 +162,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.MenuContenedor = new System.Windows.Forms.Panel();
+            this.CostoServicioTXT = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -1158,6 +1161,9 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.label26);
+            this.groupBox13.Controls.Add(this.label25);
+            this.groupBox13.Controls.Add(this.CostoServicioTXT);
             this.groupBox13.Controls.Add(this.ServiciosTXT);
             this.groupBox13.Controls.Add(this.EliminarBTN);
             this.groupBox13.Controls.Add(this.ServicioTXT);
@@ -1180,7 +1186,7 @@
             this.ServiciosTXT.Multiline = true;
             this.ServiciosTXT.Name = "ServiciosTXT";
             this.ServiciosTXT.ReadOnly = true;
-            this.ServiciosTXT.Size = new System.Drawing.Size(211, 122);
+            this.ServiciosTXT.Size = new System.Drawing.Size(211, 70);
             this.ServiciosTXT.TabIndex = 18;
             // 
             // EliminarBTN
@@ -1212,7 +1218,7 @@
             this.ServicioAdicionalCB.FormattingEnabled = true;
             this.ServicioAdicionalCB.Location = new System.Drawing.Point(6, 30);
             this.ServicioAdicionalCB.Name = "ServicioAdicionalCB";
-            this.ServicioAdicionalCB.Size = new System.Drawing.Size(211, 92);
+            this.ServicioAdicionalCB.Size = new System.Drawing.Size(211, 70);
             this.ServicioAdicionalCB.TabIndex = 15;
             this.ServicioAdicionalCB.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ServicioAdicionalCB_ItemCheck);
             // 
@@ -1823,6 +1829,37 @@
             this.MenuContenedor.Size = new System.Drawing.Size(1508, 74);
             this.MenuContenedor.TabIndex = 25;
             // 
+            // CostoServicioTXT
+            // 
+            this.CostoServicioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CostoServicioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CostoServicioTXT.Location = new System.Drawing.Point(259, 128);
+            this.CostoServicioTXT.Name = "CostoServicioTXT";
+            this.CostoServicioTXT.Size = new System.Drawing.Size(211, 24);
+            this.CostoServicioTXT.TabIndex = 20;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label25.Location = new System.Drawing.Point(1, 100);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(81, 25);
+            this.label25.TabIndex = 52;
+            this.label25.Text = "Nombre";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label26.Location = new System.Drawing.Point(254, 103);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 25);
+            this.label26.TabIndex = 53;
+            this.label26.Text = "Costo";
+            // 
             // Hoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2019,5 +2056,8 @@
         private System.Windows.Forms.CheckedListBox listaHabitaciones;
         private System.Windows.Forms.ComboBox HotelTHCB;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox CostoServicioTXT;
     }
 }
