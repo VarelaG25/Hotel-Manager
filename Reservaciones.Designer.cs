@@ -132,6 +132,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CorreoCombo = new System.Windows.Forms.ComboBox();
             this.MenuContenedor = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -211,7 +212,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AAVD.Properties.Resources.user_azul;
-            this.pictureBox2.Location = new System.Drawing.Point(1215, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(1202, 15);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -220,12 +221,14 @@
             // 
             // UsuarioActualTXT
             // 
-            this.UsuarioActualTXT.Location = new System.Drawing.Point(1271, 19);
+            this.UsuarioActualTXT.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioActualTXT.Location = new System.Drawing.Point(1260, 19);
             this.UsuarioActualTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsuarioActualTXT.Name = "UsuarioActualTXT";
-            this.UsuarioActualTXT.Size = new System.Drawing.Size(90, 28);
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(138, 28);
             this.UsuarioActualTXT.TabIndex = 13;
             this.UsuarioActualTXT.Text = "User_123";
+            this.UsuarioActualTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox5
             // 
@@ -260,8 +263,9 @@
             // 
             // PaisTXT
             // 
-            this.PaisTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PaisTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.PaisTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PaisTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PaisTXT.Location = new System.Drawing.Point(16, 59);
             this.PaisTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PaisTXT.Name = "PaisTXT";
@@ -284,8 +288,9 @@
             // 
             // EstadoTXT
             // 
-            this.EstadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.EstadoTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.EstadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EstadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.EstadoTXT.Location = new System.Drawing.Point(16, 127);
             this.EstadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.EstadoTXT.Name = "EstadoTXT";
@@ -296,8 +301,9 @@
             // 
             // CiudadTXT
             // 
-            this.CiudadTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CiudadTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.CiudadTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CiudadTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CiudadTXT.Location = new System.Drawing.Point(16, 200);
             this.CiudadTXT.Margin = new System.Windows.Forms.Padding(2);
             this.CiudadTXT.Name = "CiudadTXT";
@@ -354,6 +360,7 @@
             // 
             this.CiudadCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CiudadCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CiudadCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CiudadCB.FormattingEnabled = true;
             this.CiudadCB.Items.AddRange(new object[] {
             "Soltero",
@@ -361,13 +368,15 @@
             this.CiudadCB.Location = new System.Drawing.Point(320, 119);
             this.CiudadCB.Margin = new System.Windows.Forms.Padding(2);
             this.CiudadCB.Name = "CiudadCB";
-            this.CiudadCB.Size = new System.Drawing.Size(253, 33);
+            this.CiudadCB.Size = new System.Drawing.Size(153, 33);
             this.CiudadCB.TabIndex = 4;
+            this.CiudadCB.SelectedIndexChanged += new System.EventHandler(this.CiudadCB_SelectedIndexChanged);
             // 
             // CorreoCB
             // 
             this.CorreoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CorreoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CorreoCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CorreoCB.FormattingEnabled = true;
             this.CorreoCB.Location = new System.Drawing.Point(23, 254);
             this.CorreoCB.Margin = new System.Windows.Forms.Padding(2);
@@ -403,6 +412,7 @@
             // 
             this.RFCCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.RFCCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RFCCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.RFCCB.FormattingEnabled = true;
             this.RFCCB.Location = new System.Drawing.Point(23, 185);
             this.RFCCB.Margin = new System.Windows.Forms.Padding(2);
@@ -426,6 +436,7 @@
             // 
             this.ApellidosTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.ApellidosTXT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ApellidosTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ApellidosTXT.FormattingEnabled = true;
             this.ApellidosTXT.Location = new System.Drawing.Point(23, 119);
             this.ApellidosTXT.Margin = new System.Windows.Forms.Padding(2);
@@ -481,6 +492,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.ServicioAdicionalCB);
             this.groupBox2.Controls.Add(this.CaracteristicaTXT);
             this.groupBox2.Controls.Add(this.label1);
@@ -511,14 +523,15 @@
             this.ServicioAdicionalCB.Location = new System.Drawing.Point(307, 193);
             this.ServicioAdicionalCB.Name = "ServicioAdicionalCB";
             this.ServicioAdicionalCB.Size = new System.Drawing.Size(254, 92);
-            this.ServicioAdicionalCB.TabIndex = 85;
+            this.ServicioAdicionalCB.TabIndex = 6;
             this.ServicioAdicionalCB.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ServicioAdicionalCB_ItemCheck);
             this.ServicioAdicionalCB.SelectedIndexChanged += new System.EventHandler(this.ServicioAdicionalCB_SelectedIndexChanged);
             // 
             // CaracteristicaTXT
             // 
-            this.CaracteristicaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CaracteristicaTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.CaracteristicaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CaracteristicaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CaracteristicaTXT.Location = new System.Drawing.Point(583, 407);
             this.CaracteristicaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.CaracteristicaTXT.Multiline = true;
@@ -543,8 +556,9 @@
             // 
             // PrecioXNocheTXT
             // 
-            this.PrecioXNocheTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrecioXNocheTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.PrecioXNocheTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioXNocheTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrecioXNocheTXT.Location = new System.Drawing.Point(583, 334);
             this.PrecioXNocheTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrecioXNocheTXT.Name = "PrecioXNocheTXT";
@@ -557,6 +571,7 @@
             // 
             this.TipoHabCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TipoHabCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoHabCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TipoHabCB.FormattingEnabled = true;
             this.TipoHabCB.Items.AddRange(new object[] {
             "Soltero",
@@ -572,6 +587,7 @@
             // 
             this.HotelCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.HotelCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.HotelCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.HotelCB.FormattingEnabled = true;
             this.HotelCB.Items.AddRange(new object[] {
             "Soltero",
@@ -621,8 +637,9 @@
             // 
             // AmenidadTXT
             // 
-            this.AmenidadTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.AmenidadTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.AmenidadTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AmenidadTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.AmenidadTXT.Location = new System.Drawing.Point(309, 407);
             this.AmenidadTXT.Margin = new System.Windows.Forms.Padding(2);
             this.AmenidadTXT.Multiline = true;
@@ -681,14 +698,15 @@
             // 
             // PrecioServiciosTXT
             // 
-            this.PrecioServiciosTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrecioServiciosTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.PrecioServiciosTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioServiciosTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrecioServiciosTXT.Location = new System.Drawing.Point(12, 336);
             this.PrecioServiciosTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrecioServiciosTXT.Name = "PrecioServiciosTXT";
             this.PrecioServiciosTXT.ReadOnly = true;
             this.PrecioServiciosTXT.Size = new System.Drawing.Size(241, 27);
-            this.PrecioServiciosTXT.TabIndex = 85;
+            this.PrecioServiciosTXT.TabIndex = 21;
             this.PrecioServiciosTXT.TabStop = false;
             // 
             // label107
@@ -705,14 +723,14 @@
             // 
             // ReservarBTN
             // 
-            this.ReservarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ReservarBTN.BackColor = System.Drawing.Color.MidnightBlue;
             this.ReservarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReservarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ReservarBTN.Location = new System.Drawing.Point(278, 421);
             this.ReservarBTN.Margin = new System.Windows.Forms.Padding(2);
             this.ReservarBTN.Name = "ReservarBTN";
             this.ReservarBTN.Size = new System.Drawing.Size(238, 52);
-            this.ReservarBTN.TabIndex = 25;
+            this.ReservarBTN.TabIndex = 26;
             this.ReservarBTN.Text = "Reservar";
             this.ReservarBTN.UseVisualStyleBackColor = false;
             this.ReservarBTN.Click += new System.EventHandler(this.ReservarBTN_Click);
@@ -721,6 +739,7 @@
             // 
             this.MetPagoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.MetPagoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MetPagoCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.MetPagoCB.FormattingEnabled = true;
             this.MetPagoCB.Items.AddRange(new object[] {
             "Tarjeta de credito",
@@ -745,8 +764,9 @@
             // 
             // PersonasTXT
             // 
-            this.PersonasTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PersonasTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.PersonasTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PersonasTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PersonasTXT.Location = new System.Drawing.Point(279, 278);
             this.PersonasTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PersonasTXT.Name = "PersonasTXT";
@@ -774,6 +794,7 @@
             // 
             // FechaSalida
             // 
+            this.FechaSalida.CalendarForeColor = System.Drawing.Color.MidnightBlue;
             this.FechaSalida.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaSalida.Location = new System.Drawing.Point(267, 59);
@@ -785,6 +806,7 @@
             // 
             // FechaLlegada
             // 
+            this.FechaLlegada.CalendarForeColor = System.Drawing.Color.MidnightBlue;
             this.FechaLlegada.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.FechaLlegada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaLlegada.Location = new System.Drawing.Point(4, 59);
@@ -835,6 +857,7 @@
             // 
             this.TipoHabReservaCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TipoHabReservaCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoHabReservaCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TipoHabReservaCB.FormattingEnabled = true;
             this.TipoHabReservaCB.Location = new System.Drawing.Point(12, 157);
             this.TipoHabReservaCB.Margin = new System.Windows.Forms.Padding(2);
@@ -845,8 +868,9 @@
             // 
             // PrecioTXT
             // 
-            this.PrecioTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PrecioTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.PrecioTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrecioTXT.Location = new System.Drawing.Point(12, 278);
             this.PrecioTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrecioTXT.Name = "PrecioTXT";
@@ -857,8 +881,9 @@
             // 
             // RestanteTXT
             // 
-            this.RestanteTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.RestanteTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.RestanteTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RestanteTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.RestanteTXT.Location = new System.Drawing.Point(279, 390);
             this.RestanteTXT.Margin = new System.Windows.Forms.Padding(2);
             this.RestanteTXT.Name = "RestanteTXT";
@@ -907,8 +932,9 @@
             // 
             // NumPersonas
             // 
-            this.NumPersonas.BackColor = System.Drawing.Color.SkyBlue;
+            this.NumPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.NumPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumPersonas.ForeColor = System.Drawing.Color.MidnightBlue;
             this.NumPersonas.Location = new System.Drawing.Point(279, 334);
             this.NumPersonas.Margin = new System.Windows.Forms.Padding(2);
             this.NumPersonas.Name = "NumPersonas";
@@ -917,13 +943,14 @@
             // 
             // AnticipoTXT
             // 
-            this.AnticipoTXT.BackColor = System.Drawing.Color.SkyBlue;
+            this.AnticipoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.AnticipoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AnticipoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.AnticipoTXT.Location = new System.Drawing.Point(12, 446);
             this.AnticipoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.AnticipoTXT.Name = "AnticipoTXT";
             this.AnticipoTXT.Size = new System.Drawing.Size(241, 27);
-            this.AnticipoTXT.TabIndex = 23;
+            this.AnticipoTXT.TabIndex = 25;
             this.AnticipoTXT.TextChanged += new System.EventHandler(this.AnticipoTXT_TextChanged);
             // 
             // label30
@@ -952,14 +979,15 @@
             // 
             // TotalTXT
             // 
-            this.TotalTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.TotalTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.TotalTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TotalTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TotalTXT.Location = new System.Drawing.Point(12, 390);
             this.TotalTXT.Margin = new System.Windows.Forms.Padding(2);
             this.TotalTXT.Name = "TotalTXT";
             this.TotalTXT.ReadOnly = true;
             this.TotalTXT.Size = new System.Drawing.Size(241, 27);
-            this.TotalTXT.TabIndex = 21;
+            this.TotalTXT.TabIndex = 23;
             this.TotalTXT.TabStop = false;
             // 
             // label35
@@ -1115,6 +1143,7 @@
             // 
             this.MetodoPagoTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.MetodoPagoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MetodoPagoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.MetodoPagoTXT.Location = new System.Drawing.Point(12, 182);
             this.MetodoPagoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.MetodoPagoTXT.Name = "MetodoPagoTXT";
@@ -1139,6 +1168,7 @@
             // 
             this.PrecioRestanteTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.PrecioRestanteTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioRestanteTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrecioRestanteTXT.Location = new System.Drawing.Point(12, 120);
             this.PrecioRestanteTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrecioRestanteTXT.Name = "PrecioRestanteTXT";
@@ -1175,6 +1205,7 @@
             // 
             this.PrecioTotal.BackColor = System.Drawing.Color.SkyBlue;
             this.PrecioTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrecioTotal.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrecioTotal.Location = new System.Drawing.Point(12, 55);
             this.PrecioTotal.Margin = new System.Windows.Forms.Padding(2);
             this.PrecioTotal.Name = "PrecioTotal";
@@ -1187,6 +1218,7 @@
             // 
             this.CodigoReserva.BackColor = System.Drawing.Color.SkyBlue;
             this.CodigoReserva.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CodigoReserva.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CodigoReserva.Location = new System.Drawing.Point(20, 93);
             this.CodigoReserva.Margin = new System.Windows.Forms.Padding(2);
             this.CodigoReserva.Name = "CodigoReserva";
@@ -1230,6 +1262,7 @@
             // 
             this.FechaRegistroTXT.BackColor = System.Drawing.Color.LightSkyBlue;
             this.FechaRegistroTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaRegistroTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.FechaRegistroTXT.Location = new System.Drawing.Point(12, 185);
             this.FechaRegistroTXT.Margin = new System.Windows.Forms.Padding(2);
             this.FechaRegistroTXT.Name = "FechaRegistroTXT";
@@ -1254,6 +1287,7 @@
             // 
             this.FechaSalidaTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.FechaSalidaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaSalidaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.FechaSalidaTXT.Location = new System.Drawing.Point(12, 123);
             this.FechaSalidaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.FechaSalidaTXT.Name = "FechaSalidaTXT";
@@ -1266,6 +1300,7 @@
             // 
             this.FechaLlegadaTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.FechaLlegadaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FechaLlegadaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.FechaLlegadaTXT.Location = new System.Drawing.Point(12, 55);
             this.FechaLlegadaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.FechaLlegadaTXT.Name = "FechaLlegadaTXT";
@@ -1312,7 +1347,7 @@
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox40.Size = new System.Drawing.Size(293, 116);
-            this.groupBox40.TabIndex = 55;
+            this.groupBox40.TabIndex = 2;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "Zona de riesgo";
             // 
@@ -1370,7 +1405,7 @@
             // 
             // ConfirmarBTN
             // 
-            this.ConfirmarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ConfirmarBTN.BackColor = System.Drawing.Color.MidnightBlue;
             this.ConfirmarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ConfirmarBTN.Location = new System.Drawing.Point(20, 133);
@@ -1459,7 +1494,9 @@
             // RFCCombo
             // 
             this.RFCCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.RFCCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RFCCombo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.RFCCombo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.RFCCombo.FormattingEnabled = true;
             this.RFCCombo.Location = new System.Drawing.Point(17, 118);
             this.RFCCombo.Margin = new System.Windows.Forms.Padding(2);
@@ -1483,7 +1520,9 @@
             // ApellidosCB
             // 
             this.ApellidosCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ApellidosCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ApellidosCB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.ApellidosCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ApellidosCB.FormattingEnabled = true;
             this.ApellidosCB.Location = new System.Drawing.Point(17, 56);
             this.ApellidosCB.Margin = new System.Windows.Forms.Padding(2);
@@ -1518,7 +1557,9 @@
             // CorreoCombo
             // 
             this.CorreoCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CorreoCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CorreoCombo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.CorreoCombo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CorreoCombo.FormattingEnabled = true;
             this.CorreoCombo.Location = new System.Drawing.Point(17, 181);
             this.CorreoCombo.Margin = new System.Windows.Forms.Padding(2);
@@ -1534,6 +1575,21 @@
             this.MenuContenedor.Name = "MenuContenedor";
             this.MenuContenedor.Size = new System.Drawing.Size(1443, 67);
             this.MenuContenedor.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(464, 57);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 33);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Limpiar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Reservaciones
             // 
@@ -1684,5 +1740,6 @@
         private System.Windows.Forms.TextBox PrecioServiciosTXT;
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.CheckedListBox ServicioAdicionalCB;
+        private System.Windows.Forms.Button button1;
     }
 }

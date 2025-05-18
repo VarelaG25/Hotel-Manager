@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 
 namespace AAVD
 {
@@ -46,7 +46,10 @@ namespace AAVD
         {
             AbrirControlEnPanel(new Menu());
             var NuevoForm = new Login();
-            CargarTablas();
+            if (Login.baseDatos == 1)
+            {
+                CargarTablas();
+            }
             this.FindForm().Size = NuevoForm.Size;
             this.FindForm().StartPosition = FormStartPosition.Manual;
             this.FindForm().Location = NuevoForm.Location;
@@ -54,101 +57,113 @@ namespace AAVD
         }
         private void AceptarBTN_Click(object sender, EventArgs e)
         {
-            var enlace = new EnlaceDB();
             ClienteDatos cliente = new ClienteDatos();
-            cliente.Pais = PaisCB.Text;
-            cliente.Estado = EstadoCB.Text;
-            cliente.Ciudad = CiudadCB.Text;
-            cliente.CodigoPostal = CodigoPostalTXT.Text;
-            cliente.TelefonoCasa = TelefonoCasaTXT.Text;
-            cliente.TelefonoCelular = TelefonoCelularTXT.Text;
-
-            if (string.IsNullOrEmpty(NombreTXT.Text) || string.IsNullOrEmpty(PrimerApellidoTXT.Text) 
-                || string.IsNullOrEmpty(SegundoApellidoTXT.Text) || string.IsNullOrEmpty(CorreoTXT.Text) 
-                || string.IsNullOrEmpty(FechaNacimientoDTP.Text) || string.IsNullOrEmpty(EstadoCivilCB.Text)
-                || string.IsNullOrEmpty(TelefonoCasaTXT.Text) || string.IsNullOrEmpty(TelefonoCelularTXT.Text))
+            cliente.Domicilio = null;
+            if (string.IsNullOrEmpty(PaisCB.Text) || string.IsNullOrEmpty(EstadoCB.Text) || string.IsNullOrEmpty(CiudadCB.Text)
+                || string.IsNullOrEmpty(CodigoPostalTXT.Text) || string.IsNullOrEmpty(TelefonoCasaTXT.Text) || string.IsNullOrEmpty(TelefonoCelularTXT.Text)
+                || string.IsNullOrEmpty(RFCTXT.Text) || string.IsNullOrEmpty(CorreoTXT.Text) || string.IsNullOrEmpty(NombreTXT.Text) || string.IsNullOrEmpty(PrimerApellidoTXT.Text)
+                || string.IsNullOrEmpty(SegundoApellidoTXT.Text) || string.IsNullOrEmpty(FechaNacimientoDTP.Text) || string.IsNullOrEmpty(EstadoCivilCB.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if ((cliente.TelefonoCasa.Length != 10 && cliente.TelefonoCasa.Length > 0) ||
-                 (cliente.TelefonoCelular.Length != 10 && cliente.TelefonoCelular.Length > 0))
-            {
-                MessageBox.Show("Cada número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!cliente.TelefonoCasa.All(char.IsDigit) || !cliente.TelefonoCelular.All(char.IsDigit))
+            if (TelefonoCelularTXT.Text.All(char.IsDigit) == false || TelefonoCasaTXT.Text.All(char.IsDigit) == false)
             {
                 MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (CorreoTXT.Text.Length < 5)
+            if (TelefonoCasaTXT.Text.Length != 10 && TelefonoCelularTXT.Text.Length != 10)
             {
-                MessageBox.Show("El correo electrónico debe tener al menos 5 caracteres.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!CorreoTXT.Text.Contains("@") || !CorreoTXT.Text.Contains("."))
+            if (!Regex.IsMatch(CorreoTXT.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
-                MessageBox.Show("El correo electrónico no es válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            cliente.RFC = RFCTXT.Text;
-            cliente.Correo = CorreoTXT.Text;
-            cliente.Nombre = NombreTXT.Text;
-            cliente.PrimerApellido = PrimerApellidoTXT.Text;
-            cliente.SegundoApellido = SegundoApellidoTXT.Text;
-            cliente.EstadoCivil = EstadoCivilCB.Text;
+            var pais = PaisCB.Text;
+            var estado = EstadoCB.Text;
+            var ciudad = CiudadCB.Text;
+            var codigoPostal = CodigoPostalTXT.Text;
+            var telefonoCasa = TelefonoCasaTXT.Text;
+            var telefonoCelular = TelefonoCelularTXT.Text;
+            var rfc = RFCTXT.Text;
+            var correo = CorreoTXT.Text;
+            var nombre = NombreTXT.Text;
+            var primerApellido = PrimerApellidoTXT.Text;
+            var segundoApellido = SegundoApellidoTXT.Text;
+            var fechaNacimiento = FechaNacimientoDTP.Value;
+            var fechaRegistro = DateTime.Parse(FechaRegistroDTP.Text);
+            var estadoCivil = EstadoCivilCB.Text;
+            if (estadoCivil == "Soltero") estadoCivil = "S";
+            else if (estadoCivil == "Casado") estadoCivil = "C";
+            else if (estadoCivil == "Divorciado") estadoCivil = "D";
+            else if (estadoCivil == "Viudo") estadoCivil = "V";
 
-            if(cliente.EstadoCivil == "Soltero") cliente.EstadoCivil = "S";
-            else if (cliente.EstadoCivil == "Casado") cliente.EstadoCivil = "C";
-            else if (cliente.EstadoCivil == "Divorciado") cliente.EstadoCivil = "D";
-            else if (cliente.EstadoCivil == "Viudo") cliente.EstadoCivil = "V";
-
-
-            var tabla = new DataTable();
-            tabla = enlace.consultarUsuarioLogeado(Login.IdUsuarioActual);
-            cliente.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
-            cliente.FechaRegistro = DateTime.Parse(FechaRegistroDTP.Text);
-            cliente.FechaNacimiento = DateTime.Parse(FechaNacimientoDTP.Text);
-            cliente.Domicilio = null;
-
-            var tablaUbicacion = new DataTable();
-            tablaUbicacion = enlace.ValidarUbicacionUnica(cliente.Pais, cliente.Estado, cliente.Ciudad);
-            cliente.Id_Ubicacion = tablaUbicacion.Rows.Count < 1 ? 0 : Convert.ToInt32(tablaUbicacion.Rows[0]["Id_Ubicacion"]);
-
-            bool insertarCliente = enlace.Insertar_Cliente(cliente);
-            if (!insertarCliente)
+            if (Login.baseDatos == 1)
             {
-                MessageBox.Show("Error al registrar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                var enlace = new EnlaceDB();
+                var tabla = new DataTable();
+                tabla = enlace.consultarUsuarioLogeado(Login.IdUsuarioActual);
+                cliente.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
+                cliente.Pais = pais;
+                cliente.Estado = estado;
+                cliente.Ciudad = ciudad;
+                cliente.CodigoPostal = codigoPostal;
+                cliente.TelefonoCasa = telefonoCasa;
+                cliente.TelefonoCelular = telefonoCelular;
+                cliente.RFC = rfc;
+                cliente.Correo = correo;
+                cliente.Nombre = nombre;
+                cliente.PrimerApellido = primerApellido;
+                cliente.SegundoApellido = segundoApellido;
+                cliente.FechaNacimiento = fechaNacimiento;
+                cliente.FechaRegistro = fechaRegistro;
+                cliente.EstadoCivil = estadoCivil;
+                var tablaUbicacion = new DataTable();
+                tablaUbicacion = enlace.ValidarUbicacionUnica(cliente.Pais, cliente.Estado, cliente.Ciudad);
+                cliente.Id_Ubicacion = tablaUbicacion.Rows.Count < 1 ? 0 : Convert.ToInt32(tablaUbicacion.Rows[0]["Id_Ubicacion"]);
+
+                bool insertarCliente = enlace.Insertar_Cliente(cliente);
+                if (!insertarCliente)
+                {
+                    MessageBox.Show("Error al registrar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            else MessageBox.Show("Cliente registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cliente registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CargarTablas();
         }
         private void ClienteCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int seleccion = Convert.ToInt32(ClienteCB.SelectedValue);
-            if (seleccion >= 0)
+            int seleccion = ClienteCB.SelectedValue != null ? Convert.ToInt32(ClienteCB.SelectedValue) : -1;
+            if (seleccion < 0)
+            {
+                MessageBox.Show("Por favor, seleccione un cliente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Login.baseDatos == 1)
             {
                 var enlace = new EnlaceDB();
                 var tabla = new DataTable();
                 tabla = enlace.consultarClienteEspecifico(seleccion);
                 if (tabla.Rows.Count > 0)
                 {
-                    NombreSeleccionado.Text = tabla.Rows[0]["nombreCliente"].ToString();
-                    PrimerApellidoSeleccionado.Text = tabla.Rows[0]["primerApellidoCliente"].ToString();
-                    SegundoApellidoSeleccionado.Text = tabla.Rows[0]["segundoApellidoCliente"].ToString();
-                    TelefonoCasaSeleccionado.Text = tabla.Rows[0]["telefonoCasa"].ToString();
-                    TelefonoCelularSeleccionado.Text = tabla.Rows[0]["telefonoCelular"].ToString();
-                    EstadoCivilSeleccionado.Text = tabla.Rows[0]["EstadoCivil"].ToString();
-                    RFCSeleccionado.Text = tabla.Rows[0]["rfcCliente"].ToString();
-                    CorreoSeleccionado.Text = tabla.Rows[0]["correoCliente"].ToString();
-                    FechaNacimientoSeleccionada.Value = DateTime.Parse(tabla.Rows[0]["fechaNacimientoCliente"].ToString());
-                    PaisSeleccionado.Text = tabla.Rows[0]["pais"].ToString();
-                    EstadoSeleccionado.Text = tabla.Rows[0]["estado"].ToString();
-                    CiudadSeleccionado.Text = tabla.Rows[0]["ciudad"].ToString();
-                    CodigoPostalSeleccionado.Text = tabla.Rows[0]["codigoPostal"].ToString();
+                    var cliente = tabla.Rows[0];
+                    NombreSeleccionado.Text = cliente["nombreCliente"].ToString();
+                    PrimerApellidoSeleccionado.Text = cliente["primerApellidoCliente"].ToString();
+                    SegundoApellidoSeleccionado.Text = cliente["segundoApellidoCliente"].ToString();
+                    TelefonoCasaSeleccionado.Text = cliente["telefonoCasa"].ToString();
+                    TelefonoCelularSeleccionado.Text = cliente["telefonoCelular"].ToString();
+                    RFCSeleccionado.Text = cliente["rfcCliente"].ToString();
+                    CorreoSeleccionado.Text = cliente["correoCliente"].ToString();
+                    FechaNacimientoSeleccionada.Value = DateTime.Parse(cliente["fechaNacimientoCliente"].ToString());
+                    PaisSeleccionado.Text = cliente["pais"].ToString();
+                    EstadoSeleccionado.Text = cliente["estado"].ToString();
+                    CiudadSeleccionado.Text = cliente["ciudad"].ToString();
+                    CodigoPostalSeleccionado.Text = cliente["codigoPostal"].ToString();
                 }
             }
         }
@@ -156,74 +171,90 @@ namespace AAVD
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("¿Está seguro de que desea modificar el cliente?", "Modificar Cliente", buttons, MessageBoxIcon.Question);
+            ClienteDatos cliente = new ClienteDatos();
 
             if (result == DialogResult.Yes)
             {
-                var enlace = new EnlaceDB();
-                ClienteDatos cliente = new ClienteDatos();
-                cliente.Id_Cliente = Convert.ToInt32(ClienteCB.SelectedValue);
-                cliente.Nombre = NombreSeleccionado.Text;
-                cliente.PrimerApellido = PrimerApellidoSeleccionado.Text;
-                cliente.SegundoApellido = SegundoApellidoSeleccionado.Text;
-                cliente.TelefonoCasa = TelefonoCasaSeleccionado.Text;
-                cliente.TelefonoCelular = TelefonoCelularSeleccionado.Text;
-                cliente.EstadoCivil = EstadoCivilSeleccionado.Text;
-                cliente.RFC = RFCSeleccionado.Text;
-                cliente.Correo = CorreoSeleccionado.Text;
-                cliente.FechaNacimiento = FechaNacimientoSeleccionada.Value;
-                cliente.FechaModificacion = FechaModificacion.Value;
-                var tabla = new DataTable();
-                tabla = enlace.consultarIdUsuario(Login.IdUsuarioActual);
-                cliente.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
-                if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrEmpty(cliente.PrimerApellido) || string.IsNullOrEmpty(cliente.SegundoApellido) ||
-                    string.IsNullOrEmpty(cliente.TelefonoCelular) || string.IsNullOrEmpty(cliente.TelefonoCasa) || string.IsNullOrEmpty(cliente.EstadoCivil) ||
-                    string.IsNullOrEmpty(cliente.RFC) || string.IsNullOrEmpty(cliente.Correo))
+                if (string.IsNullOrEmpty(NombreSeleccionado.Text) || string.IsNullOrEmpty(PrimerApellidoSeleccionado.Text) || string.IsNullOrEmpty(SegundoApellidoSeleccionado.Text) ||
+                    string.IsNullOrEmpty(TelefonoCasaSeleccionado.Text) || string.IsNullOrEmpty(TelefonoCelularSeleccionado.Text) || string.IsNullOrEmpty(RFCSeleccionado.Text) ||
+                    string.IsNullOrEmpty(CorreoSeleccionado.Text))
                 {
                     MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (!cliente.TelefonoCasa.All(char.IsDigit) || !cliente.TelefonoCelular.All(char.IsDigit))
+                if (!TelefonoCasaSeleccionado.Text.All(char.IsDigit) || !TelefonoCelularSeleccionado.Text.All(char.IsDigit))
                 {
                     MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if ((cliente.TelefonoCasa.Length != 10 && cliente.TelefonoCasa.Length > 0) ||
-                (cliente.TelefonoCelular.Length != 10 && cliente.TelefonoCelular.Length > 0))
+                if (TelefonoCelularSeleccionado.Text.Length != 10 && TelefonoCasaSeleccionado.Text.Length != 10)
                 {
-                    MessageBox.Show("Cada número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if(cliente.RFC.Length < 0 || cliente.RFC.Length > 20)
+                if (!Regex.IsMatch(CorreoSeleccionado.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                 {
-                    MessageBox.Show("El RFC debe contener almenos 20 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                bool resultado = enlace.Actualizar_Cliente(cliente);
-                if(!resultado)
+
+                var nombre = NombreSeleccionado.Text;
+                var primerApellido = PrimerApellidoSeleccionado.Text;
+                var segundoApellido = SegundoApellidoSeleccionado.Text;
+                var telefonoCasa = TelefonoCasaSeleccionado.Text;
+                var telefonoCelular = TelefonoCelularSeleccionado.Text;
+                var rfc = RFCSeleccionado.Text;
+                var correo = CorreoSeleccionado.Text;
+                var fechaNacimiento = FechaNacimientoSeleccionada.Value;
+                var fechaModificacion = FechaNacimientoSeleccionada.Value;
+
+                if (Login.baseDatos == 1)
                 {
-                    MessageBox.Show("Error al modificar al cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    var enlace = new EnlaceDB();
+                    var tabla = new DataTable();
+                    cliente.Id_Cliente = Convert.ToInt32(ClienteCB.SelectedValue);
+                    cliente.Nombre = nombre;
+                    cliente.PrimerApellido = primerApellido;
+                    cliente.SegundoApellido = segundoApellido;
+                    cliente.TelefonoCasa = telefonoCasa;
+                    cliente.TelefonoCelular = telefonoCelular;
+                    cliente.RFC = rfc;
+                    cliente.Correo = correo;
+                    cliente.FechaNacimiento = fechaNacimiento;
+                    cliente.FechaModificacion = fechaModificacion;
+                    tabla = enlace.consultarIdUsuario(Login.IdUsuarioActual);
+                    cliente.Id_Usuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
+                    bool resultado = enlace.Actualizar_Cliente(cliente);
+                    if (!resultado)
+                    {
+                        MessageBox.Show("Error al modificar al cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    CargarTablas();
                 }
-                CargarTablas();
+                MessageBox.Show("Cliente modificado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void BorrarBTN_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("¿Está seguro de que desea borrar al cliente?", "Borrar Cliente", buttons, MessageBoxIcon.Question);
+            ClienteDatos cliente = new ClienteDatos();
+
             if (result == DialogResult.Yes)
             {
-                var enlace = new EnlaceDB();
-                ClienteDatos cliente = new ClienteDatos();
-                cliente.Id_Cliente = Convert.ToInt32(ClienteCB.SelectedValue);
-                bool resultado = enlace.Borrar_Cliente(cliente.Id_Cliente);
-                if (!resultado)
+                if (Login.baseDatos == 1)
                 {
-                    MessageBox.Show("Error al borrar al cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    var enlace = new EnlaceDB();
+                    cliente.Id_Cliente = Convert.ToInt32(ClienteCB.SelectedValue);
+                    bool resultado = enlace.Borrar_Cliente(cliente.Id_Cliente);
+                    if (!resultado)
+                    {
+                        MessageBox.Show("Error al borrar al cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    CargarTablas();
                 }
-                CargarTablas();
-                ClienteCB.SelectedIndex = 0;
             }
         }
         public void CargarTablas()

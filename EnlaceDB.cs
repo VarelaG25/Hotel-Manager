@@ -353,6 +353,64 @@ namespace AAVD
 
             return tabla;
         }
+        public DataTable consultarHotelXCiudad()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarUbiXHotel";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable hotelXCiudad(string ciudad)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarHotelesPorCiudad";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@ciudad", ciudad);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public DataTable consultarAmenidad()
         {
             var msg = "";
@@ -445,6 +503,34 @@ namespace AAVD
             {
                 conectar();
                 string qry = "SP_ConsultarCliente";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable consultarFacturaCliente()
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarFacturaCliente";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
@@ -1068,6 +1154,68 @@ namespace AAVD
 
             return tabla;
         }
+        public DataTable factura(Factura.Filtro param)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SP_ConsultarClienteFactura";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@Apellidos", param.Apellidos);
+                _comandosql.Parameters.AddWithValue("@RFC", param.RFC);
+                _comandosql.Parameters.AddWithValue("@Correo", param.Correo);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+        public DataTable facturaServicios(Factura.Filtro param)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "facturaServicios";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@RFC", param.RFC);
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
         public DataTable historialCliente(Reportes.filtros param)
         {
             var msg = "";
@@ -1075,7 +1223,7 @@ namespace AAVD
             try
             {
                 conectar();
-                string qry = "SP_ReporteIngresosCompletos";
+                string qry = "SP_HistorialCliente";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
@@ -1084,6 +1232,7 @@ namespace AAVD
                 _comandosql.Parameters.AddWithValue("@apellido2", param.segundoApellido);
                 _comandosql.Parameters.AddWithValue("@correo", param.correo);
                 _comandosql.Parameters.AddWithValue("@rfc", param.rfc);
+                _comandosql.Parameters.AddWithValue("@anio", param.anio);
 
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(tabla);
@@ -1751,40 +1900,6 @@ namespace AAVD
 
             return add;
         }
-        public bool Borrar_TipoHab(int Id_TipoHab)
-        {
-            var msg = "";
-            var add = true;
-            try
-            {
-                conectar();
-                string qry = "SP_EliminarTipoHabitacion";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                // Parámetros para la tabla Usuario
-                _comandosql.Parameters.AddWithValue("@Id_TipoHab", Id_TipoHab);
-
-                // Ejecutar el comando
-                _comandosql.ExecuteNonQuery();
-                add = true;
-            }
-            catch (SqlException e)
-            {
-                add = false;
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return add;
-        }
-
         public bool Actualizar_Usuario(Usuario.UsuarioDatos param)
         {
             var msg = "";

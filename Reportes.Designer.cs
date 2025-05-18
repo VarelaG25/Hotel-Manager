@@ -79,15 +79,16 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.AplicarHistorial = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.LimpiarHistorial = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.RfcCB = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.AnioDTP = new System.Windows.Forms.DateTimePicker();
+            this.CorreoCB = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.ApellidoPCB = new System.Windows.Forms.ComboBox();
             this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
             this.HistorialDTG = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
@@ -98,7 +99,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.AplicarHistorial = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ApellidoMCB = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -202,7 +204,7 @@
             // 
             // LimpiarFiltrosBTN
             // 
-            this.LimpiarFiltrosBTN.BackColor = System.Drawing.Color.SkyBlue;
+            this.LimpiarFiltrosBTN.BackColor = System.Drawing.Color.SteelBlue;
             this.LimpiarFiltrosBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LimpiarFiltrosBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LimpiarFiltrosBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -287,7 +289,9 @@
             // HotelCB2
             // 
             this.HotelCB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HotelCB2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HotelCB2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.HotelCB2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.HotelCB2.FormattingEnabled = true;
             this.HotelCB2.Location = new System.Drawing.Point(309, 53);
             this.HotelCB2.Margin = new System.Windows.Forms.Padding(2);
@@ -298,7 +302,9 @@
             // CiudadCB2
             // 
             this.CiudadCB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CiudadCB2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CiudadCB2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.CiudadCB2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CiudadCB2.FormattingEnabled = true;
             this.CiudadCB2.Location = new System.Drawing.Point(198, 53);
             this.CiudadCB2.Margin = new System.Windows.Forms.Padding(2);
@@ -322,7 +328,9 @@
             // PaisCB2
             // 
             this.PaisCB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PaisCB2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisCB2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.PaisCB2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PaisCB2.FormattingEnabled = true;
             this.PaisCB2.Location = new System.Drawing.Point(4, 53);
             this.PaisCB2.Margin = new System.Windows.Forms.Padding(2);
@@ -446,7 +454,9 @@
             // HotelCB1
             // 
             this.HotelCB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HotelCB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HotelCB1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.HotelCB1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.HotelCB1.FormattingEnabled = true;
             this.HotelCB1.Location = new System.Drawing.Point(576, 56);
             this.HotelCB1.Margin = new System.Windows.Forms.Padding(2);
@@ -457,7 +467,9 @@
             // CiudadCB1
             // 
             this.CiudadCB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CiudadCB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CiudadCB1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.CiudadCB1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CiudadCB1.FormattingEnabled = true;
             this.CiudadCB1.Location = new System.Drawing.Point(392, 56);
             this.CiudadCB1.Margin = new System.Windows.Forms.Padding(2);
@@ -481,7 +493,9 @@
             // PaisCB1
             // 
             this.PaisCB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PaisCB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisCB1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.PaisCB1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PaisCB1.FormattingEnabled = true;
             this.PaisCB1.Location = new System.Drawing.Point(24, 57);
             this.PaisCB1.Margin = new System.Windows.Forms.Padding(2);
@@ -593,7 +607,7 @@
             this.Aplicar.Margin = new System.Windows.Forms.Padding(2);
             this.Aplicar.Name = "Aplicar";
             this.Aplicar.Size = new System.Drawing.Size(202, 37);
-            this.Aplicar.TabIndex = 29;
+            this.Aplicar.TabIndex = 5;
             this.Aplicar.Text = "Aplicar";
             this.Aplicar.UseVisualStyleBackColor = false;
             this.Aplicar.Click += new System.EventHandler(this.Aplicar_Click);
@@ -649,7 +663,9 @@
             // HotelCB3
             // 
             this.HotelCB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.HotelCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HotelCB3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.HotelCB3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.HotelCB3.FormattingEnabled = true;
             this.HotelCB3.Location = new System.Drawing.Point(494, 56);
             this.HotelCB3.Margin = new System.Windows.Forms.Padding(2);
@@ -659,7 +675,7 @@
             // 
             // LimpiarBTN
             // 
-            this.LimpiarBTN.BackColor = System.Drawing.Color.SkyBlue;
+            this.LimpiarBTN.BackColor = System.Drawing.Color.SteelBlue;
             this.LimpiarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LimpiarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LimpiarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -667,7 +683,7 @@
             this.LimpiarBTN.Margin = new System.Windows.Forms.Padding(2);
             this.LimpiarBTN.Name = "LimpiarBTN";
             this.LimpiarBTN.Size = new System.Drawing.Size(202, 37);
-            this.LimpiarBTN.TabIndex = 5;
+            this.LimpiarBTN.TabIndex = 6;
             this.LimpiarBTN.Text = "Limpiar";
             this.LimpiarBTN.UseVisualStyleBackColor = false;
             this.LimpiarBTN.Click += new System.EventHandler(this.LimpiarBTN_Click);
@@ -675,7 +691,9 @@
             // CiudadCB3
             // 
             this.CiudadCB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CiudadCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CiudadCB3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.CiudadCB3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CiudadCB3.FormattingEnabled = true;
             this.CiudadCB3.Location = new System.Drawing.Point(288, 55);
             this.CiudadCB3.Margin = new System.Windows.Forms.Padding(2);
@@ -686,6 +704,7 @@
             // AnioCB3
             // 
             this.AnioCB3.CalendarFont = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnioCB3.CalendarForeColor = System.Drawing.Color.MidnightBlue;
             this.AnioCB3.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.AnioCB3.CustomFormat = "yyy";
             this.AnioCB3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
@@ -699,7 +718,9 @@
             // PaisCB3
             // 
             this.PaisCB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.PaisCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisCB3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.PaisCB3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PaisCB3.FormattingEnabled = true;
             this.PaisCB3.Location = new System.Drawing.Point(16, 54);
             this.PaisCB3.Margin = new System.Windows.Forms.Padding(2);
@@ -792,32 +813,49 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.AplicarHistorial);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.ApellidoMCB);
             this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label24);
             this.groupBox5.Controls.Add(this.LimpiarHistorial);
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.dateTimePicker7);
-            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.RfcCB);
+            this.groupBox5.Controls.Add(this.label24);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.comboBox10);
+            this.groupBox5.Controls.Add(this.ApellidoPCB);
+            this.groupBox5.Controls.Add(this.CorreoCB);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.AnioDTP);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox5.Location = new System.Drawing.Point(642, 81);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(576, 223);
+            this.groupBox5.Size = new System.Drawing.Size(576, 317);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filtar por";
+            // 
+            // AplicarHistorial
+            // 
+            this.AplicarHistorial.BackColor = System.Drawing.Color.MidnightBlue;
+            this.AplicarHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AplicarHistorial.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AplicarHistorial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AplicarHistorial.Location = new System.Drawing.Point(16, 266);
+            this.AplicarHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.AplicarHistorial.Name = "AplicarHistorial";
+            this.AplicarHistorial.Size = new System.Drawing.Size(545, 37);
+            this.AplicarHistorial.TabIndex = 7;
+            this.AplicarHistorial.Text = "Aplicar";
+            this.AplicarHistorial.UseVisualStyleBackColor = false;
+            this.AplicarHistorial.Click += new System.EventHandler(this.AplicarHistorial_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(11, 105);
+            this.label12.Location = new System.Drawing.Point(11, 98);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 25);
@@ -829,7 +867,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label24.Location = new System.Drawing.Point(301, 105);
+            this.label24.Location = new System.Drawing.Point(11, 175);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(47, 25);
@@ -838,65 +876,70 @@
             // 
             // LimpiarHistorial
             // 
-            this.LimpiarHistorial.BackColor = System.Drawing.Color.SkyBlue;
+            this.LimpiarHistorial.BackColor = System.Drawing.Color.SteelBlue;
             this.LimpiarHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LimpiarHistorial.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LimpiarHistorial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LimpiarHistorial.Location = new System.Drawing.Point(306, 176);
+            this.LimpiarHistorial.Location = new System.Drawing.Point(307, 194);
             this.LimpiarHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.LimpiarHistorial.Name = "LimpiarHistorial";
             this.LimpiarHistorial.Size = new System.Drawing.Size(254, 37);
-            this.LimpiarHistorial.TabIndex = 3;
+            this.LimpiarHistorial.TabIndex = 6;
             this.LimpiarHistorial.Text = "Limpiar";
             this.LimpiarHistorial.UseVisualStyleBackColor = false;
             this.LimpiarHistorial.Click += new System.EventHandler(this.LimpiarHistorial_Click);
             // 
-            // comboBox2
+            // RfcCB
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(16, 130);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(254, 31);
-            this.comboBox2.TabIndex = 29;
+            this.RfcCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.RfcCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RfcCB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.RfcCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.RfcCB.FormattingEnabled = true;
+            this.RfcCB.Location = new System.Drawing.Point(16, 123);
+            this.RfcCB.Margin = new System.Windows.Forms.Padding(2);
+            this.RfcCB.Name = "RfcCB";
+            this.RfcCB.Size = new System.Drawing.Size(254, 31);
+            this.RfcCB.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(301, 29);
+            this.label7.Location = new System.Drawing.Point(302, 98);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 25);
             this.label7.TabIndex = 28;
             this.label7.Text = "Correo";
             // 
-            // dateTimePicker7
+            // AnioDTP
             // 
-            this.dateTimePicker7.CalendarFont = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker7.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.dateTimePicker7.CustomFormat = "yyy";
-            this.dateTimePicker7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker7.Location = new System.Drawing.Point(306, 130);
-            this.dateTimePicker7.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(254, 31);
-            this.dateTimePicker7.TabIndex = 2;
+            this.AnioDTP.CalendarFont = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnioDTP.CalendarForeColor = System.Drawing.Color.MidnightBlue;
+            this.AnioDTP.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.AnioDTP.CustomFormat = "yyy";
+            this.AnioDTP.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.AnioDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.AnioDTP.Location = new System.Drawing.Point(16, 200);
+            this.AnioDTP.Margin = new System.Windows.Forms.Padding(2);
+            this.AnioDTP.Name = "AnioDTP";
+            this.AnioDTP.Size = new System.Drawing.Size(254, 31);
+            this.AnioDTP.TabIndex = 5;
             // 
-            // comboBox1
+            // CorreoCB
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(306, 54);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(254, 31);
-            this.comboBox1.TabIndex = 27;
+            this.CorreoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.CorreoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CorreoCB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.CorreoCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.CorreoCB.FormattingEnabled = true;
+            this.CorreoCB.Location = new System.Drawing.Point(307, 123);
+            this.CorreoCB.Margin = new System.Windows.Forms.Padding(2);
+            this.CorreoCB.Name = "CorreoCB";
+            this.CorreoCB.Size = new System.Drawing.Size(254, 31);
+            this.CorreoCB.TabIndex = 4;
             // 
             // label22
             // 
@@ -906,20 +949,22 @@
             this.label22.Location = new System.Drawing.Point(11, 29);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 25);
+            this.label22.Size = new System.Drawing.Size(155, 25);
             this.label22.TabIndex = 26;
-            this.label22.Text = "Apellidos";
+            this.label22.Text = "Apellido Paterno";
             // 
-            // comboBox10
+            // ApellidoPCB
             // 
-            this.comboBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.comboBox10.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(16, 54);
-            this.comboBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(254, 31);
-            this.comboBox10.TabIndex = 1;
+            this.ApellidoPCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ApellidoPCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ApellidoPCB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.ApellidoPCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ApellidoPCB.FormattingEnabled = true;
+            this.ApellidoPCB.Location = new System.Drawing.Point(16, 54);
+            this.ApellidoPCB.Margin = new System.Windows.Forms.Padding(2);
+            this.ApellidoPCB.Name = "ApellidoPCB";
+            this.ApellidoPCB.Size = new System.Drawing.Size(254, 31);
+            this.ApellidoPCB.TabIndex = 1;
             // 
             // dateTimePicker8
             // 
@@ -990,12 +1035,14 @@
             // 
             // UsuarioActualTXT
             // 
+            this.UsuarioActualTXT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioActualTXT.Location = new System.Drawing.Point(56, 36);
             this.UsuarioActualTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsuarioActualTXT.Name = "UsuarioActualTXT";
-            this.UsuarioActualTXT.Size = new System.Drawing.Size(98, 28);
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(147, 28);
             this.UsuarioActualTXT.TabIndex = 13;
             this.UsuarioActualTXT.Text = "User_123";
+            this.UsuarioActualTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -1041,20 +1088,30 @@
             this.label26.Text = "¡Alto!\r\nRevisa que los datos ingresados esten correctos.\r\n";
             this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // AplicarHistorial
+            // label14
             // 
-            this.AplicarHistorial.BackColor = System.Drawing.Color.SteelBlue;
-            this.AplicarHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AplicarHistorial.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AplicarHistorial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AplicarHistorial.Location = new System.Drawing.Point(16, 176);
-            this.AplicarHistorial.Margin = new System.Windows.Forms.Padding(2);
-            this.AplicarHistorial.Name = "AplicarHistorial";
-            this.AplicarHistorial.Size = new System.Drawing.Size(254, 37);
-            this.AplicarHistorial.TabIndex = 31;
-            this.AplicarHistorial.Text = "Aplicar";
-            this.AplicarHistorial.UseVisualStyleBackColor = false;
-            this.AplicarHistorial.Click += new System.EventHandler(this.AplicarHistorial_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label14.Location = new System.Drawing.Point(302, 29);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(161, 25);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Apellido Materno";
+            // 
+            // ApellidoMCB
+            // 
+            this.ApellidoMCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.ApellidoMCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ApellidoMCB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.ApellidoMCB.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ApellidoMCB.FormattingEnabled = true;
+            this.ApellidoMCB.Location = new System.Drawing.Point(307, 54);
+            this.ApellidoMCB.Margin = new System.Windows.Forms.Padding(2);
+            this.ApellidoMCB.Name = "ApellidoMCB";
+            this.ApellidoMCB.Size = new System.Drawing.Size(254, 31);
+            this.ApellidoMCB.TabIndex = 2;
             // 
             // Reportes
             // 
@@ -1146,8 +1203,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button LimpiarHistorial;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.DateTimePicker AnioDTP;
+        private System.Windows.Forms.ComboBox ApellidoPCB;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DateTimePicker dateTimePicker8;
         private System.Windows.Forms.DataGridView ReporteOcupacionResumen;
@@ -1167,10 +1224,12 @@
         private System.Windows.Forms.Button AplicarBTN1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button Aplicar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CorreoCB;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox RfcCB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button AplicarHistorial;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox ApellidoMCB;
     }
 }

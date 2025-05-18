@@ -175,6 +175,7 @@
             this.TipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoUsuario.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoUsuario.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TipoUsuario.FormattingEnabled = true;
             this.TipoUsuario.Items.AddRange(new object[] {
             "Administrador",
@@ -278,8 +279,9 @@
             // 
             // NumeroNominaTXT
             // 
-            this.NumeroNominaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroNominaTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.NumeroNominaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroNominaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.NumeroNominaTXT.Location = new System.Drawing.Point(14, 68);
             this.NumeroNominaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.NumeroNominaTXT.MaxLength = 10;
@@ -304,6 +306,7 @@
             // 
             this.TelefonoCelularTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TelefonoCelularTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCelularTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TelefonoCelularTXT.Location = new System.Drawing.Point(190, 269);
             this.TelefonoCelularTXT.Margin = new System.Windows.Forms.Padding(2);
             this.TelefonoCelularTXT.MaxLength = 10;
@@ -315,6 +318,7 @@
             // 
             this.TelefonoCasaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TelefonoCasaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCasaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TelefonoCasaTXT.Location = new System.Drawing.Point(14, 269);
             this.TelefonoCasaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.TelefonoCasaTXT.MaxLength = 10;
@@ -338,6 +342,7 @@
             // 
             this.SegundoApellidoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.SegundoApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SegundoApellidoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.SegundoApellidoTXT.Location = new System.Drawing.Point(190, 200);
             this.SegundoApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.SegundoApellidoTXT.MaxLength = 50;
@@ -361,6 +366,7 @@
             // 
             this.PrimerApellidoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.PrimerApellidoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrimerApellidoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrimerApellidoTXT.Location = new System.Drawing.Point(14, 200);
             this.PrimerApellidoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrimerApellidoTXT.MaxLength = 50;
@@ -372,6 +378,7 @@
             // 
             this.NombreTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.NombreTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NombreTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.NombreTXT.Location = new System.Drawing.Point(14, 132);
             this.NombreTXT.Margin = new System.Windows.Forms.Padding(2);
             this.NombreTXT.MaxLength = 50;
@@ -475,6 +482,7 @@
             // 
             this.ConfirmarContraseniaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.ConfirmarContraseniaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmarContraseniaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ConfirmarContraseniaTXT.Location = new System.Drawing.Point(12, 197);
             this.ConfirmarContraseniaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirmarContraseniaTXT.MaxLength = 50;
@@ -510,6 +518,7 @@
             // 
             this.ContraseniaTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.ContraseniaTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ContraseniaTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ContraseniaTXT.Location = new System.Drawing.Point(13, 132);
             this.ContraseniaTXT.Margin = new System.Windows.Forms.Padding(2);
             this.ContraseniaTXT.MaxLength = 50;
@@ -521,6 +530,7 @@
             // 
             this.CorreoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CorreoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CorreoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CorreoTXT.Location = new System.Drawing.Point(13, 68);
             this.CorreoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.CorreoTXT.MaxLength = 255;
@@ -542,7 +552,7 @@
             // 
             // AceptarBTN
             // 
-            this.AceptarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.AceptarBTN.BackColor = System.Drawing.Color.MidnightBlue;
             this.AceptarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AceptarBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AceptarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -618,6 +628,7 @@
             // 
             this.NombreCompletoCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.NombreCompletoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NombreCompletoCB.ForeColor = System.Drawing.Color.MidnightBlue;
             this.NombreCompletoCB.FormattingEnabled = true;
             this.NombreCompletoCB.Location = new System.Drawing.Point(895, 85);
             this.NombreCompletoCB.Margin = new System.Windows.Forms.Padding(2);
@@ -655,6 +666,7 @@
             // 
             this.TelefonoCelularSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TelefonoCelularSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCelularSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TelefonoCelularSeleccionadoTXT.Location = new System.Drawing.Point(190, 253);
             this.TelefonoCelularSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.TelefonoCelularSeleccionadoTXT.MaxLength = 10;
@@ -666,6 +678,7 @@
             // 
             this.TelefonoCasaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.TelefonoCasaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelefonoCasaSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.TelefonoCasaSeleccionadoTXT.Location = new System.Drawing.Point(14, 253);
             this.TelefonoCasaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.TelefonoCasaSeleccionadoTXT.MaxLength = 10;
@@ -677,6 +690,7 @@
             // 
             this.SegundoApellidoSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.SegundoApellidoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SegundoApellidoSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.SegundoApellidoSeleccionadoTXT.Location = new System.Drawing.Point(190, 184);
             this.SegundoApellidoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.SegundoApellidoSeleccionadoTXT.MaxLength = 50;
@@ -688,6 +702,7 @@
             // 
             this.PrimerApellidoSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.PrimerApellidoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrimerApellidoSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.PrimerApellidoSeleccionadoTXT.Location = new System.Drawing.Point(14, 184);
             this.PrimerApellidoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.PrimerApellidoSeleccionadoTXT.MaxLength = 50;
@@ -699,6 +714,7 @@
             // 
             this.NombreSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.NombreSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NombreSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.NombreSeleccionadoTXT.Location = new System.Drawing.Point(14, 117);
             this.NombreSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.NombreSeleccionadoTXT.MaxLength = 50;
@@ -732,8 +748,9 @@
             // 
             // NumeroNominaSeleccionadoTXT
             // 
-            this.NumeroNominaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.NumeroNominaSeleccionadoTXT.BackColor = System.Drawing.Color.SkyBlue;
             this.NumeroNominaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroNominaSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.NumeroNominaSeleccionadoTXT.Location = new System.Drawing.Point(14, 54);
             this.NumeroNominaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.NumeroNominaSeleccionadoTXT.MaxLength = 10;
@@ -838,7 +855,7 @@
             // 
             // ModificarBTN
             // 
-            this.ModificarBTN.BackColor = System.Drawing.Color.SteelBlue;
+            this.ModificarBTN.BackColor = System.Drawing.Color.MidnightBlue;
             this.ModificarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ModificarBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ModificarBTN.Location = new System.Drawing.Point(731, 555);
@@ -888,6 +905,7 @@
             // 
             this.ConfirmarContraseniaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.ConfirmarContraseniaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmarContraseniaSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ConfirmarContraseniaSeleccionadoTXT.Location = new System.Drawing.Point(14, 187);
             this.ConfirmarContraseniaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirmarContraseniaSeleccionadoTXT.MaxLength = 50;
@@ -899,6 +917,7 @@
             // 
             this.ContraseniaSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.ContraseniaSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ContraseniaSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ContraseniaSeleccionadoTXT.Location = new System.Drawing.Point(14, 122);
             this.ContraseniaSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.ContraseniaSeleccionadoTXT.MaxLength = 50;
@@ -910,6 +929,7 @@
             // 
             this.CorreoSeleccionadoTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.CorreoSeleccionadoTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CorreoSeleccionadoTXT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.CorreoSeleccionadoTXT.Location = new System.Drawing.Point(14, 58);
             this.CorreoSeleccionadoTXT.Margin = new System.Windows.Forms.Padding(2);
             this.CorreoSeleccionadoTXT.MaxLength = 255;
@@ -1018,12 +1038,14 @@
             // 
             // UsuarioActualTXT
             // 
+            this.UsuarioActualTXT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioActualTXT.Location = new System.Drawing.Point(56, 36);
             this.UsuarioActualTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsuarioActualTXT.Name = "UsuarioActualTXT";
-            this.UsuarioActualTXT.Size = new System.Drawing.Size(98, 28);
+            this.UsuarioActualTXT.Size = new System.Drawing.Size(110, 28);
             this.UsuarioActualTXT.TabIndex = 13;
             this.UsuarioActualTXT.Text = "User_123";
+            this.UsuarioActualTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -1053,7 +1075,7 @@
             this.label9.Location = new System.Drawing.Point(27, 182);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 185);
+            this.label9.Size = new System.Drawing.Size(118, 185);
             this.label9.TabIndex = 16;
             this.label9.Text = "¡Alto!\r\nRevisa que los datos ingresados esten correctos.\r\n";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1062,7 +1084,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.MidnightBlue;
             this.pictureBox4.Image = global::AAVD.Properties.Resources.logo_blanco;
-            this.pictureBox4.Location = new System.Drawing.Point(29, 48);
+            this.pictureBox4.Location = new System.Drawing.Point(27, 48);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(118, 108);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

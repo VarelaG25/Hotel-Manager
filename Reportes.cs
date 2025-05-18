@@ -27,6 +27,7 @@ namespace AAVD
             public string correo { get; set; }
             public string rfc { get; set; }
             public int? anio { get; set; }
+            public int Id_Cliente { get; set; }
         }
         private void AbrirControlEnPanel(System.Windows.Forms.UserControl control)
         {
@@ -50,6 +51,8 @@ namespace AAVD
         public void CargarTablas()
         {
             var enlace = new EnlaceDB();
+            var tablaUsuarioActual = enlace.ConsultarBarraUsuario();
+            UsuarioActualTXT.Text = tablaUsuarioActual.Rows[0]["nombreUsuario"].ToString();
             var tabla = new DataTable();
             var tabla2 = new DataTable();
             filtros filtro = new filtros();
@@ -57,6 +60,10 @@ namespace AAVD
             filtro.ciudad = null;
             filtro.anio = null;
             filtro.hotel = null;
+            filtro.primerApellido = null;
+            filtro.segundoApellido = null;
+            filtro.correo = null;
+            filtro.rfc = null;
             tabla2 = enlace.reporteOcupacionHotel(filtro);
             tabla = enlace.reporteOcupacion(filtro);
             ReporteOcupacionDTG.DataSource = tabla;
@@ -153,7 +160,7 @@ namespace AAVD
             HotelCB1.DataSource = hoteles;
             HotelCB1.DisplayMember = "nombreHotel";
             HotelCB1.ValueMember = "nombreHotel";
-            HotelCB2.DataSource = hoteles;
+            HotelCB2.DataSource = hoteles2;
             HotelCB2.DisplayMember = "nombreHotel";
             HotelCB2.ValueMember = "nombreHotel";
 
@@ -214,19 +221,76 @@ namespace AAVD
             HotelCB3.DisplayMember = "nombreHotel";
             HotelCB3.ValueMember = "nombreHotel";
 
-            //var historial = enlace.historialCliente(filtro);
-            //HistorialDTG.DataSource = historial;
+            var historial = enlace.historialCliente(filtro);
+            HistorialDTG.DataSource = historial;
 
-            //HistorialDTG.Columns["nombreCompleto"].HeaderText = "Nombre completo";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
-            //HistorialDTG.Columns[""].HeaderText = "";
+            HistorialDTG.Columns["nombreCompleto"].HeaderText = "Nombre completo";
+            HistorialDTG.Columns["ciudad"].HeaderText = "Ciudad";
+            HistorialDTG.Columns["nombreHotel"].HeaderText = "Hotel";
+            HistorialDTG.Columns["nivelHabitacion"].HeaderText = "Nivel de habitación";
+            HistorialDTG.Columns["numeroHabitacion"].HeaderText = "Número de habitación";
+            HistorialDTG.Columns["piso"].HeaderText = "Piso";
+            HistorialDTG.Columns["personasHospedadas"].HeaderText = "Personas hospedadas";
+            HistorialDTG.Columns["codigoReserva"].HeaderText = "Código de reserva";
+            HistorialDTG.Columns["fechaReservacion"].HeaderText = "Fecha de reservación";
+            HistorialDTG.Columns["fechaCheckIn"].HeaderText = "Fecha de Check-In";
+            HistorialDTG.Columns["fechaCheckOut"].HeaderText = "Fecha de Check-Out";
+            HistorialDTG.Columns["estatus"].HeaderText = "Estatus";
+            HistorialDTG.Columns["anticipo"].HeaderText = "Anticipo";
+            HistorialDTG.Columns["totalSinServicios"].HeaderText = "Monto del hospedaje";
+            HistorialDTG.Columns["servicios"].HeaderText = "Monto de servicios";
+            HistorialDTG.Columns["montoHospedaje"].HeaderText = "Total";
 
+            HistorialDTG.Columns["anticipo"].DefaultCellStyle.Format = "C2";
+            HistorialDTG.Columns["totalSinServicios"].DefaultCellStyle.Format = "C2";
+            HistorialDTG.Columns["servicios"].DefaultCellStyle.Format = "C2";
+            HistorialDTG.Columns["montoHospedaje"].DefaultCellStyle.Format = "C2";
+
+            var cliente = new DataTable();
+            cliente = enlace.consultarCliente();
+            var apellidoP = cliente.AsEnumerable()
+                .Select(row => row.Field<string>("primerApellidoCliente"))
+                .Where(pA => !string.IsNullOrEmpty(pA))
+                .Distinct()
+                .Select(pA => new { primerApellidoCliente = pA })
+                .ToList();
+            apellidoP.Insert(0, new { primerApellidoCliente = "" });
+            ApellidoPCB.DataSource = apellidoP;
+            ApellidoPCB.DisplayMember = "primerApellidoCliente";
+            ApellidoPCB.ValueMember = "primerApellidoCliente";
+
+            var apellidoM = cliente.AsEnumerable()
+                 .Select(row => row.Field<string>("segundoApellidoCliente"))
+                 .Where(mA => !string.IsNullOrEmpty(mA))
+                 .Distinct()
+                 .Select(mA => new { segundoApellidoCliente = mA })
+                 .ToList();
+            apellidoM.Insert(0, new { segundoApellidoCliente = "" });
+            ApellidoMCB.DataSource = apellidoM;
+            ApellidoMCB.DisplayMember = "segundoApellidoCliente";
+            ApellidoMCB.ValueMember = "segundoApellidoCliente";
+
+            var correos = cliente.AsEnumerable()
+                .Select(row => row.Field<string>("correoCliente"))
+                .Where(c => !string.IsNullOrEmpty(c))
+                .Distinct()
+                .Select(c => new { correoCliente = c })
+                .ToList();
+            correos.Insert(0, new { correoCliente = "" });
+            CorreoCB.DataSource = correos;
+            CorreoCB.DisplayMember = "correoCliente";
+            CorreoCB.ValueMember = "correoCliente";
+
+            var rfcs = cliente.AsEnumerable()
+                .Select(row => row.Field<string>("rfcCliente"))
+                .Where(r => !string.IsNullOrEmpty(r))
+                .Distinct()
+                .Select(r => new { rfcCliente = r })
+                .ToList();
+            rfcs.Insert(0, new { rfcCliente = "" });
+            RfcCB.DataSource = rfcs;
+            RfcCB.DisplayMember = "rfcCliente";
+            RfcCB.ValueMember = "rfcCliente";
         }
         private void LimpiarFiltrosBTN_Click(object sender, EventArgs e)
         {
@@ -246,7 +310,7 @@ namespace AAVD
             var hotelSeleccionado = HotelCB1.SelectedValue?.ToString();
             filtro.hotel = string.IsNullOrWhiteSpace(hotelSeleccionado) ? null : hotelSeleccionado;
 
-            if (AnioCB1.Checked) 
+            if (AnioCB1.Checked)
             {
                 filtro.anio = AnioCB1.Value.Year;
             }
@@ -379,7 +443,56 @@ namespace AAVD
 
         private void AplicarHistorial_Click(object sender, EventArgs e)
         {
+            filtros filtro = new filtros();
 
+            var apellidoPaterno = ApellidoPCB.SelectedValue?.ToString();
+            filtro.primerApellido = string.IsNullOrWhiteSpace(apellidoPaterno) ? null : apellidoPaterno;
+
+            var apellidoMaterno = ApellidoMCB.SelectedValue?.ToString();
+            filtro.segundoApellido = string.IsNullOrWhiteSpace(apellidoMaterno) ? null : apellidoMaterno;
+
+            var correo = CorreoCB.SelectedValue?.ToString();
+            filtro.correo = string.IsNullOrWhiteSpace(correo) ? null : correo;
+
+            var rfc = RfcCB.SelectedValue?.ToString();
+            filtro.rfc = string.IsNullOrWhiteSpace(rfc) ? null : rfc;
+
+            if (AnioDTP.Checked)
+            {
+                filtro.anio = AnioDTP.Value.Year;
+            }
+            else
+            {
+                filtro.anio = null;
+            }
+
+            var enlace = new EnlaceDB();
+            var historial = enlace.historialCliente(filtro);
+            HistorialDTG.DataSource = historial;
+
+            // Configurar columnas
+            HistorialDTG.Columns["nombreCompleto"].HeaderText = "Nombre completo";
+            HistorialDTG.Columns["ciudad"].HeaderText = "Ciudad";
+            HistorialDTG.Columns["nombreHotel"].HeaderText = "Hotel";
+            HistorialDTG.Columns["nivelHabitacion"].HeaderText = "Nivel de habitación";
+            HistorialDTG.Columns["numeroHabitacion"].HeaderText = "Número de habitación";
+            HistorialDTG.Columns["piso"].HeaderText = "Piso";
+            HistorialDTG.Columns["personasHospedadas"].HeaderText = "Personas hospedadas";
+            HistorialDTG.Columns["codigoReserva"].HeaderText = "Código de reserva";
+            HistorialDTG.Columns["fechaReservacion"].HeaderText = "Fecha de reservación";
+            HistorialDTG.Columns["fechaCheckIn"].HeaderText = "Fecha de Check-In";
+            HistorialDTG.Columns["fechaCheckOut"].HeaderText = "Fecha de Check-Out";
+            HistorialDTG.Columns["estatus"].HeaderText = "Estatus";
+            HistorialDTG.Columns["anticipo"].HeaderText = "Anticipo";
+            HistorialDTG.Columns["totalSinServicios"].HeaderText = "Monto del hospedaje";
+            HistorialDTG.Columns["servicios"].HeaderText = "Monto de servicios";
+            HistorialDTG.Columns["montoHospedaje"].HeaderText = "Total";
+
+            // Formato monetario
+            HistorialDTG.Columns["anticipo"].DefaultCellStyle.Format = "C2";
+            HistorialDTG.Columns["totalSinServicios"].DefaultCellStyle.Format = "C2";
+            HistorialDTG.Columns["servicios"].DefaultCellStyle.Format = "C2";
+            HistorialDTG.Columns["montoHospedaje"].DefaultCellStyle.Format = "C2";
         }
     }
 }

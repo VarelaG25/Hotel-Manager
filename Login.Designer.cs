@@ -60,13 +60,12 @@ namespace AAVD
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(224, 202);
+            this.label1.Location = new System.Drawing.Point(150, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 42);
+            this.label1.Size = new System.Drawing.Size(341, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inicia sesión";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,6 +90,7 @@ namespace AAVD
             this.Login_Usuario.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Login_Usuario.Location = new System.Drawing.Point(73, 15);
             this.Login_Usuario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Login_Usuario.MaxLength = 255;
             this.Login_Usuario.Name = "Login_Usuario";
             this.Login_Usuario.Size = new System.Drawing.Size(246, 16);
             this.Login_Usuario.TabIndex = 0;
@@ -102,10 +102,10 @@ namespace AAVD
             this.Login_Continuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Continuar.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.Login_Continuar.ForeColor = System.Drawing.SystemColors.Window;
-            this.Login_Continuar.Location = new System.Drawing.Point(223, 436);
+            this.Login_Continuar.Location = new System.Drawing.Point(219, 435);
             this.Login_Continuar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_Continuar.Name = "Login_Continuar";
-            this.Login_Continuar.Size = new System.Drawing.Size(209, 50);
+            this.Login_Continuar.Size = new System.Drawing.Size(200, 50);
             this.Login_Continuar.TabIndex = 2;
             this.Login_Continuar.Text = "Ingresar";
             this.Login_Continuar.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@ namespace AAVD
             this.Login_SQL.AutoSize = true;
             this.Login_SQL.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.Login_SQL.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Login_SQL.Location = new System.Drawing.Point(166, 705);
+            this.Login_SQL.Location = new System.Drawing.Point(166, 546);
             this.Login_SQL.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_SQL.Name = "Login_SQL";
             this.Login_SQL.Size = new System.Drawing.Size(63, 29);
@@ -130,7 +130,7 @@ namespace AAVD
             this.Login_CQL.AutoSize = true;
             this.Login_CQL.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.Login_CQL.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Login_CQL.Location = new System.Drawing.Point(416, 705);
+            this.Login_CQL.Location = new System.Drawing.Point(416, 546);
             this.Login_CQL.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Login_CQL.Name = "Login_CQL";
             this.Login_CQL.Size = new System.Drawing.Size(64, 29);
@@ -141,14 +141,13 @@ namespace AAVD
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(202, 670);
+            this.label5.Location = new System.Drawing.Point(150, 511);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 25);
+            this.label5.Size = new System.Drawing.Size(341, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Elige una base de datos";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,6 +275,7 @@ namespace AAVD
             this.Login_Contrasena.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Login_Contrasena.Location = new System.Drawing.Point(69, 15);
             this.Login_Contrasena.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Login_Contrasena.MaxLength = 50;
             this.Login_Contrasena.Name = "Login_Contrasena";
             this.Login_Contrasena.Size = new System.Drawing.Size(250, 16);
             this.Login_Contrasena.TabIndex = 1;

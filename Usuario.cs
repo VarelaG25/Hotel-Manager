@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using static AAVD.Hoteles;
 
 namespace AAVD
 {
@@ -47,8 +49,10 @@ namespace AAVD
         {
             AbrirControlEnPanel(new Menu());
             var NuevoForm = new Login();
-            // Cargar tabla Usuarios SQL
-            cargarTablaUsuario();
+            if (Login.baseDatos == 1)
+            {
+                cargarTablaUsuario();
+            }
             // Generar número aleatorio
             Random rnd = new Random();
             int rand = rnd.Next(100000, 999999);
@@ -63,74 +67,103 @@ namespace AAVD
         {
             // Clase UsuarioDatos
             UsuarioDatos usuario = new UsuarioDatos();
-            // Usuario
-            usuario.NumeroNomina = int.Parse(NumeroNominaTXT.Text);
-            usuario.NombreUsuario = NombreTXT.Text;
-            usuario.PrimerApellido = PrimerApellidoTXT.Text;
-            usuario.SegundoApellido = SegundoApellidoTXT.Text;
-            // Validar que los teléfonos contengan solo números
-            usuario.TelefonoCelular = TelefonoCelularTXT.Text;
-            usuario.TelefonoCasa = TelefonoCasaTXT.Text;
-            usuario.Id_Admin = TipoUsuario.SelectedItem.ToString() == "Administrador" ? true : false;
-            if ((usuario.TelefonoCasa.Length != 10 && usuario.TelefonoCasa.Length > 0) ||
-                (usuario.TelefonoCelular.Length != 10 && usuario.TelefonoCelular.Length > 0))
-            {
-                MessageBox.Show("Cada número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!usuario.TelefonoCasa.All(char.IsDigit) || !usuario.TelefonoCelular.All(char.IsDigit))
-            {
-                MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if(usuario.CorreoUsuario == "" || usuario.NombreUsuario == "" || usuario.PrimerApellido == "" || usuario.SegundoApellido == "")
+            // Validar datos
+            if (NumeroNominaTXT.Text == "" || NombreTXT.Text == "" || PrimerApellidoTXT.Text == "" || SegundoApellidoTXT.Text == "" ||
+                TelefonoCelularTXT.Text == "" || TelefonoCasaTXT.Text == "" || CorreoTXT.Text == "" || ContraseniaTXT.Text == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            // Credenciales
-            usuario.CorreoUsuario = CorreoTXT.Text;
-            usuario.ContrasenaUsuario = ContraseniaTXT.Text;
-            var ConfirmarContrasenia = ConfirmarContraseniaTXT.Text;
-            // Fechas
-            usuario.FechaRegistroUsuario = DateTime.Parse(FechaActualDTP.Text);
-            usuario.FechaModificacionUsuario = DateTime.Today;
-
-            if (usuario.ContrasenaUsuario != ConfirmarContrasenia)
+            if (TelefonoCelularTXT.Text.Length != 10 || TelefonoCasaTXT.Text.Length != 10)
+            {
+                MessageBox.Show("Cada número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!TelefonoCelularTXT.Text.All(char.IsDigit) || !TelefonoCasaTXT.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // Validar que el correo tenga un formato válido
+            if (!Regex.IsMatch(CorreoTXT.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (ContraseniaTXT.Text != ConfirmarContraseniaTXT.Text)
             {
                 MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            // Enlace a la base de datos
-            var enlace = new EnlaceDB();
-            bool resultado = enlace.Insertar_Usuario(usuario);
-            if (!resultado)
+            if (!Regex.IsMatch(ContraseniaTXT.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*[!""#$%&/=´?¡¿:;,\.\-_\+\*\{\}\[\]]).{8,}$"))
             {
-                MessageBox.Show("Error al registrar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula y un carácter especial.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            var NumeroNomina = int.Parse(NumeroNominaTXT.Text);
+            var Nombre = NombreTXT.Text;
+            var PrimerApellido = PrimerApellidoTXT.Text;
+            var SegundoApellido = SegundoApellidoTXT.Text;
+            var TelefonoCelular = TelefonoCelularTXT.Text;
+            var TelefonoCasa = TelefonoCasaTXT.Text;
+            var Correo = CorreoTXT.Text;
+            var Contrasenia = ContraseniaTXT.Text;
+            var FechaRegistro = DateTime.Parse(FechaActualDTP.Text);
+            var FechaModificacion = DateTime.Today;
+            var Id_Admin = TipoUsuario.SelectedItem.ToString() == "Administrador" ? true : false;
+
+            // Usando SQL
+            if (Login.baseDatos == 1)
+            {
+                // Usuario
+                usuario.NumeroNomina = NumeroNomina;
+                usuario.NombreUsuario = Nombre;
+                usuario.PrimerApellido = PrimerApellido;
+                usuario.SegundoApellido = SegundoApellido;
+                usuario.TelefonoCelular = TelefonoCelular;
+                usuario.TelefonoCasa = TelefonoCasa;
+                usuario.Id_Admin = Id_Admin;
+                usuario.CorreoUsuario = Correo;
+                usuario.ContrasenaUsuario = Contrasenia;
+                usuario.FechaRegistroUsuario = FechaRegistro;
+                usuario.FechaModificacionUsuario = FechaModificacion;
+
+                // Enlace a la base de datos
+                var enlace = new EnlaceDB();
+                bool resultado = enlace.Insertar_Usuario(usuario);
+                if (!resultado)
+                {
+                    MessageBox.Show("Error al registrar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                cargarTablaUsuario();
+
+            }
             MessageBox.Show("Usuario registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            cargarTablaUsuario();
         }
 
         private void NombreCompletoCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int seleccion = Convert.ToInt32(NombreCompletoCB.SelectedValue);
-            if (seleccion >= 0)
+            int seleccion = NombreCompletoCB.SelectedValue != null ? Convert.ToInt32(NombreCompletoCB.SelectedValue) : -1;
+            if (seleccion < 0)
             {
-                // Asignar el valor al TextBox
+                MessageBox.Show("Por favor, seleccione un usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Login.baseDatos == 1)
+            {
                 var enlace = new EnlaceDB();
                 var tabla = new DataTable();
                 tabla = enlace.consultarUsuarioEspecifico(seleccion);
-                // Asignar los valores a los TextBox
-                NumeroNominaSeleccionadoTXT.Text = tabla.Rows[0]["numeroNomina"].ToString();
-                NombreSeleccionadoTXT.Text = tabla.Rows[0]["nombreUsuario"].ToString();
-                PrimerApellidoSeleccionadoTXT.Text = tabla.Rows[0]["primerApellido"].ToString();
-                SegundoApellidoSeleccionadoTXT.Text = tabla.Rows[0]["segundoApellido"].ToString();
-                TelefonoCelularSeleccionadoTXT.Text = tabla.Rows[0]["telefonoCelular"].ToString();
-                TelefonoCasaSeleccionadoTXT.Text = tabla.Rows[0]["telefonoCasa"].ToString();
-                CorreoSeleccionadoTXT.Text = tabla.Rows[0]["correoUsuario"].ToString();
-                contraseniaActual = tabla.Rows[0]["contrasenaUsuario"].ToString();
+                var usuario = tabla.Rows[0];
+                NumeroNominaSeleccionadoTXT.Text = usuario["numeroNomina"].ToString();
+                NombreSeleccionadoTXT.Text = usuario["nombreUsuario"].ToString();
+                PrimerApellidoSeleccionadoTXT.Text = usuario["primerApellido"].ToString();
+                SegundoApellidoSeleccionadoTXT.Text = usuario["segundoApellido"].ToString();
+                TelefonoCelularSeleccionadoTXT.Text = usuario["telefonoCelular"].ToString();
+                TelefonoCasaSeleccionadoTXT.Text = usuario["telefonoCasa"].ToString();
+                CorreoSeleccionadoTXT.Text = usuario["correoUsuario"].ToString();
+                contraseniaActual = usuario["contrasenaUsuario"].ToString();
             }
         }
 
@@ -141,78 +174,89 @@ namespace AAVD
 
             if (result == DialogResult.Yes)
             {
-                // Eliminar usuario
-                var enlace = new EnlaceDB();
-                bool resultado = enlace.Borrar_Usuario(int.Parse(NumeroNominaSeleccionadoTXT.Text));
-                if (!resultado)
+                if (Login.baseDatos == 1)
                 {
-                    MessageBox.Show("Error al eliminar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("Usuario eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Eliminar usuario
+                    var enlace = new EnlaceDB();
+                    bool resultado = enlace.Borrar_Usuario(int.Parse(NumeroNominaSeleccionadoTXT.Text));
+                    if (!resultado)
+                    {
+                        MessageBox.Show("Error al eliminar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     cargarTablaUsuario();
-                    NombreCompletoCB.SelectedIndex = 0;
                 }
             }
+            MessageBox.Show("Usuario eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            NombreCompletoCB.SelectedIndex = 0;
         }
 
         private void ModificarBTN_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("¿Está seguro de que desea modificar el usuario?", "Modificar Usuario", buttons, MessageBoxIcon.Warning);
-
+            UsuarioDatos usuario = new UsuarioDatos();
             if (result == DialogResult.Yes)
             {
-                // Clase UsuarioDatos
-                UsuarioDatos usuario = new UsuarioDatos();
-                // Usuario
-                usuario.NumeroNomina = int.Parse(NumeroNominaSeleccionadoTXT.Text);
-                usuario.NombreUsuario = NombreSeleccionadoTXT.Text;
-                usuario.PrimerApellido = PrimerApellidoSeleccionadoTXT.Text;
-                usuario.SegundoApellido = SegundoApellidoSeleccionadoTXT.Text;
-                usuario.TelefonoCelular = TelefonoCelularSeleccionadoTXT.Text;
-                usuario.TelefonoCasa = TelefonoCasaSeleccionadoTXT.Text;
-                if( string.IsNullOrEmpty(usuario.TelefonoCelular) || string.IsNullOrEmpty(usuario.TelefonoCasa) || string.IsNullOrEmpty(usuario.NombreUsuario)
-                    || string.IsNullOrEmpty(usuario.PrimerApellido) || string.IsNullOrEmpty(usuario.SegundoApellido) || string.IsNullOrEmpty(usuario.CorreoUsuario)
-                    || string.IsNullOrEmpty(usuario.ContrasenaUsuario))
+                // Validar datos
+                if (NumeroNominaSeleccionadoTXT.Text == "" || NombreSeleccionadoTXT.Text == "" || PrimerApellidoSeleccionadoTXT.Text == "" || SegundoApellidoSeleccionadoTXT.Text == "" ||
+                    TelefonoCelularSeleccionadoTXT.Text == "" || TelefonoCasaSeleccionadoTXT.Text == "" || CorreoSeleccionadoTXT.Text == "" || ConfirmarContraseniaSeleccionadoTXT.Text == "")
                 {
                     MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
-                if (!usuario.TelefonoCasa.All(char.IsDigit) || !usuario.TelefonoCelular.All(char.IsDigit))
+                if (!TelefonoCelularSeleccionadoTXT.Text.All(char.IsDigit) || !TelefonoCasaSeleccionadoTXT.Text.All(char.IsDigit))
                 {
                     MessageBox.Show("El número de teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if ((usuario.TelefonoCasa.Length != 10 && usuario.TelefonoCasa.Length > 0) ||
-                (usuario.TelefonoCelular.Length != 10 && usuario.TelefonoCelular.Length > 0))
+                if (TelefonoCelularSeleccionadoTXT.Text.Length != 10 || TelefonoCasaSeleccionadoTXT.Text.Length != 10)
                 {
                     MessageBox.Show("Cada número de teléfono debe tener exactamente 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                // Credenciales
-                usuario.CorreoUsuario = CorreoSeleccionadoTXT.Text;
-                usuario.ContrasenaUsuario = ContraseniaSeleccionadoTXT.Text;
-                var ConfirmarContrasenia = contraseniaActual;
-                // Fechas
-                usuario.FechaModificacionUsuario = DateTime.Parse(FechaModificadoTXT.Text);
-                if (ConfirmarContraseniaSeleccionadoTXT.Text != ConfirmarContrasenia)
+
+                var NumeroNomina = int.Parse(NumeroNominaSeleccionadoTXT.Text);
+                var Nombre = NombreSeleccionadoTXT.Text;
+                var PrimerApellido = PrimerApellidoSeleccionadoTXT.Text;
+                var SegundoApellido = SegundoApellidoSeleccionadoTXT.Text;
+                var TelefonoCelular = TelefonoCelularSeleccionadoTXT.Text;
+                var TelefonoCasa = TelefonoCasaSeleccionadoTXT.Text;
+                var Correo = CorreoSeleccionadoTXT.Text;
+                var Contrasenia = ContraseniaSeleccionadoTXT.Text;
+                var FechaModificacion = DateTime.Parse(FechaModificadoTXT.Text);
+
+                // Usando SQL
+                if (Login.baseDatos == 1)
                 {
-                    MessageBox.Show("La contraseñas no coincide con la anterior", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    usuario.NumeroNomina = NumeroNomina;
+                    usuario.NombreUsuario = Nombre;
+                    usuario.PrimerApellido = PrimerApellido;
+                    usuario.SegundoApellido = SegundoApellido;
+                    usuario.TelefonoCelular = TelefonoCelular;
+                    usuario.TelefonoCasa = TelefonoCasa;
+                    usuario.CorreoUsuario = Correo;
+                    usuario.ContrasenaUsuario = Contrasenia;
+                    usuario.FechaModificacionUsuario = FechaModificacion;
+                    var Confirmar = contraseniaActual;
+
+                    if (ConfirmarContraseniaSeleccionadoTXT.Text != Confirmar)
+                    {
+                        MessageBox.Show("La contraseña no coincide con la anterior", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    var enlace = new EnlaceDB();
+                    bool resultado = enlace.Actualizar_Usuario(usuario);
+                    if (!resultado)
+                    {
+                        MessageBox.Show("Error al registrar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    cargarTablaUsuario();
                 }
-                // Enlace a la base de datos
-                var enlace = new EnlaceDB();
-                bool resultado = enlace.Actualizar_Usuario(usuario);
-                if (!resultado)
-                {
-                    MessageBox.Show("Error al registrar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+
                 MessageBox.Show("Usuario registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cargarTablaUsuario();
             }
         }
         public void cargarTablaUsuario()
